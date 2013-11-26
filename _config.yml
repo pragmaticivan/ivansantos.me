@@ -1,0 +1,38 @@
+safe:        false
+baseurl:     /
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+paginate_path: 'blog/page:num'
+
+future:      true
+lsi:         false
+pygments:    false
+markdown:    maruku
+permalink:   /:title/
+paginate: 5
+
+
+
+
+
+
+name: Ivan Santos
+markdown: redcarpet
+pygments: auto
+auto: false
+
+
+#Permalink
+permalink: /:categories/:title
+
+
+
+#Exclude
+exclude: [".rvmrc", ".ruby-version", ".ruby-gemset", "README.md",
+  "Rakefile", "changelog.md", "*.scss", "sandbox",
+  "node_modules", "Gruntfile.js", "bootstrap", "_site_git", "config.rb"
+
+  ]
+
