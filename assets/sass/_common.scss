@@ -1,0 +1,27 @@
+// Font
+@import url(//fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
+
+// Common
+body {
+	background: url('../images/common/bg.jpg');
+}
+
+.container {
+  width: 100%;
+}
+#content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 10px 0 10px;
+}
+
+.clearfix:after {
+  clear: both;
+  display: block;
+  content: " ";
+  height: 0px;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}

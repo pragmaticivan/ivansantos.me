@@ -33,21 +33,33 @@ module.exports = function(grunt) {
          " */\n" +
          "\n",
 
-                 // Observação de mudanças nos arquivos
+        copy: {
+          dist: {
+            files: {
+              '_site_git/' : '_site/**'
+            }
+          },
+          css : {
+            src: 'assets/css/style.css',
+            dest: '_site/assets/css/style.css'
+          }
+        },
+
+        // Observação de mudanças nos arquivos
         watch: {
             options: {
                 livereload: true
             },
             css: {
                 files: ["<%= dirs.sass %>/{,*/}*.{scss,sass}"],
-                tasks: ["compass", "notify:compass"]
+                tasks: ["compass", "notify:compass","cssCopy"]
             },
             js: {
                 files: ["<%= jshint.all %>"],
                 tasks: ["jshint", "uglify", "notify:js"]
             },
             jekyllSources: {
-              files: ['*.html','_layouts/*.html', '*.yml', 'assets/js/**.js', '_posts/**', 'projects/**', 'blog/**', 'about/**', '_includes/**', 'atom.xml', '**/*.md'],
+              files: ['*.html','_layouts/*.html','_includes/*.html', '*.yml', 'assets/js/**.js', '_posts/**', 'projects/**', 'blog/**', 'about/**', '_includes/**', 'atom.xml', '**/*.md'],
               tasks: ['shell:jekyll']
             }
         },
@@ -172,6 +184,9 @@ module.exports = function(grunt) {
       'open:server',
       'watch'
     ]);
+
+    // CSS Copy
+    grunt.registerTask('cssCopy', ['copy:css']);
 
     // Optimizar imagens
     grunt.registerTask( "optimize", [ "imagemin", "notify:image" ] );

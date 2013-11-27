@@ -1,0 +1,39 @@
+// Footer
+footer.footer {
+	padding-top: 80px;
+	nav {
+		// padding-left: 20px;
+	}
+	ul {
+		text-align: center;
+		margin:0;
+		padding: 0;
+		li {
+			// &:first-child {
+			// 	margin-left: 40px;
+			// }
+			display: inline-block;
+		}
+		a {
+			display: block;
+			text-indent: -9999999px;
+			height: 38px;
+			width: 38px;
+			&:hover {
+				opacity: 0.8;
+			}
+			background: url('../images/common/social.png') no-repeat;
+			&.twitter {
+				
+			}
+			&.facebook {
+				width: 39px;
+				background-position: -48px 0;
+			}
+			&.github {
+				width: 39px;
+				background-position: -96px 0;
+			}
+		}
+	}
+}

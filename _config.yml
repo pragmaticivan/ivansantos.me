@@ -19,7 +19,6 @@ paginate: 5
 
 
 name: Ivan Santos
-markdown: redcarpet
 pygments: auto
 auto: false
 
