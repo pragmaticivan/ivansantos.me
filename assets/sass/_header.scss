@@ -48,9 +48,23 @@ header.header {
 	display: inline-block;
 	position: absolute;
 	left: 50%;
-	margin-left:-77px; 
+	margin-left:-77px;
 	top: 32px;
 	width: 154px;
+  img {
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+}
+.nav-logo:hover {
+  margin-left:-80px;
+  img {
+    width: 160px;
+    opacity: 0.8;
+  }
 }
 
 
