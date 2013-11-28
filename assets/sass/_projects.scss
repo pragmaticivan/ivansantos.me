@@ -1,0 +1,42 @@
+.projects {
+	h1 {
+		color: #53232b;
+		font-family: 'Kreon', serif;
+	}
+	.list.projects {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		.project {
+			margin-bottom: 4px;
+			width: 100%;
+			a {
+				text-decoration: none;
+				
+				.project-description {
+					float: left;
+				}
+				.project-tecnology {
+					font-family: 'roboto';
+					font-weight: 300px;
+					color: #6d6e71;
+				}
+				.lang {
+					font-family: 'roboto';
+					font-weight: 300px;
+					color: #6d6e71;
+				}
+				.project-title {
+					// float: left;
+					font-size: 24px;
+					font-family: 'roboto';
+					font-weight: 300px;
+					color: #6d6e71;
+					line-height: 30px;
+					padding: 10px 0 4px 0;
+					margin:0;
+				}
+			}
+		}
+	}
+}
