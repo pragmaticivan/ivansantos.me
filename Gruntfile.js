@@ -60,7 +60,7 @@ module.exports = function(grunt) {
             },
             jekyllSources: {
               files: ['*.html','_layouts/*.html','_includes/*.html', '*.yml', 'assets/js/**.js', '_posts/**', 'projects/**', 'blog/**', 'about/**', '_includes/**', 'atom.xml', '**/*.md'],
-              tasks: ['shell:jekyll']
+              tasks: ['shell:jekyll','cssCopy']
             }
         },
 

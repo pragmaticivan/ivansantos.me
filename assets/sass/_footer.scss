@@ -24,7 +24,7 @@ footer.footer {
 			}
 			background: url('../images/common/social.png') no-repeat;
 			&.twitter {
-				
+
 			}
 			&.facebook {
 				width: 39px;
@@ -36,4 +36,14 @@ footer.footer {
 			}
 		}
 	}
+}
+
+.by-dev {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 40px;
+  font-size: 12px;
+  color: #999999;
+  font-family: 'Kreon', serif;
 }
