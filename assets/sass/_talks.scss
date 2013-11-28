@@ -1,0 +1,67 @@
+.talks {
+	h1 {
+		color: #53232b;
+		font-family: 'Kreon', serif;
+	}
+	.list.talks {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		.talk {
+			margin-bottom: 10px;
+			a {
+				text-decoration: none;
+				.talk-date {
+					float: left;
+					width: 40px;
+					border-right: #b24b5b 4px solid;
+					padding: 5px 20px;
+					margin-right: 22px;
+					span {
+						display: block;
+						text-align: center;
+					}
+					.talk-date-day {
+						font-size: 38px;
+						font-weight: bold;
+						color: #6d6e71;
+						font-family: 'roboto';
+						line-height: 35px;
+						padding-top: 4px;
+					}
+					.talk-date-month {
+						font-size: 18px;
+						font-family: 'roboto';
+						font-weight: 300px;
+						color: #6d6e71;
+						line-height: 18px;
+					}
+					
+				}
+				.talk-description {
+					float: left;
+				}
+				.talk-local {
+					font-family: 'roboto';
+					font-weight: 300px;
+					color: #6d6e71;
+				}
+				.lang {
+					font-family: 'roboto';
+					font-weight: 300px;
+					color: #6d6e71;
+				}
+				.talk-title {
+					// float: left;
+					font-size: 30px;
+					font-family: 'roboto';
+					font-weight: 300px;
+					color: #6d6e71;
+					line-height: 30px;
+					padding: 10px 0 4px 0;
+					margin:0;
+				}
+			}
+		}
+	}
+}

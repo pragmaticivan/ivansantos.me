@@ -59,7 +59,7 @@ module.exports = function(grunt) {
                 tasks: ["jshint", "uglify", "notify:js"]
             },
             jekyllSources: {
-              files: ['*.html','_layouts/*.html','_includes/*.html', '*.yml', 'assets/js/**.js', '_posts/**', 'projects/**', 'blog/**', 'about/**', '_includes/**', 'atom.xml', '**/*.md'],
+              files: ['*.html','talks/*.html','_layouts/*.html','_includes/*.html', '*.yml', 'assets/js/**.js', '_posts/**', 'projects/**', 'blog/**', 'about/**', '_includes/**', 'atom.xml', '**/*.md'],
               tasks: ['shell:jekyll','cssCopy']
             }
         },
