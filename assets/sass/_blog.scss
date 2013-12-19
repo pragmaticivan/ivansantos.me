@@ -1,0 +1,79 @@
+.blog {
+      h2, h2 a {
+        display: inline-block;
+        color: #53232b;
+        font-family: 'Kreon', serif;
+      }
+      h2 {
+        padding: 0 0 0 0;
+        margin: 0;
+        float: left;
+      }
+      h2.single {
+        display: block;
+        width: 100%;
+        font-size: 40px;
+      }
+      .content-post {
+        width: 100%;
+        a {
+          color: #53232b;
+        }
+      }
+}
+.posts.list {
+  list-style: none;
+    padding: 0;
+    margin: 0;
+  .list-item {
+    margin-bottom: 14px;
+    background: #f3f3f3;
+    border: 1px solid #bcbcbc;
+    padding: 10px 20px;
+    width: 100%;
+
+    p {
+      font-family: 'roboto';
+    }
+
+    header {
+      width: 100%;
+    }
+
+      .lang {
+          font-family: 'roboto';
+          font-weight: 300px;
+          color: #ffffff;
+          background: #b44a5a;
+          display: inline-block;
+          padding: 3px 10px;
+          margin-right: 10px;
+          float: left;
+          margin-top: 2px;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .date {
+        float: right;
+        font-family: 'roboto';
+        font-weight: 300px;
+        padding: 4px 0 0 0;
+        margin: 0;
+      }
+    footer {
+      a {
+        font-family: 'roboto';
+        font-weight: 300px;
+        color: #b44a5a;
+      }
+      text-align: right;
+    }
+  }
+}
+
+.comments {
+  width: 100%;
+  padding-top: 20px;
+}

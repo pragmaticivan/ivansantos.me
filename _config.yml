@@ -11,7 +11,7 @@ lsi:         false
 pygments:    false
 markdown:    maruku
 permalink:   /:title/
-paginate: 5
+paginate: 30
 
 
 
@@ -23,10 +23,10 @@ pygments: auto
 auto: false
 
 
-#Permalink
-permalink: /:categories/:title
+# #Permalink
+# permalink: /:categories/:title
 
-
+excerpt_separator: "<!-- more -->"
 
 #Exclude
 exclude: [".rvmrc", ".ruby-version", ".ruby-gemset", "README.md",
