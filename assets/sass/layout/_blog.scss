@@ -1,0 +1,82 @@
+/*********************************************************************
+*  Blog Style
+*********************************************************************/
+
+.blog {
+
+      h2, h2 a {
+        display: inline-block;
+        color: $wine;
+      }
+
+      h2 {
+        padding: 0 0 10px 0;
+        margin: 0;
+        float: left;
+      }
+
+      h2.single {
+        display: block;
+        width: 100%;
+        font-size: 40px;
+      }
+
+      .content-post {
+        width: 100%;
+
+        a {
+          color: $wine;
+        }
+      }
+}
+
+.posts.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .list-item {
+      margin-bottom: 14px;
+      background: $clean-gray;
+      border: 1px solid $gray;
+      padding: 10px 20px;
+
+      header {
+        width: 100%;
+      }
+
+      .lang {
+          font-weight: 300px;
+          color: $white;
+          background: $red;
+          display: inline-block;
+          padding: 3px 10px;
+          float: left;
+          margin: 2px 10px 0 0;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .date {
+        float: right;
+        font-weight: 300px;
+        padding: 4px 0 0 0;
+        margin: 0;
+      }
+
+      footer {
+        text-align: right;
+
+        a {
+          font-weight: 300px;
+          color: $red;
+        }
+      }
+    }
+}
+
+.comments {
+  width: 100%;
+  padding-top: 20px;
+}
