@@ -72,7 +72,7 @@ module.exports = function(grunt) {
             }
         },
 
-        // Validação de arquivos
+        // Javascript Validation
         jshint: {
             options: {
                 jshintrc: ".jshintrc"
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
             ]
         },
 
-        // Minificação e concatenação de arquivos
+        // Minify and Concat files
         uglify: {
             options: {
                 mangle: false,
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
             }
         },
 
-        // Compilacão de arquivos Sass/Scss para CSS
+        // SASS/SCSS
         compass: {
             dist: {
                 options: {
@@ -112,7 +112,7 @@ module.exports = function(grunt) {
             }
         },
 
-        // Otimização de imagens
+        // Image Optimization
         imagemin: {
             dist: {
                 options: {
@@ -167,18 +167,17 @@ module.exports = function(grunt) {
 
     };
 
-
-    // Iniciando as configurações do Grunt
+    // Grunt init configuration
     grunt.initConfig(appConfig);
 
 
-    // Registrando as tarefas
+    // Register tasks
     // --------------------------
 
-    // Tarefa padrão
+    // Default task
     grunt.registerTask( "default", [ "jshint", "compass", "uglify" ] );
 
-    // Observar mudanças dos arquivos
+    // Observer files
     grunt.registerTask('server', [
       'connect:server',
       'open:server',
@@ -188,7 +187,7 @@ module.exports = function(grunt) {
     // CSS Copy
     grunt.registerTask('cssCopy', ['copy:css']);
 
-    // Optimizar imagens
+    // Image optimization tasks
     grunt.registerTask( "optimize", [ "imagemin", "notify:image" ] );
 
 
