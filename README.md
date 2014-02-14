@@ -1,4 +1,3 @@
-ivansjr.com.br
-==============
+# ivansjr.com.br Jekyll theme
 
-Personal Website
+This is the theme I'm using in [my personal site](http://ivansjr.com.br). Feel free to study its implementation and suggest code improvements.
