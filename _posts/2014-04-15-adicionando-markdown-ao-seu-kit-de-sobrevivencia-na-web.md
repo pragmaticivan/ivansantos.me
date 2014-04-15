@@ -5,6 +5,7 @@ description: ""
 category:
 date: 2014-04-15
 permalink: /blog/2014-04-15-adicionando-markdown-ao-seu-kit-de-sobrevivencia-na-web
+image_graph: /assets/images/posts/markdown-logo.jpg
 language: pt-br
 ---
 
