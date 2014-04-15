@@ -31,7 +31,8 @@ Hoje em dia é frequentemente utilizado para escrita de documentação, páginas
 ### Ainda não entendeu o que é?
 
 Vou explicar de uma forma mais amigável. Markdwon pode ser facilmente escrito com um editor de texto básico como por exemplo o TextEdit do MacOS ou o Notepad do Windows (Ok... isso não inclui usar o Word).
-É uma eficiente e fácil forma para escrever textos para serem convertidos em HTML. Geralmente a extensão de arquivo desse tipo de marcação termina com `.md` ou `.markdown`. Porém, eventualmente você vai estar utilizando uma ferramenta online como por exemplo um [GIST](https://gist.github.com/) no [Github](https://github.com/) e quase sempre não vai precisar salvar esse tipo de arquivo, a não ser que por exemplo você utilize como base para criação de páginas e posts para um site estático.
+
+É um método eficiente e forma fácil para escrever textos contando com a facilidade na conversão em formato HTML. Geralmente a extensão de arquivo desse tipo de marcação termina com `.md` ou `.markdown`. Porém, eventualmente você vai estar utilizando uma ferramenta online como por exemplo um [GIST](https://gist.github.com/) no [Github](https://github.com/) e quase sempre não vai precisar salvar esse tipo de arquivo, a não ser que por exemplo você utilize como base para criação de páginas e posts para um site estático.
 
 Veja um exemplo de como funciona o processo de conversão:
 
@@ -85,9 +86,9 @@ dog's back.</p>
 </blockquote>
 ```
 
-### Quais sites atualmente utilizam o Markdown?
+### Quais sites utilizam atualmente?
 
-Vários sites adoraram essa sintaxe como padrão para várias áreas de seu projeto. Abaixo você pode conhecer alguns deles:
+Vários sites adotaram essa sintaxe como padrão para várias áreas de seu projeto. Abaixo você pode conhecer alguns deles:
 
 * [Stack Overflow](http://stackoverflow.com/)
 * [Github](https://github.com/)
@@ -105,7 +106,7 @@ Seguindo o fluxo de adoção, você provavelmente já deve ter ouvido falar sobr
 
 A maioria das coisas sobre Markdown é free. Se você pensa em escrever e testar a conversão do markdown de forma fácil, provavelmente você vai gostar de utilizar uma das ferramentas abaixo:
 
-* [Mou](http://mouapp.com/) - (Mac OS) Na minha opnião é a melhor ferramenta.
+* [Mou (Mac OS)](http://mouapp.com/) -  Na minha opnião é a melhor ferramenta.
 * [Alternativas para Mou no windows](http://alternativeto.net/software/mou/?platform=windows)
 * [ReText](http://sourceforge.net/p/retext/home/ReText/) - Caso você seja usuário de linux
 * [Sublime + Markdown](http://www.macstories.net/roundups/sublime-text-2-and-markdown-tips-tricks-and-links/) - Caso você queira testar direto no sublime, aconselho ler este artigo.
@@ -117,7 +118,7 @@ Markdown me surpreende a cada dia. Ao longo do tempo empresas e projetos começa
 
 ### Tunando o Markdown
 
-Markdown por si só é uma ótima ferramenta para o seu projeto, porém você ainda pode utilizar outras opções baseadas no no mesmo para ter uma enorme gama de possibilidades. Um exemplo disso é o MultiMarkdown.
+Markdown por si só é uma ótima ferramenta para o seu projeto, porém você ainda pode utilizar outras opções baseadas no mesmo para ter uma enorme gama de possibilidades. Um exemplo disso é o MultiMarkdown.
 MMD (MultiMarkdown) é uma expansão do Markdown, onde é incluído várias *features* como tabelas, notas de rodapé e citações.
 MultiMarkdown pode converter texto simples em muito além do que apenas HTML. Incluindo nesta lista de conversão o PDF (no formato de LaTeX), OPML ou até OpenDocument que pode ser convertido em RTF e Microsoft Word.
 
@@ -126,22 +127,22 @@ MultiMarkdown pode converter texto simples em muito além do que apenas HTML. In
 
 Segue abaixo alguns links interessantes para ajudar nos seus estudos sobre Markdown:
 
-* http://daringfireball.net/projects/markdown/syntax
-* https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-* https://help.github.com/articles/github-flavored-markdown
-* https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide
+* [http://daringfireball.net/projects/markdown/syntax](http://daringfireball.net/projects/markdown/syntax)
+* [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [https://help.github.com/articles/github-flavored-markdown](https://help.github.com/articles/github-flavored-markdown)
+* [https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide](https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide)
 
 
 ### Referências
 
-* http://fletcherpenney.net/multimarkdown/
-* http://www.aaronsw.com/weblog/001189
-* http://www.gitbook.io/
-* http://eltonminetto.net/blog/2012/11/29/escrevendo-um-livro-do-modo-nerd/
-* https://www.linuxnewmedia.com.br/lm/noticia/markdown_pode_ser_definido_como_padraeo
-* https://daringfireball.net/projects/markdown/
-* http://whatismarkdown.com/
-* http://br-mac.org/2013/09/o-que-e-markdown.html
-* http://canaltech.com.br/o-que-e/programacao/Voce-sabe-o-que-e-Markdown/
-* http://en.wikipedia.org/wiki/Markdown
-* https://daringfireball.net/projects/markdown/
+* [http://fletcherpenney.net/multimarkdown/](http://fletcherpenney.net/multimarkdown/)
+* [http://www.aaronsw.com/weblog/001189](http://www.aaronsw.com/weblog/001189)
+* [http://www.gitbook.io/](http://www.gitbook.io/)
+* [http://eltonminetto.net/blog/2012/11/29/escrevendo-um-livro-do-modo-nerd/](http://eltonminetto.net/blog/2012/11/29/escrevendo-um-livro-do-modo-nerd/)
+* [https://www.linuxnewmedia.com.br/lm/noticia/markdown_pode_ser_definido_como_padraeo](https://www.linuxnewmedia.com.br/lm/noticia/markdown_pode_ser_definido_como_padraeo)
+* [https://daringfireball.net/projects/markdown/](https://daringfireball.net/projects/markdown/)
+* [http://whatismarkdown.com/](http://whatismarkdown.com/)
+* [http://br-mac.org/2013/09/o-que-e-markdown.html](http://br-mac.org/2013/09/o-que-e-markdown.html)
+* [http://canaltech.com.br/o-que-e/programacao/Voce-sabe-o-que-e-Markdown/](http://canaltech.com.br/o-que-e/programacao/Voce-sabe-o-que-e-Markdown/)
+* [http://en.wikipedia.org/wiki/Markdown](http://en.wikipedia.org/wiki/Markdown)
+* [https://daringfireball.net/projects/markdown/](https://daringfireball.net/projects/markdown/)
