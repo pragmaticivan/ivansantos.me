@@ -19,15 +19,33 @@
         display: block;
         width: 100%;
         font-size: 40px;
+        line-height: 40px;
       }
 
       .content-post {
         width: 100%;
-
+        p {
+          line-height: 23px;
+        }
         a {
           color: $wine;
         }
       }
+}
+.blog .content-post img {
+  width: 100%;
+  border-radius: 10px;
+}
+.blog blockquote {
+  background: #fff;
+  padding:30px;
+  margin: 5px;
+  color: #9b133d;
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .posts.list {
