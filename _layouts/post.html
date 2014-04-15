@@ -12,6 +12,13 @@ class: blog
     <div class="clearfix content-post">
       {{ content }}
     </div>
+    <div class="clearfix social">
+      <div class="fb-like" data-href="http://ivansjr.com.br{{ page.permalink }}" data-layout="button_count" data-action="like" data-show-faces="false" data-width="250" data-share="false"></div>
+      <div class="twitter-share">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ivansjr.com.br{{ page.permalink }}" data-via="pragmaticivan">Tweet</a>
+      </div>
+      <div class="g-plusone" data-size="medium" data-href="http://ivansjr.com.br{{ page.permalink }}"></div>
+    </div>
     <div class="clearfix comments">
           <div id="disqus_thread"></div>
           <script type="text/javascript">
@@ -32,5 +39,25 @@ class: blog
   </div>
 
 </div>
+<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=185312078331494";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
+    <!-- Place this tag after the last +1 button tag. -->
+    <script type="text/javascript">
+      window.___gcfg = {lang: 'pt-BR'};
+
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 {% include footer.html %}
