@@ -101,7 +101,7 @@ Com essa larga adoção, o desenvolvedor [Jeff Atwood](http://en.wikipedia.org/w
 
 Seguindo o fluxo de adoção, você provavelmente já deve ter ouvido falar sobre o movimento de geração de conteúdo estático. Cada vez mais os desenvolvedores estão adotando isso em seus projetos e portfolios. Um ótimo exemplo para isso são as páginas estáticas do [GitHub](https://github.com/), onde você pode desenvolver um site estático e servir em uma URL utilizando o branch `gh-pages`. Leia mais sobre como criar páginas Web para repositórios no [GitHub](https://github.com/) [aqui](http://tableless.com.br/criando-paginas-web-para-seus-repositorios-com-o-github-pages/). Ao longo do tempo foram lançadas ótimas ferramentas para geração e compilação de páginas estáticas, dois projetos mais conhecidos são o [Docpad](http://docpad.org/) e o [Jekyll](http://jekyllrb.com/), o último foi desenvolvido pela equipe do Github. Caso queira saber mais sobre isso, existe um ótimo artigo sobre DocPad escrito por Vitor Britto [aqui](http://www.vitorbritto.com.br/blog/a-nova-geracao-web-estrelando-docpad/) e um outro muito bom falando sobre Jekyll no site do [tableless](http://tableless.com.br/jekyll-servindo-sites-estaticos/).
 
-### Aplicações :)
+### Aplicativos :)
 
 A maioria das coisas sobre Markdown é free. Se você pensa em escrever e testar a conversão do markdown de forma fácil, provavelmente você vai gostar de utilizar uma das ferramentas abaixo:
 
@@ -109,6 +109,7 @@ A maioria das coisas sobre Markdown é free. Se você pensa em escrever e testar
 * [Alternativas para Mou no windows](http://alternativeto.net/software/mou/?platform=windows)
 * [ReText](http://sourceforge.net/p/retext/home/ReText/) - Caso você seja usuário de linux
 * [Sublime + Markdown](http://www.macstories.net/roundups/sublime-text-2-and-markdown-tips-tricks-and-links/) - Caso você queira testar direto no sublime, aconselho ler este artigo.
+* [Stack Edit](http://stackedit.io) - Ótima plataforma web
 
 ### Escrevendo um livro
 
