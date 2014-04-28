@@ -14,7 +14,7 @@ language: pt-br
 
 Algum tempo atrás, após passar 6 meses morando em Austin-TX, decidi ~~tentar~~ seguir um fluxo maior de viagens pelo Brasil. Então pensei, nada melhor do que agregar essas viagens a minha busca por conhecimento. Não é a primeira vez que participo de um evento fora do estado, mas em especial, é a primeira em que saio pra conhecer um pouco da cultura do lugar que visito, além do objetivo de obter conhecimento.
 
-Como todos, também fui atraído pela proposta do Abril Pro Ruby, uma conferência tropical de Ruby, que aconteceu nos dias 24 até 27 de abril em Porto de Galinhas. Foi um evento sensasional, que me promoveu a oportunidade de aprender muito, conhecer pessoas incríveis e ainda por cima poder praticar um pouco do meu inglês.
+Como todos, também fui atraído pela proposta do Abril Pro Ruby, uma conferência tropical de Ruby, que aconteceu nos dias 24 até 27 de abril em Porto de Galinhas. Foi um evento sensacional, que me promoveu a oportunidade de aprender muito, conhecer pessoas incríveis e ainda por cima poder praticar um pouco do meu inglês.
 
 O contato com outras comunidades de vários lugares do país tem um grande valor para mim. Conversando com outras pessoas, conhecendo como funciona o mercado de trabalho de cada estado, como estão evoluindo as comunidades ruby no país e até fora do país. Sem dúvida foi um evento sensacional e bem organizado.
 
