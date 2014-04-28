@@ -5,7 +5,7 @@ description: ""
 category:
 date: 2014-04-28
 permalink: /blog/2014-04-28-uma-conferencia-tropical-de-ruby-minha-experiencia-no-abril-pro-ruby-2014
-image_graph: /assets/images/posts/aprb2014.jpg
+image_graph: /assets/images/posts/caravana-aprb-2014.jpg
 language: pt-br
 ---
 
