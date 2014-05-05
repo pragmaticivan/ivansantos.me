@@ -45,7 +45,7 @@ Já tive a oportunidade de trabalhar com alguns sistemas de controle de versão,
 
 Não poderia deixar de falar de workflows no git. Para Projetos open source costumo utilizar o básico workflow baseado em Forks e Pull Requests. Para projetos privados varia um pouco, as vezes Git branching model onde apenas uma pessoa faz review do código (não acho tão eficiente), e as vezes utilizo workflow baseado em Forks, porém todos do time do projeto podem fazer review tanto da feature quanto do código (acho essa forma incrível).
 
-Não poderia deixar de falar de uma fearramenta que utilizo muito diáriamente para trabalhar com [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/), o [Git Flow](http://danielkummer.github.io/git-flow-cheatsheet/), que ajuda muito na organização e merge de branchs para feature, release e bugs.
+Não poderia deixar de falar de uma ferramenta que utilizo muito diáriamente para trabalhar com [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/), o [Git Flow](http://danielkummer.github.io/git-flow-cheatsheet/), que ajuda muito na organização e merge de branchs para feature, release e bugs.
 
 ### Terminal
 Quando se trata de terminal, hoje em dia sempre menciono o Iterm 2, infelizmente não testei muitos dos outros concorrentes além do próprio terminal do Mac OS X, me sinto bem satisfeito. Utilizo também o Hotkey Window do iTerm 2 para funções rápidas fora do escopo do projeto, presionando `fn + f6` surge uma janela no topo da tela.
