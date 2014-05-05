@@ -5,13 +5,15 @@ description: ""
 category:
 date: 2014-05-05
 permalink: /blog/2014-05-05-meu-ambiente-de-trabalho-em-7-itens
-image_graph: /assets/images/posts/camac-os-mavericks.jpg
+image_graph: /assets/images/posts/myworkflow.jpg
 language: pt-br
 ---
 
 <!-- more -->
 
 Resolvi adotar uma antiga brincadeira que a algum tempo atrás foi seguida por muitos desenvolvedores, consequentemente acabei vendo em blogs que costumo ler, como o do [Fernando Vieira](http://simplesideias.com.br/meu-ambiente-de-desenvolvimento-em-7-itens/) e o do [Zeno Rocha](http://zenorocha.com/meu-ambiente-de-trabalho-em-7-itens/). Pensei então, muito tempo atrás quando se fala em tecnologia significa muitas mudanças, e agora? O que todas essas pessoas estão usando no momento? Meu ambiente atual é:
+
+![My Workflow](/assets/images/posts/myworkflow.jpg)
 
 
 ### Máquina / Sistemas Operacionais
@@ -28,7 +30,7 @@ E para finalizar, como parte do meu workflow de sistema operacional, utilizo [Va
 
 
 ### Linguagens de Programação
-Hoje se alguém for perguntar com qual linguagem de programação eu trabalho mais, sem dúvida falaria que ruby, até mais que javascript mesmo tendo um pé na área de front-end. Porém já trabalhei alguns anos com PHP, hoje não utilizo pra mais nada que não seja relativo a Wordpress. Gosto muito de javascript, e a algum tempo venho dando uma lida em node.js. Já trabalhei também com Objective-C em alguns poucos projetos de IOS, porém a mais de 1 ano não tenho oportunidade de trabalhar com isso.
+Hoje se alguém for perguntar com qual linguagem de programação eu mais trabalho, sem dúvida falaria que ruby, até mais que javascript mesmo tendo um pé na área de front-end. Porém já trabalhei alguns anos com PHP, hoje não utilizo pra mais nada que não seja relativo a Wordpress. Gosto muito de javascript, e a algum tempo venho dando uma lida em node.js. Já trabalhei também com Objective-C em alguns poucos projetos de IOS, porém a mais de 1 ano não tenho oportunidade de trabalhar com isso.
 
 ### Editor
 Quem já trabalhou comigo, sabe que utilizo o Sublime Text 3 para quase todos os meus projetos, porém ainda sinto a necessidade de quando a coisa aperta muito, utilizar IDEs como rubymine para debug de aplicações e consumo de memória em execução (Pretendo largar esse vício).
@@ -46,7 +48,7 @@ Não poderia deixar de falar de workflows no git. Para Projetos open source cost
 Não poderia deixar de falar de uma fearramenta que utilizo muito diáriamente para trabalhar com [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/), o [Git Flow](http://danielkummer.github.io/git-flow-cheatsheet/), que ajuda muito na organização e merge de branchs para feature, release e bugs.
 
 ### Terminal
-Quando se trata de terminal, hoje em dia sempre menciono o Iterm 2, infelizmente não testei muitos dos outros concorrentes além do próprio terminal do Mac OS X, me sinto bem satisfeito. Utilizo também o Hotkey Window do iTerm 2 para funções rápidas fora do escopo do projeto, precionando `fn + f6` surge uma janela no topo da tela.
+Quando se trata de terminal, hoje em dia sempre menciono o Iterm 2, infelizmente não testei muitos dos outros concorrentes além do próprio terminal do Mac OS X, me sinto bem satisfeito. Utilizo também o Hotkey Window do iTerm 2 para funções rápidas fora do escopo do projeto, presionando `fn + f6` surge uma janela no topo da tela.
 
 ![iTerm 2](/assets/images/posts/iterm2.jpg)
 
