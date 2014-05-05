@@ -11,7 +11,7 @@ language: pt-br
 
 
 <!-- more -->
-![Markdown logo](/assets/images/posts/markdown-logo.jpg)
+![Markdown logo]({{ site.url }}/assets/images/posts/markdown-logo.jpg)
 
 Se você teve interesse em ler este artigo, provavelmente já ouviu falar sobre Markdown. Mas o que é isso?
 >  Markdown é uma sintaxe de formatação de texto simples visualmente limpo e claro o suficiente para  ser capaz de tornar fácil a escrita e leitura de textos. Além de ter uma fácil utilização, ele pode ser convertido facilmente para HTML.

@@ -10,7 +10,7 @@ language: pt-br
 ---
 
 <!-- more -->
-![Backpack Ivan](/assets/images/posts/backpack-2014.jpg)
+![Backpack Ivan]({{ site.url }}/assets/images/posts/backpack-2014.jpg)
 
 Algum tempo atrás, após passar 6 meses morando em Austin-TX, decidi ~~tentar~~ seguir um fluxo maior de viagens pelo Brasil. Então pensei, nada melhor do que agregar essas viagens a minha busca por conhecimento. Não é a primeira vez que participo de um evento fora do estado, mas em especial, é a primeira em que saio pra conhecer um pouco da cultura do lugar que visito, além do objetivo de obter conhecimento.
 
@@ -22,17 +22,17 @@ No primeiro dia a programação foi marcada pelos incríveis workshops com algum
 
 No Brasil é a primeira vez que participo de um workshop onde o idioma predominante em todo o fluxo é inglês, foi uma experiência incrível, e isso só mostra o quanto os desenvolvedores estão dando atenção a importância do inglês como segunda língua em suas vidas.
 
-![Drinkup](/assets/images/posts/recife-roads.jpg)
+![Drinkup]({{ site.url }}/assets/images/posts/recife-roads.jpg)
 
 Na mesma semana, poucos dias antes, foi anunciado uma grande surpresa, o [Github](http://github.com) promoveu um [Drinkup](https://github.com/blog/1820-recife-brazil-drinkup) na Impact Hub. E é claro que essa eu não iria perder hehe. Tive a oportunidade de rever alguns amigos, e conhecer muitos outros desenvolvedores que estavam participando do evento. Pessoas de vários lugares do mundo, como Alemanha, Irlanda, Estados Unidos e é claro Brasil faziam parte do evento, bem descontraído. Tive a oportunidade de conversar com vários Desenvolvedores ~~gringos~~ que estavam participando do evento. Entendi um pouco de como funciona o mercado e exigência lá fora por uma visão de quem mora lá a anos, e isso só fez aumentar minha vontade de morar fora.
 
 No segundo e no último dia, a equipe organizou alguns passeios turístico em porto de galinha, infelizmente, ou felizmente não fui, por vir de uma cidade cercada de praias, não sou muito apegado a esse tipo de coisa.
 
-![Welcome](/assets/images/posts/welcome-abril-pro-ruby-2014.jpg)
+![Welcome]({{ site.url }}/assets/images/posts/welcome-abril-pro-ruby-2014.jpg)
 
 E finalmente no dia 26 que foi marcado por grandes palestras apresentadas por vários nomes internacionais de várias empresas bem conhecidas como Shopify, SendGrid, Locaweb, Globo.com, Microsoft, Plataformatec e Harvest. Tive a oportunidade de conhecer alguns dos palestrantes previamente. Nesse dia Maceió marcou presença com a parcipação de vários programadores, e isso só me fez ver o quanto a comunidade Ruby evoluiu por aqui, e me motivou mais ainda a participar da organização do próximo encontro do GURU AL que possívelmente irá acontecer em Maio.
 
-![Backpack Ivan](/assets/images/posts/caravana-aprb-2014.jpg)
+![Backpack Ivan]({{ site.url }}/assets/images/posts/caravana-aprb-2014.jpg)
 
 Algumas palestras para mim tiveram um destaque maior. Gostei muito do ponto de vista de MVP aplicado a tecnologias do mercado que [João M. D. Moura](https://twitter.com/joaomdmoura) do Palpiteros mostrou. Em seguida achei muito interessante a abordagem de Projeto Orientado a Domínio e a apresentação de um banco de dados com multiplos paradigmas apresentada por [Lucas Dohmen](https://twitter.com/moonbeamlabs). Uma palestra muito interessante e que despertou filosoficamente a mente de vários desenvolvedores no evento foi a Arquitetura de Sharding do Shopify apresentada por [Arthur Neves](https://twitter.com/arthurnn). Pela primeira vez tive a oportunidade de assistir a palestra de programadores que participam do desenvolvimento do core do Ruby on Rails, Steve Klabnik e Rafael França detonaram no palco. Pra mim uma das abordagens mais interessantes foi feita por [Scott Motte](https://twitter.com/scottmotte) da SendGrid que falou sobre uma abordagem alternativa para autenticação usando apenas e-mail. Todas as palestras foram ótimas, porém essas foram as que me agregaram mais conhecimento.
 

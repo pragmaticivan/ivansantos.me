@@ -13,7 +13,7 @@ language: pt-br
 
 Resolvi adotar uma antiga brincadeira que a algum tempo atrás foi seguida por muitos desenvolvedores, consequentemente acabei vendo em blogs que costumo ler, como o do [Fernando Vieira](http://simplesideias.com.br/meu-ambiente-de-desenvolvimento-em-7-itens/) e o do [Zeno Rocha](http://zenorocha.com/meu-ambiente-de-trabalho-em-7-itens/). Pensei então, muito tempo atrás quando se fala em tecnologia significa muitas mudanças, e agora? O que todas essas pessoas estão usando no momento? Meu ambiente atual é:
 
-![My Workflow](/assets/images/posts/myworkflow.jpg)
+![My Workflow]({{ site.url }}/assets/images/posts/myworkflow.jpg)
 
 
 ### Máquina / Sistemas Operacionais
@@ -26,7 +26,7 @@ Quando preciso de algo fora deste escopo como Windows e Linux, utilizo virtualiz
 E para finalizar, como parte do meu workflow de sistema operacional, utilizo [Vagrant](http://www.vagrantup.com/), e aos poucos utilizando o [Docker](https://www.docker.io/).
 
 
-![Mac OS X](/assets/images/posts/mac-os-mavericks.jpg)
+![Mac OS X]({{ site.url }}/assets/images/posts/mac-os-mavericks.jpg)
 
 
 ### Linguagens de Programação
@@ -35,7 +35,7 @@ Hoje se alguém for perguntar com qual linguagem de programação eu mais trabal
 ### Editor
 Quem já trabalhou comigo, sabe que utilizo o Sublime Text 3 para quase todos os meus projetos, porém ainda sinto a necessidade de quando a coisa aperta muito, utilizar IDEs como rubymine para debug de aplicações e consumo de memória em execução (Pretendo largar esse vício).
 
-![Sublime Text Editor 3](/assets/images/posts/sublime-editor.jpg)
+![Sublime Text Editor 3]({{ site.url }}/assets/images/posts/sublime-editor.jpg)
 
 
 ### Controle de Versão
@@ -50,7 +50,7 @@ Não poderia deixar de falar de uma fearramenta que utilizo muito diáriamente p
 ### Terminal
 Quando se trata de terminal, hoje em dia sempre menciono o Iterm 2, infelizmente não testei muitos dos outros concorrentes além do próprio terminal do Mac OS X, me sinto bem satisfeito. Utilizo também o Hotkey Window do iTerm 2 para funções rápidas fora do escopo do projeto, presionando `fn + f6` surge uma janela no topo da tela.
 
-![iTerm 2](/assets/images/posts/iterm2.jpg)
+![iTerm 2]({{ site.url }}/assets/images/posts/iterm2.jpg)
 
 No terminal costumo utilizar uma versão customizada do ZSH, o [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh).
 
