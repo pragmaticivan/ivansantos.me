@@ -1,6 +1,10 @@
 safe:        false
 baseurl:     /
 
+name: Ivan Santos' Blog
+description: Ivan Santo's Blog
+url: http://ivansjr.com.br
+
 source:      .
 destination: ./_site
 plugins:     ./_plugins
