@@ -37,54 +37,11 @@ Vou explicar de uma forma mais amigável. Markdwon pode ser facilmente escrito c
 Veja um exemplo de como funciona o processo de conversão:
 
 #### Texto em Markdown:
-
-```
-A First Level Header
-====================
-
-A Second Level Header
----------------------
-
-Now is the time for all good men to come to
-the aid of their country. This is just a
-regular paragraph.
-
-The quick brown fox jumped over the lazy
-dog's back.
-
-### Header 3
-
-> This is a blockquote.
->
-> This is the second paragraph in the blockquote.
->
-> ## This is an H2 in a blockquote
-```
+<script src="https://gist.github.com/pragmaticivan/4ff60dadc8f1b70c131d.js"></script>
 
 #### Convertido para HTML:
 
-```
-<h1>A First Level Header</h1>
-
-<h2>A Second Level Header</h2>
-
-<p>Now is the time for all good men to come to
-the aid of their country. This is just a
-regular paragraph.</p>
-
-<p>The quick brown fox jumped over the lazy
-dog's back.</p>
-
-<h3>Header 3</h3>
-
-<blockquote>
-    <p>This is a blockquote.</p>
-
-    <p>This is the second paragraph in the blockquote.</p>
-
-    <h2>This is an H2 in a blockquote</h2>
-</blockquote>
-```
+<script src="https://gist.github.com/pragmaticivan/692ea59cf67f25690ad7.js"></script>
 
 ### Quais sites utilizam atualmente?
 
