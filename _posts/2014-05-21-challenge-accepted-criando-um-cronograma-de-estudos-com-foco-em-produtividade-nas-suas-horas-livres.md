@@ -9,6 +9,7 @@ image_graph: /assets/images/posts/barney.jpg
 language: pt-br
 ---
 
+<!-- more -->
 
 A muito tempo, mesmo antes de iniciar meu processo de graduação, tenho um histórico de aprender as coisas utilizando o método autodidata. Mas isso implica em todo um processo rigoroso para não haver perda de tempo e de foco. Quem já tentou fazer isso sabe dos desafios de se estudar por conta própria. A falta de antenção, os ruídos de casa, pessoas lhe chamando, TV, Video Game, Redes Sociais. Tudo isso torna seu processo de estudo um vedadeiro caos. Com o tempo venho adaptando meu tempo livre para tentar aprender algo que agregue ao meu trabalho de forma considerável.
 
