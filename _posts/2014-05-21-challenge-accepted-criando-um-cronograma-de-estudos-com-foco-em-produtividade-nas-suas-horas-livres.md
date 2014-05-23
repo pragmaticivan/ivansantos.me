@@ -13,7 +13,7 @@ language: pt-br
 
 A muito tempo, mesmo antes de iniciar meu processo de graduação, tenho um histórico de aprender as coisas utilizando o método autodidata. Mas isso implica em todo um processo rigoroso para não haver perda de tempo e de foco. Quem já tentou fazer isso sabe dos desafios de se estudar por conta própria. A falta de antenção, os ruídos de casa, pessoas lhe chamando, TV, Video Game, Redes Sociais. Tudo isso torna seu processo de estudo um vedadeiro caos. Com o tempo venho adaptando meu tempo livre para tentar aprender algo que agregue ao meu trabalho de forma considerável.
 
-Para adotar uma estilo de estudos assim é necessário muito foco e determinação, algo que particularmente venho tentando adicionar na minha vida. As vezes me isolando de distrações, ou até mesmo utilizando ferramentas para otimização do meu tempo, como por exemplo o pomodoro.
+Para adotar um estilo de estudos assim é necessário muito foco e determinação, algo que particularmente venho tentando adicionar na minha vida. As vezes me isolando de distrações, ou até mesmo utilizando ferramentas para otimização do meu tempo, como por exemplo o pomodoro.
 
 ![Barney Challenge Accepted!]({{ site.url }}/assets/images/posts/barney.jpg)
 
