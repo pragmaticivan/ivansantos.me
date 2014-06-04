@@ -11,7 +11,7 @@ language: pt-br
 
 <!-- more -->
 
-A muito tempo, mesmo antes de iniciar meu processo de graduação, tenho um histórico de aprender as coisas utilizando o método autodidata. Mas isso implica em todo um processo rigoroso para não haver perda de tempo e de foco. Quem já tentou fazer isso sabe dos desafios de se estudar por conta própria. A falta de antenção, os ruídos de casa, pessoas lhe chamando, TV, Video Game, Redes Sociais. Tudo isso torna seu processo de estudo um vedadeiro caos. Com o tempo venho adaptando meu tempo livre para tentar aprender algo que agregue ao meu trabalho de forma considerável.
+A muito tempo, mesmo antes de iniciar meu processo de graduação, tenho um histórico de aprender as coisas utilizando o método autodidata. Mas isso implica em todo um processo rigoroso para não haver perda de tempo e de foco. Quem já tentou fazer isso sabe dos desafios de se estudar por conta própria. A falta de atenção, os ruídos de casa, pessoas lhe chamando, TV, Video Game, Redes Sociais. Tudo isso torna seu processo de estudo um verdadeiro caos. Com o tempo venho adaptando meu tempo livre para tentar aprender algo que agregue ao meu trabalho de forma considerável.
 
 Para adotar um estilo de estudos assim é necessário muito foco e determinação, algo que particularmente venho tentando adicionar na minha vida. As vezes me isolando de distrações, ou até mesmo utilizando ferramentas para otimização do meu tempo, como por exemplo o pomodoro.
 
@@ -47,9 +47,9 @@ Por fim, após aprendizado, se possível e se o tempo permitir, compartilhar o c
 ### Conclusão
 Infelizmente cada vez mais, muitos desenvolvedores não se permitem sair da sua zona de conforto, pessoalmente acho que práticas como essa ajudam muito para o desenvlvimento profissional de um desemvolvedor, até mesmo aqueles que por limitações da empresa em que trabalham, tem problemas em incluir tecnologias novas em projetos.
 
-Práticas como essas fazem com que o desenvolvedor tenha know how de como defender a inclusão de tecnologias na empresa ou time que trabalha. Geralmente ter uma responsabilidade e confiança maior quando se trata de determinado conhecimento.
+Práticas como essas fazem com que o desenvolvedor tenha know-how de como defender a inclusão de tecnologias na empresa ou time que trabalha. Geralmente ter uma responsabilidade e confiança maior quando se trata de determinado conhecimento.
 
-> Noventa e nove por cento das pessoas no mundo estão convencidas de que são incapazes de conquistar as coisas grandes, de modo que passam a objetivar coisas medíocres. O nível de competição é, portanto, muito mais acirrado para as metas "realistas", exisgindo, paradoxalmente, muito mais tempo e energia. Se você é inseguro, adivinhe. O resto do mundo também é. Não superestime a competição e não se subestime. Você é melhor do que acha que é.
+> Noventa e nove por cento das pessoas no mundo estão convencidas de que são incapazes de conquistar as coisas grandes, de modo que passam a objetivar coisas medíocres. O nível de competição é, portanto, muito mais acirrado para as metas "realistas", exigindo, paradoxalmente, muito mais tempo e energia. Se você é inseguro, adivinhe. O resto do mundo também é. Não superestime a competição e não se subestime. Você é melhor do que acha que é.
 
 [Trecho retirado do livro: The 4-Hour Workweek escrito por Timothy Ferriss]
 
