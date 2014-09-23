@@ -26,7 +26,7 @@ Infelizmente sinto que perdi boa parte do meu tempo investindo em freelancer e c
 O termo Open Source (Código aberto em português), diz respeito a software de com código aberto, transparente e de forma colaborativa. Significa que você pode ter um executável final do projeto e também ter acesso ao código fonte de como esse executável foi produzido. Uma vez tendo acesso ao código fonte, é possível compreender como o software foi produzido e o mais importante, é possível modificar, solucionar problemas e adicionar novas funcionalidades. Um grande exemplo é o Kernel do Linux, que teve a contribuição de milhares de desenvolvedores.
 
 
-## Porquê eu deveria contribuir?
+## Por que eu deveria contribuir?
 
 A maioria das vezes se resume no sentimento de solucionar um problema, publicar e ver sua solução sendo utilizada por centenas, milhares, ou até milhões de pessoas. Isso é realmente incrível!
 Mas não é só isso, contribuindo você pode:
