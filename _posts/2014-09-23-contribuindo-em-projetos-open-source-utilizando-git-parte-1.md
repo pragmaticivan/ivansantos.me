@@ -101,4 +101,4 @@ Mesmo existindo a função de gráfico de contributors (ex [Contributors](https:
 O arquivo `LICENSE` represença o tipo de licença do projeto. Geralmente projetos Open Source informam aos usuários e contribuidores o que eles podem e não podem fazer no projeto (usar, modificar, redistribuir, etc). Existem vários tipos de licenças, você pode descobrir qual se encaixa melhor no perfil do seu projeto no site [choosealicense.com](http://choosealicense.com).
 
 #### Documentação e Wikis
-Geralmente projetos iniciam apenas com sua documentação no arquivo `README`. A medida que o projeto cresce é necessário criar outras formas de documentação. Geralmente incluindo em umas pasta `/doc`. Ou criando páginas WIKIs. WIKIs são recursos providos pelo Github ou Bitbucket para que se possa criar documentações simples e navegáveis.
+Geralmente projetos iniciam apenas com sua documentação no arquivo `README`. A medida que o projeto cresce é necessário criar outras formas de documentação. Geralmente incluindo em uma pasta `/doc`. Ou criando páginas WIKIs. WIKIs são recursos providos pelo Github ou Bitbucket para que se possa criar documentações simples e navegáveis.
