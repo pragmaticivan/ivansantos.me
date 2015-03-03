@@ -6,7 +6,7 @@ category:
 date: 2014-04-28
 permalink: /blog/2014-04-28-my-experience-at-abril-pro-ruby-2014
 image_graph: /assets/images/posts/caravana-aprb-2014.jpg
-language: pt-br
+language: en
 ---
 
 <!-- more -->
