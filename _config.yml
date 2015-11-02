@@ -7,12 +7,11 @@ url: http://ivansjr.com.br
 
 source:      .
 destination: ./_site
-plugins:     ./_plugins
+plugins_dir:     ./_plugins
 paginate_path: 'blog/page:num'
 
 future:      true
 lsi:         false
-pygments:    false
 markdown:    redcarpet
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 textile_ext:   textile
@@ -25,8 +24,9 @@ redcarpet:
 
 
 name: Ivan Santos
-pygments: auto
-auto: false
+highlighter: rouge
+
+gems: ['jekyll-paginate']
 
 
 # #Permalink
@@ -40,4 +40,3 @@ exclude: [".rvmrc", ".ruby-version", ".ruby-gemset", "README.md",
   "node_modules", "Gruntfile.js", "bootstrap", "_site_git", "config.rb"
 
   ]
-
