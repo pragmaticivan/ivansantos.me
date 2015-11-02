@@ -24,7 +24,7 @@ redcarpet:
 
 
 name: Ivan Santos
-highlighter: rouge
+highlighter: pygments
 
 gems: ['jekyll-paginate']
 
