@@ -28,7 +28,11 @@ body {
   height: 100%;
 }
 
-
+.sn-nav-wrapper {
+  background-image: -moz-linear-gradient( 0deg, rgb(92,73,120) 40%, rgb(174, 76, 93) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(92,73,120) 40%, rgb(174, 76, 93) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(92,73,120) 40%, rgb(174, 76, 93) 100%);
+}
 
 // HEADER
 .heading-line {
@@ -45,7 +49,7 @@ body {
 }
 
 .site-logo {
-  display: inline-block;;
+  display: inline-block;
   margin-top: 20px;
 }
 .menu-bar {
@@ -54,14 +58,6 @@ body {
   line-height: 140px;
   color: #000;
   font-size: 28px;
-}
-
-// General
-
-.sn-nav-wrapper {
-  background-image: -moz-linear-gradient( 0deg, rgb(92,73,120) 40%, rgb(174, 76, 93) 100%);
-  background-image: -webkit-linear-gradient( 0deg, rgb(92,73,120) 40%, rgb(174, 76, 93) 100%);
-  background-image: -ms-linear-gradient( 0deg, rgb(92,73,120) 40%, rgb(174, 76, 93) 100%);
 }
 
 // Footer
@@ -140,9 +136,6 @@ body {
   padding-top: 30px;
 }
 
-
-
-
 .page-heading {
   margin-top: 20px;
   height: 300px;
@@ -196,4 +189,92 @@ body {
       }
     }
   }
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 500px) and (-webkit-min-device-pixel-ratio: 2) {
+  .site-logo img {
+    width: 130px;
+  }
+  .menu-bar {
+    left: 20px;
+    position: absolute;
+    line-height: 90px;
+    color: #000;
+    font-size: 28px;
+  }
+  .profile-picture {
+    text-align: center;
+  }
+
+  .profile-picture img {
+    width: 70%;
+  }
+  .content-howdy {
+    text-align: center;
+  }
+  .howdy {
+    font-size: 40px;
+    letter-spacing: 16px;
+  }
+
+  .website-owner {
+    font-size: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .profile-description {
+    font-size: 17px;
+  }
+
+  .footer {
+    .social-footer {
+      li {
+        width: 40px;
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+
+}
+
+/* Tablets */
+
+@media only screen and (min-width:500px) {
+  .profile-picture {
+    text-align: center;
+  }
+  .content-howdy {
+    text-align: center;
+  }
+  .website-owner {
+    font-size: 70px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+}
+
+/* Standard Desktop */
+
+@media only screen and (min-width:900px) {
+
+}
+
+
+/* Large screens */
+
+@media only screen and (min-width:1200px) {
+
+}
+
+/* Fucking Large screens */
+
+@media only screen and (min-width:2000px) {
+
 }
