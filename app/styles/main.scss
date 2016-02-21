@@ -263,7 +263,12 @@ body {
 /* Standard Desktop */
 
 @media only screen and (min-width:900px) {
-
+  .profile-picture {
+    text-align: right;
+  }
+  .content-howdy {
+    text-align: left;
+  }
 }
 
 
