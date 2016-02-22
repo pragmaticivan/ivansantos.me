@@ -85,6 +85,7 @@ gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
     'app/CNAME',
+    'app/ivan_cv_en.pdf',
     '!app/*.html'
   ], {
     dot: true
