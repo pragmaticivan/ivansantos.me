@@ -27,11 +27,23 @@ body {
   background: #fff;
   height: 100%;
 }
+.awards {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 900;
+  text-align: right;
+  img {
+    width: 50%;
+  }
+}
 
 .sn-nav-wrapper {
+  background-color: rgb(92,73,120);
   background-image: -moz-linear-gradient( 0deg, rgb(92,73,120) 40%, rgb(174, 76, 93) 100%);
   background-image: -webkit-linear-gradient( 0deg, rgb(92,73,120) 40%, rgb(174, 76, 93) 100%);
   background-image: -ms-linear-gradient( 0deg, rgb(92,73,120) 40%, rgb(174, 76, 93) 100%);
+  background-image: linear-gradient(to right, rgb(92,73,120) 40%, rgb(174, 76, 93) 100%);
 }
 
 // HEADER
