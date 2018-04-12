@@ -1,0 +1,36 @@
+.blog-list__item {
+  padding-bottom: 60px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.blog-list__item__date {
+  color: rgba(0,0,0,0.50);
+  font-size: 14px;
+  letter-spacing: 4.5px;
+  padding-bottom: 6px;
+}
+
+.blog-list__item__title {
+  color: rgba(0,0,0,0.90);
+  font-size: 36px;
+  letter-spacing: 2px;
+  line-height: 41px;
+  margin-left: -2px;
+  padding-bottom: 16px;
+  &:hover {
+    color: rgba(0,0,0,0.50);
+  }
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.blog-list__item__description {
+  color: rgba(0,0,0,0.50);
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 20px;
+}

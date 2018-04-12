@@ -1,0 +1,31 @@
+.greeting {
+  left: 50%;
+  margin-left: -164px;
+  position: absolute;
+  top: 200px;
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    left: 0;
+    margin-left: 0;
+    position: relative;
+    text-align: center;
+    top: 20px;
+  }
+}
+.greeting__calling {
+  border: 4px solid #5C4B77;
+  color: #5C4B77;
+  display: inline-block;
+  font-family: Philosopher;
+  font-size: 80px;
+  padding: 6px 22px;
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    display: inline-block;
+  }
+}
+.greeting__about-me {
+  color: #050505;
+  font-family: Philosopher;
+  font-size: 56px;
+  letter-spacing: -2.95px;
+  padding-top: 10px;
+}

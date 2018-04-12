@@ -1,0 +1,32 @@
+.general-description {
+  margin: 0 auto;
+  max-width: 1200px;
+  div {
+    float: left;
+    width: 50%;
+  }
+  p {
+    color: rgba(0,0,0,0.90);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 24px;
+    padding-bottom: 20px;
+    padding: 0 10px 20px 10px;
+  }
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    padding: 0 20px;
+    div {
+      width: 100%;
+    }
+  }
+}
+
+.general-description:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
