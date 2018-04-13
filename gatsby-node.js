@@ -24,6 +24,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             frontmatter {
               path
               image
+              lang
             }
           }
         }
@@ -39,7 +40,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {
-          image: node.frontmatter.image
+          image: node.frontmatter.image,
+          lang: node.frontmatter.lang
         }, // additional data can be passed via context
       });
     });

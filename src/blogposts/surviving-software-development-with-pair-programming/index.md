@@ -4,6 +4,7 @@ title: Surviving software development with pair programming
 description: "All the questions relative to pair programming start with a necessity of something. Mine happened when I first started working remotely."
 image: "surviving-software-development-with-pair-programming/image1.jpeg"
 date: "2015-08-31"
+lang: "en"
 ---
 
 All the questions relative to pair programming start with a necessity of something. Mine happened when I first started working remotely. I had no idea that as a remote worker, coding communication would be a big issue. The way that I needed to interact with the coworkers and the nature of being part of a project team changed a lot.
