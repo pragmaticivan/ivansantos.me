@@ -39,7 +39,7 @@ export const pageQuery = graphql`
     }
     file(relativePath: { eq: $image}) {
       childImageSharp {
-        resolutions(width: 2000) {
+        resolutions(width: 1900) {
           ...GatsbyImageSharpResolutions_tracedSVG
         }
       }
