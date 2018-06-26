@@ -5,15 +5,9 @@ import './style.scss';
 
 class NavigationBar extends React.Component {
   render() {
-    let logo = null;
-    let logoLarger = null;
-    if (this.props.dark) {
-      logo = require('./ivan-logo-white.png');
-      logoLarger = require('./ivan-logo-white@2x.png');
-    } else {
-      logo = require('./ivan-logo-black.png');
-      logoLarger = require('./ivan-logo-black@2x.png');
-    }
+    const logo = this.props.dark ? require('./ivan-logo-white.png') : require('./ivan-logo-black.png');
+    const logoLarger = this.props.dark ? require('./ivan-logo-white@2x.png') : require('./ivan-logo-black@2x.png');
+
     return(
       <div className="navigation-bar">
         <h1 className="logo">
