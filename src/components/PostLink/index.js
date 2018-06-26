@@ -4,25 +4,18 @@ import RetinaImage from 'react-retina-image';
 import './style.scss';
 
 const PostLink = ({ post }) => {
-  let langFlag = null;
-  let langFlagLarger = null;
-  if (post.frontmatter.lang == 'en') {
-    langFlag = require('./en-flag.png');
-    langFlagLarger = require('./en-flag@2x.png');
-  } else {
-    langFlag = require('./br-flag.png');
-    langFlagLarger = require('./br-flag@2x.png');
-  }
+  const langFlag = post.frontmatter.lang == 'en' ? require('./en-flag.png') : require('./br-flag.png');
+  const langFlagLarger = post.frontmatter.lang == 'en' ? require('./en-flag@2x.png') : require('./br-flag@2x.png');
   return (
-    <div className="blog-list__item">
+    <div className="PostLink__item">
       <Link to={post.frontmatter.path}>
-        <div className="blog-list__item__date">
+        <div className="PostLink__item__date">
           {post.frontmatter.date}
         </div>
-        <div className="blog-list__item__title">
+        <div className="PostLink__item__title">
           <RetinaImage src={[langFlag, langFlagLarger]} /> - {post.frontmatter.title}
         </div>
-        <div className="blog-list__item__description">
+        <div className="PostLink__item__description">
           {post.frontmatter.description}
         </div>
       </Link>

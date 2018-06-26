@@ -1,8 +1,8 @@
-.navigation-bar {
+.NavigationBar {
   padding: 40px 40px 0 40px;
 }
 
-.navigation-bar:after {
+.NavigationBar:after {
   clear: both;
   content: " ";
   display: block;
@@ -11,7 +11,7 @@
   visibility: hidden;
 }
 
-.logo {
+.NavigationBar__logo {
   float: left;
   img {
     height: auto;
@@ -25,7 +25,7 @@
   }
 }
 
-.menu {
+.NavigationBar__menu {
   float: right;
   margin: 30px 0 0 0;
   ul {
@@ -54,13 +54,5 @@
         margin-right: 20px;
       }
     }
-  }
-}
-
-.header__home {
-  background: url('./bg-home-header.png');
-  height: 650px;
-  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    height: 450px;
   }
 }

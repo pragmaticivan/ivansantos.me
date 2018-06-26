@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 
 const GeneralDescription = () => (
-  <div className="general-description">
+  <div className="GeneralDescription">
     <div>
       <p>
         Born and raised in Brazil, in a tropical state called Alagoas,

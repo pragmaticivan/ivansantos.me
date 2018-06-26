@@ -3,7 +3,7 @@ import { withPrefix } from 'gatsby-link';
 import './style.scss';
 
 const ResumeLink = () => (
-  <div className="resume-link">
+  <div className="ResumeLink">
     <a href={withPrefix('/resume.pdf')} >GET MY RESUME</a>
   </div>
 );

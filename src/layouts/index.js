@@ -1,9 +1,8 @@
-import brands from '@fortawesome/fontawesome-free-brands';
 import fbImage from '../../static/facebook.png';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Footer from '../components/Footer';
 import './index.scss';
 
 const TemplateWrapper = ({ children }) => (
@@ -31,25 +30,7 @@ const TemplateWrapper = ({ children }) => (
     <div>
       {children()}
     </div>
-    <footer className="footer">
-      <ul className="social">
-        <li>
-          <a href="https://twitter.com/pragmaticivan" title="Twitter">
-            <FontAwesomeIcon icon={brands.faTwitter} />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/pragmaticivan" title="Github">
-            <FontAwesomeIcon icon={brands.faGithub} />
-          </a>
-        </li>
-        <li>
-          <a href="http://www.linkedin.com/in/pragmaticivan" title="LinkedIn">
-            <FontAwesomeIcon icon={brands.faLinkedin} />
-          </a>
-        </li>
-      </ul>
-    </footer>
+    <Footer/>
   </div>
 )
 

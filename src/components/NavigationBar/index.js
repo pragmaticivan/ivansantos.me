@@ -9,13 +9,13 @@ class NavigationBar extends React.Component {
     const logoLarger = this.props.dark ? require('./ivan-logo-white@2x.png') : require('./ivan-logo-black@2x.png');
 
     return(
-      <div className="navigation-bar">
-        <h1 className="logo">
+      <div className="NavigationBar">
+        <h1 className="NavigationBar__logo">
           <Link to="/">
             <RetinaImage src={[logo, logoLarger]} />
           </Link>
         </h1>
-        <nav className="menu">
+        <nav className="NavigationBar__menu">
           <ul>
             <li>
               <Link to="/">Home</Link>

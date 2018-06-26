@@ -1,18 +1,18 @@
-.blog-list__item {
+.PostLink__item {
   padding-bottom: 60px;
   a {
     text-decoration: none;
   }
 }
 
-.blog-list__item__date {
+.PostLink__item__date {
   color: rgba(0,0,0,0.50);
   font-size: 14px;
   letter-spacing: 4.5px;
   padding-bottom: 6px;
 }
 
-.blog-list__item__title {
+.PostLink__item__title {
   color: rgba(0,0,0,0.90);
   font-size: 36px;
   letter-spacing: 2px;
@@ -34,7 +34,7 @@
   }
 }
 
-.blog-list__item__description {
+.PostLink__item__description {
   color: rgba(0,0,0,0.50);
   font-size: 14px;
   letter-spacing: 2px;

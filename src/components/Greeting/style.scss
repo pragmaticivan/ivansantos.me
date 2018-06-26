@@ -1,4 +1,4 @@
-.greeting {
+.Greeting {
   left: 50%;
   margin-left: -164px;
   position: absolute;
@@ -11,7 +11,7 @@
     top: 20px;
   }
 }
-.greeting__calling {
+.Greeting__calling {
   border: 4px solid #5C4B77;
   color: #5C4B77;
   display: inline-block;
@@ -22,7 +22,7 @@
     display: inline-block;
   }
 }
-.greeting__about-me {
+.Greeting__aboutme {
   color: #050505;
   font-family: Philosopher;
   font-size: 56px;

@@ -69,6 +69,11 @@ body {
 
 .header__home {
   position: relative;
+  background: url('./bg-home-header.png');
+  height: 650px;
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    height: 450px;
+  }
 }
 
 .header__blog {
@@ -158,20 +163,5 @@ body {
     color: rgba(0,0,0,0.90);
     line-height: 41px;
     padding-bottom: 20px;
-  }
-}
-
-.social {
-  text-align: center;
-  li {
-    display: inline-block;
-    margin: 10px 10px 40px 10px;
-    a {
-      font-size: 30px;
-      color: rgba(0,0,0,0.90);
-      &:hover {
-        color: rgba(0,0,0,0.50);
-      }
-    }
   }
 }
