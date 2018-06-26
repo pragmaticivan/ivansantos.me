@@ -23,6 +23,9 @@ class NavigationBar extends React.Component {
             <li>
               <Link to="/blog">Blog</Link>
             </li>
+            <li>
+              <Link to="/pics">Pics</Link>
+            </li>
           </ul>
         </nav>
       </div>
