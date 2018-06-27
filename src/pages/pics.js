@@ -1,8 +1,12 @@
 import NavigationBar from '../components/NavigationBar';
 import PhotographyHighlight from '../components/PhotographyHighlight';
+import PhotographyGallery from '../components/PhotographyGallery';
 import React from 'react';
 
-const PicsPage = () => {
+const PicsPage = ({ data: { allMarkdownRemark: { edges } } }) => {
+  const posts = edges
+    .filter(edge => !!edge.node.frontmatter.date)
+
   return (
     <div>
       <header className="header__pics">
@@ -11,8 +15,41 @@ const PicsPage = () => {
 
       <PhotographyHighlight />
 
+      <PhotographyGallery posts={posts}/>
     </div>
   );
 };
 
 export default PicsPage;
+
+export const pageQuery = graphql`
+  query PicsIndexQuery {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: {regex: "/(\/pics)\/.*\\.md$/"}}
+    ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+            description
+            image {
+              filePath {
+                childImageSharp{
+                    sizes(maxWidth: 630) {
+                        ...GatsbyImageSharpSizes
+                    }
+                }
+              }
+            }
+            lang
+          }
+        }
+      }
+    }
+  }
+`;

@@ -24,8 +24,11 @@ const BlogPage = ({ data: { allMarkdownRemark: { edges } } }) => {
 export default BlogPage
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+  query BlogIndexQuery {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: {regex: "/(\/blogposts)\/.*\\.md$/"}}
+    ) {
       edges {
         node {
           id
