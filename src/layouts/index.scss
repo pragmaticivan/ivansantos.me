@@ -98,6 +98,24 @@ body {
   }
 }
 
+.header__pic-post {
+  position: relative;
+  height: calc(100vh);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  a {
+    color: #ffffff !important;
+  }
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    height: calc(100vh - 400px);
+  }
+}
+
 .blog-list {
   max-width: 1000px;
   margin: 0 auto;
