@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    description: `A fantastic new static site generator.`,
+    title: 'Ivan Santos',
+    description: 'A Brazilian software developer specializing on fault-tolerant applications',
     siteUrl: `https://ivansantos.me`
   },
   plugins: [
@@ -74,14 +74,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/blogposts`,
+        path: `${__dirname}/src/content/blogposts`,
         name: "markdown-pages",
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pics`,
+        path: `${__dirname}/src/content/pics`,
         name: "markdown-pages",
       },
     },
