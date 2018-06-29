@@ -2,7 +2,7 @@
 path: "/blog/surviving-software-development-with-pair-programming"
 title: Surviving software development with pair programming
 description: "All the questions relative to pair programming start with a necessity of something. Mine happened when I first started working remotely."
-image: "surviving-software-development-with-pair-programming/image1.jpeg"
+image: "./image1.jpeg"
 date: "2015-08-31"
 lang: "en"
 ---

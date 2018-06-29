@@ -2,7 +2,7 @@
 path: "/blog/be-the-guide-you-always-wanted-to-have-in-the-past"
 title: Be the guide you always wanted to have in the past.
 description: "How the influence of many professionals have helped me to become what I am today."
-image: "be-the-guide-you-always-wanted-to-have-in-the-past/heading.jpg"
+image: "./heading.jpg"
 date: "2018-04-15"
 lang: "en"
 ---

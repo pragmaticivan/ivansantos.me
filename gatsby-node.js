@@ -25,7 +25,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           node {
             frontmatter {
               path
-              image
               lang
             }
           }
@@ -49,8 +48,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     });
   }).then(() => {
     return graphql(`
-      {
-        allMarkdownRemark(
+    {
+      allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: {fileAbsolutePath: {regex: "/(\/pics)/.*\.md$/"}}
           limit: 1000
@@ -59,15 +58,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             node {
               frontmatter {
                 path
-                image {
-              filePath {
-                childImageSharp{
-                    sizes(maxWidth: 630) {
-                        ...GatsbyImageSharpSizes
-                    }
-                }
-              }
-            }
                 lang
               }
             }
@@ -86,9 +76,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           context: {
             image: node.frontmatter.image,
             lang: node.frontmatter.lang
-          }, // additional data can be passed via context
+          },
         });
       });
-    })
+    });
   });
+
+
 };

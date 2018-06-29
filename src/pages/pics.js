@@ -38,11 +38,12 @@ export const pageQuery = graphql`
             title
             description
             image {
-              filePath {
-                childImageSharp{
-                    sizes(maxWidth: 630) {
-                        ...GatsbyImageSharpSizes
-                    }
+              childImageSharp {
+                sizes(maxWidth: 1600, quality: 90, traceSVG: { color: "#5C4B77" }) {
+                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                }
+                resize(width: 800) {
+                  src
                 }
               }
             }

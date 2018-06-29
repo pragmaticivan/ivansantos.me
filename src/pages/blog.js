@@ -12,11 +12,9 @@ const BlogPage = ({ data: { allMarkdownRemark: { edges } } }) => {
       <header className="header__blog">
         <NavigationBar/>
       </header>
-
       <div className="blog-list">
         {Posts}
       </div>
-
     </div>
   );
 };
@@ -39,6 +37,16 @@ export const pageQuery = graphql`
             title
             description
             lang
+            image {
+              childImageSharp {
+                sizes(maxWidth: 1600, quality: 90, traceSVG: { color: "#328bff" }) {
+                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                }
+                resize(width: 800) {
+                  src
+                }
+              }
+            }
           }
         }
       }

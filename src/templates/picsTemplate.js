@@ -5,12 +5,12 @@ import BlogAvatar from '../components/BlogAvatar';
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark, file } = data; // data.markdownRemark holds our post data
+  const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
-
+  console.log('frontmatter', frontmatter)
   return (
     <div>
-      <header className="header__blog-post" style={{ backgroundImage: `url(${file.childImageSharp.resolutions.src})` }}>
+      <header className="header__blog-post"  style={{ backgroundImage: `url(${frontmatter.image.childImageSharp.sizes.src})`}}>
         <NavigationBar dark={true}/>
         <BlogAvatar/>
       </header>
@@ -26,7 +26,7 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query PicsPostByPath($path: String!, $image: String!) {
+  query PicsPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -34,13 +34,15 @@ export const pageQuery = graphql`
         path
         title
         description
-        image
-      }
-    }
-    file(relativePath: { eq: $image}) {
-      childImageSharp {
-        resolutions(width: 1900) {
-          ...GatsbyImageSharpResolutions_tracedSVG
+        image {
+          childImageSharp {
+            sizes(maxWidth: 1600, quality: 90, traceSVG: { color: "#328bff" }) {
+              ...GatsbyImageSharpSizes_withWebp_tracedSVG
+            }
+            resize(width: 800) {
+              src
+            }
+          }
         }
       }
     }
