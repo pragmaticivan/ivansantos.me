@@ -4,8 +4,7 @@ module.exports = {
     description: 'A Brazilian software developer specializing on fault-tolerant applications',
     siteUrl: `https://ivansantos.me`
   },
-  plugins: [
-    {
+  plugins: [{
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
@@ -20,20 +19,28 @@ module.exports = {
             }
           }
         `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                console.log('edge', JSON.stringify(edge, 2, 2))
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
+        feeds: [{
+          serialize: ({
+            query: {
+              site,
+              allMarkdownRemark
+            }
+          }) => {
+            return allMarkdownRemark.edges.map(edge => {
+              console.log('edge', JSON.stringify(edge, 2, 2))
+              return Object.assign({}, edge.node.frontmatter, {
+                description: edge.node.excerpt,
+                url: site.siteMetadata.siteUrl + edge.node.frontmatter
+                  .path,
+                guid: site.siteMetadata.siteUrl + edge.node.frontmatter
+                  .path,
+                custom_elements: [{
+                  "content:encoded": edge.node.html
+                }],
               })
-            },
-            query: `
+            })
+          },
+          query: `
               {
                 allMarkdownRemark(
                   limit: 1000,
@@ -53,9 +60,8 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-          },
-        ],
+          output: "/rss.xml",
+        }, ],
       },
     },
     'gatsby-plugin-react-helmet',
@@ -66,10 +72,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-postcss-sass`,
-      options: {
-        precision: 8, // SASS default: 5
-      },
+      resolve: `gatsby-plugin-sass`,
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -109,17 +112,15 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 3000,
-            },
+        plugins: [{
+          resolve: `gatsby-remark-images`,
+          options: {
+            // It's important to specify the maxWidth (in pixels) of
+            // the content container as this plugin uses this as the
+            // base for generating different widths of each image.
+            maxWidth: 3000,
           },
-        ],
+        }, ],
       },
     },
   ],

@@ -1,8 +1,6 @@
-import React from 'react';
-import './style.scss';
+import React from 'react'
+import './style.scss'
 
-const BlogAvatar = () => (
-  <div className="BlogAvatar"></div>
-);
+const BlogAvatar = () => <div className="BlogAvatar" />
 
-export default BlogAvatar;
+export default BlogAvatar

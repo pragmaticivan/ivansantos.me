@@ -8,8 +8,8 @@
 
 const path = require("path");
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`);
   const picsPostTemplate = path.resolve(`src/templates/picsTemplate.js`);

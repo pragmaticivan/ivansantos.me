@@ -1,32 +1,36 @@
-import NavigationBar from '../components/NavigationBar';
-import PhotographyHighlight from '../components/PhotographyHighlight';
-import PhotographyGallery from '../components/PhotographyGallery';
-import React from 'react';
+import NavigationBar from '../components/NavigationBar'
+import PhotographyHighlight from '../components/PhotographyHighlight'
+import PhotographyGallery from '../components/PhotographyGallery'
+import React from 'react'
+import Layout from '../components/layout'
 
-const PicsPage = ({ data: { allMarkdownRemark: { edges } } }) => {
-  const posts = edges
-    .filter(edge => !!edge.node.frontmatter.date)
+const PicsPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const posts = edges.filter(edge => !!edge.node.frontmatter.date)
 
   return (
-    <div>
-      <header className="header__pics">
-        <NavigationBar/>
-      </header>
+    <Layout>
+      <div>
+        <header className="header__pics">
+          <NavigationBar />
+        </header>{' '}
+        <PhotographyHighlight />
+        <PhotographyGallery posts={posts} />{' '}
+      </div>{' '}
+    </Layout>
+  )
+}
 
-      <PhotographyHighlight />
-
-      <PhotographyGallery posts={posts}/>
-    </div>
-  );
-};
-
-export default PicsPage;
+export default PicsPage
 
 export const pageQuery = graphql`
   query PicsIndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fileAbsolutePath: {regex: "/(\/pics)\/.*\\.md$/"}}
+      # filter: { fileAbsolutePath: {regex: "/(\/pics)\/.*\\.md$/"}}
     ) {
       edges {
         node {
@@ -53,4 +57,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

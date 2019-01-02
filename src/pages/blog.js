@@ -1,23 +1,29 @@
 import NavigationBar from '../components/NavigationBar';
 import PostLink from '../components/PostLink';
 import React from 'react';
+import Layout from '../components/layout';
+import { graphql } from "gatsby";
 
-const BlogPage = ({ data: { allMarkdownRemark: { edges } } }) => {
+const BlogPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return (
-    <div>
-      <header className="header__blog">
-        <NavigationBar/>
-      </header>
-      <div className="blog-list">
-        {Posts}
-      </div>
-    </div>
-  );
-};
+    <Layout>
+      <div>
+        <header className="header__blog">
+          <NavigationBar />
+        </header>{' '}
+        <div className="blog-list"> {Posts} </div>{' '}
+      </div>{' '}
+    </Layout>
+  )
+}
 
 export default BlogPage
 
@@ -25,7 +31,7 @@ export const pageQuery = graphql`
   query BlogIndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fileAbsolutePath: {regex: "/(\/blogposts)\/.*\\.md$/"}}
+      # filter: { fileAbsolutePath: {regex: "/(\/blogposts)\/.*\\.md$/"}}
     ) {
       edges {
         node {
@@ -52,4 +58,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
