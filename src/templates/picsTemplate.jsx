@@ -1,20 +1,21 @@
-import React from 'react';
-import NavigationBar from '../components/NavigationBar';
-import { graphql } from 'gatsby';
+import React from "react";
+import NavigationBar from "../components/NavigationBar";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+// import PageTransition from "gatsby-plugin-page-transitions";
 
 export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
+  data // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark } = data; // data.markdownRemark holds our post data
+  const { frontmatter, html } = markdownRemark;
   return (
-    <div>
+    // <PageTransition>
+    <Layout>
       <header
         className="header__pic-post"
         style={{
-          backgroundImage: `url(${
-            frontmatter.image.childImageSharp.sizes.src
-          })`,
+          backgroundImage: `url(${frontmatter.image.childImageSharp.sizes.src})`
         }}
       >
         <NavigationBar dark={true} />
@@ -29,8 +30,9 @@ export default function Template({
           />
         </div>
       </div>
-    </div>
-  )
+    </Layout>
+    // </PageTransition>
+  );
 }
 
 export const pageQuery = graphql`
@@ -55,4 +57,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

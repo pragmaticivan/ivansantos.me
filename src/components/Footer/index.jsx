@@ -1,7 +1,7 @@
-import React from 'react';
-import './style.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import brands from '@fortawesome/fontawesome-free-brands';
+import React from "react";
+import "./style.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import brands from "@fortawesome/fontawesome-free-brands";
 
 const Footer = () => (
   <footer className="Footer">
@@ -23,6 +23,6 @@ const Footer = () => (
       </li>
     </ul>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

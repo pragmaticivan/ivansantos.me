@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Img from 'gatsby-image'
-import './style.scss'
+import React from "react";
+import Link from "gatsby-link";
+import Img from "gatsby-image";
+import "./style.scss";
 
 const GalleryLink = ({ post }) => {
   return (
@@ -16,7 +16,7 @@ const GalleryLink = ({ post }) => {
         </div>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default GalleryLink
+export default GalleryLink;

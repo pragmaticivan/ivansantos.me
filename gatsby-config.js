@@ -65,6 +65,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
+    // 'gatsby-plugin-page-transitions',
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-46005483-1",
+      },
+    },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {

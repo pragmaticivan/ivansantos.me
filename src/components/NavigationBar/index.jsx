@@ -1,16 +1,16 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import RetinaImage from 'react-retina-image'
-import './style.scss'
+import React from "react";
+import Link from "gatsby-link";
+import RetinaImage from "react-retina-image";
+import "./style.scss";
 
 class NavigationBar extends React.Component {
   render() {
     const logo = this.props.dark
-      ? require('./ivan-logo-white.png')
-      : require('./ivan-logo-black.png')
+      ? require("./ivan-logo-white.png")
+      : require("./ivan-logo-black.png");
     const logoLarger = this.props.dark
-      ? require('./ivan-logo-white@2x.png')
-      : require('./ivan-logo-black@2x.png')
+      ? require("./ivan-logo-white@2x.png")
+      : require("./ivan-logo-black@2x.png");
 
     return (
       <div className="NavigationBar">
@@ -27,14 +27,14 @@ class NavigationBar extends React.Component {
             <li>
               <Link to="/blog">Blog</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/pics">Pics</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
-    )
+    );
   }
 }
 
-export default NavigationBar
+export default NavigationBar;

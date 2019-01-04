@@ -1,5 +1,5 @@
-import React from 'react'
-import './style.scss'
+import React from "react";
+import "./style.scss";
 
 const PhotographyHighlight = () => (
   <div className="PhotographyHighlight">
@@ -11,6 +11,6 @@ const PhotographyHighlight = () => (
       grab small feelings and atmospheres in order to tell stories.
     </p>
   </div>
-)
+);
 
-export default PhotographyHighlight
+export default PhotographyHighlight;

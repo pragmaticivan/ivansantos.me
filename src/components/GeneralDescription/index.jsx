@@ -1,5 +1,5 @@
-import React from 'react'
-import './style.scss'
+import React from "react";
+import "./style.scss";
 
 const GeneralDescription = () => (
   <div className="GeneralDescription">
@@ -12,10 +12,9 @@ const GeneralDescription = () => (
       </p>
       <p>
         I currently work developing universal web applications with Javascript
-        and APIs with Elixir and Phoenix. I also love to play with
-        docker-related projects.
+        and APIs with Go. I also love to play with docker-related projects.
       </p>
-      <p>Presently I live in Orange County, and work on WeDeploy.</p>
+      <p>Presently I live in Orange County, and work on Zillow.</p>
     </div>
     <div>
       <p>
@@ -30,6 +29,6 @@ const GeneralDescription = () => (
       <p>Fun fact: My dog knows how to dance.</p>
     </div>
   </div>
-)
+);
 
-export default GeneralDescription
+export default GeneralDescription;
