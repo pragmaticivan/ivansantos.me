@@ -2,7 +2,7 @@ import NavigationBar from "../components/NavigationBar";
 import PhotographyHighlight from "../components/PhotographyHighlight";
 import PhotographyGallery from "../components/PhotographyGallery";
 import React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 // import PageTransition from "gatsby-plugin-page-transitions";
 
 const PicsPage = ({

@@ -1,7 +1,7 @@
 import NavigationBar from "../components/NavigationBar";
 import PostLink from "../components/PostLink";
 import React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 // import PageTransition from "gatsby-plugin-page-transitions";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationBar from "../components/NavigationBar";
 import BlogAvatar from "../components/BlogAvatar";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 // import PageTransition from "gatsby-plugin-page-transitions";
 
 export default function Template({
