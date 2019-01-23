@@ -1,7 +1,9 @@
-import React from "react";
-import NavigationBar from "../components/NavigationBar";
 import BlogAvatar from "../components/BlogAvatar";
+import Disqus from 'disqus-react';
 import Layout from "../components/Layout";
+import NavigationBar from "../components/NavigationBar";
+import React from "react";
+
 // import PageTransition from "gatsby-plugin-page-transitions";
 
 export default function Template({
@@ -9,6 +11,13 @@ export default function Template({
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
+
+  const disqusShortname = 'ivansantos-me';
+  const disqusConfig = {
+      url: frontmatter.path,
+      identifier: frontmatter.path,
+      title: frontmatter.title,
+  };
 
   return (
     // <PageTransition>
@@ -31,6 +40,9 @@ export default function Template({
               __html: html
             }}
           />
+          <div>
+            <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig}/>
+          </div>
         </div>
       </div>
     </Layout>
