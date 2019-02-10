@@ -1,7 +1,8 @@
-import React from "react";
-import Link from "gatsby-link";
-import RetinaImage from "react-retina-image";
 import "./style.scss";
+
+import Link from "gatsby-link";
+import React from "react";
+import RetinaImage from "react-retina-image";
 
 class NavigationBar extends React.Component {
   render() {
@@ -15,15 +16,12 @@ class NavigationBar extends React.Component {
     return (
       <div className="NavigationBar">
         <h1 className="NavigationBar__logo">
-          <Link to="/">
-            <RetinaImage src={[logo, logoLarger]} />
+          <Link to="/" title="Ivan Santos - home">
+            <RetinaImage src={[logo, logoLarger]} alt={"Ivan Santos Logo"} />
           </Link>
         </h1>
         <nav className="NavigationBar__menu">
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
             <li>
               <Link to="/blog">Blog</Link>
             </li>

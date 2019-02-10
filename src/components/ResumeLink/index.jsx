@@ -1,10 +1,11 @@
+import "./style.scss";
+
 import React from "react";
 import { withPrefix } from "gatsby-link";
-import "./style.scss";
 
 const ResumeLink = () => (
   <div className="ResumeLink">
-    <a href={withPrefix("/resume.pdf")}>GET MY RESUME</a>
+    <a href={withPrefix("/resume.pdf#non_html")} title="Get My Resume">GET MY RESUME</a>
   </div>
 );
 

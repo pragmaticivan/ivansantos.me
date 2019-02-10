@@ -1,9 +1,10 @@
-import React from "react";
-import fbImage from "../../../static/facebook.png";
+import "./index.scss";
+
+import Footer from "../Footer";
 import Helmet from "react-helmet";
 import PropTypes from "prop-types";
-import Footer from "../Footer";
-import "./index.scss";
+import React from "react";
+import fbImage from "../../../static/facebook.png";
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -74,7 +75,9 @@ const TemplateWrapper = ({ children }) => (
           content: "ivansantos.me"
         }
       ]}
-    />
+    >
+    <html lang="en" />
+    </Helmet>
     <div> {children} </div>
     <Footer />
   </div>
