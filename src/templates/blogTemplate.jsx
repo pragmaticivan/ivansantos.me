@@ -1,5 +1,4 @@
 import BlogAvatar from "../components/BlogAvatar";
-import Disqus from 'disqus-react';
 import Layout from "../components/Layout";
 import NavigationBar from "../components/NavigationBar";
 import React from "react";
@@ -11,14 +10,6 @@ export default function Template({
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
-
-  const disqusShortname = 'ivansantos-me';
-  const disqusConfig = {
-      url: frontmatter.path,
-      identifier: frontmatter.path,
-      title: frontmatter.title,
-  };
-
   return (
     // <PageTransition>
     <Layout>
@@ -40,9 +31,6 @@ export default function Template({
               __html: html
             }}
           />
-          <div>
-            <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig}/>
-          </div>
         </div>
       </div>
     </Layout>
