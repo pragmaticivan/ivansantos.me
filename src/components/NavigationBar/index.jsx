@@ -23,7 +23,7 @@ class NavigationBar extends React.Component {
         <nav className="NavigationBar__menu">
           <ul>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog" rel="preload">Blog</Link>
             </li>
             {/* <li>
               <Link to="/pics">Pics</Link>
