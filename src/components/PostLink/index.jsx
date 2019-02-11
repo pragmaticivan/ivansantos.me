@@ -1,7 +1,8 @@
-import React from "react";
-import Link from "gatsby-link";
-import RetinaImage from "react-retina-image";
 import "./style.scss";
+
+import Link from "gatsby-link";
+import React from "react";
+import RetinaImage from "react-retina-image";
 
 const PostLink = ({ post }) => {
   const langFlag =
@@ -17,7 +18,7 @@ const PostLink = ({ post }) => {
       <Link to={post.frontmatter.path}>
         <div className="PostLink__item__date">{post.frontmatter.date}</div>
         <div className="PostLink__item__title">
-          <RetinaImage src={[langFlag, langFlagLarger]} /> -{" "}
+          <RetinaImage src={[langFlag, langFlagLarger]} alt={post.frontmatter.lang === "en" ? "American Flag": "Brazilian Flag"} /> -{" "}
           {post.frontmatter.title}
         </div>
         <div className="PostLink__item__description">
