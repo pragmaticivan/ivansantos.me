@@ -80,6 +80,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-netlify`,
     // 'gatsby-plugin-page-transitions',
     'gatsby-plugin-offline',
     {
