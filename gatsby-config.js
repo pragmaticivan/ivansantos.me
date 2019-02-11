@@ -64,6 +64,21 @@ module.exports = {
         }, ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ivan Santos`,
+        short_name: `Ivan Santos`,
+        start_url: `/`,
+        background_color: `#FFFFFF`,
+        theme_color: `#5C4B77`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `static/favicon.png`, // This path is relative to the root of the site.
+        include_favicon: true, // Include favicon
+      },
+    },
     'gatsby-plugin-react-helmet',
     // 'gatsby-plugin-page-transitions',
     'gatsby-plugin-offline',
@@ -116,7 +131,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
