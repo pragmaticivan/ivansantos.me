@@ -24,7 +24,7 @@ const IndexPage = () => (
       </section>
 
       <GeneralDescription />
-      <ResumeLink />
+      {/* <ResumeLink /> */}
       <CallToContact />
     </div>
   </Layout>
