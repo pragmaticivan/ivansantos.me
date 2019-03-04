@@ -1,13 +1,13 @@
 ---
 path: "/blog/surviving-software-development-with-pair-programming"
 title: Surviving software development with pair programming
-description: "All the questions relative to pair programming start with a necessity of something. Mine happened when I first started working remotely."
+description: "You start thinking about pair programming when there's a need to learn more through feedback. My necessity happened when I first started working remotely."
 image: "./image1.jpeg"
 date: "2015-08-31"
 lang: "en"
 ---
 
-All the questions relative to pair programming start with a necessity of something. Mine happened when I first started working remotely. I had no idea that as a remote worker, coding communication would be a big issue. The way that I needed to interact with the coworkers and the nature of being part of a project team changed a lot.
+You start thinking about pair programming when there's a need to learn more through feedback. My necessity happened when I first started working remotely. I had no idea that as a remote worker, communication would be a big issue. The way that I needed to interact with the coworkers and the nature of being part of a project team changed a lot.
 
 The necessity of self and project improvement created a process called by “Pair programming”, which means the situation where two people team up on a project and divide the work into distinct roles: the navigator and the driver.
 
