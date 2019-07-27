@@ -80,8 +80,9 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-netlify`,
-    // 'gatsby-plugin-page-transitions',
+    `gatsby-plugin-transition-link`,
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-google-analytics`,
