@@ -85,6 +85,9 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     'gatsby-plugin-offline',
     {
+      resolve: `gatsby-plugin-styled-components`,
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-46005483-1",
