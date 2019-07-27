@@ -1,11 +1,10 @@
 import React from "react";
 import NavigationBar from "../components/NavigationBar";
 import GeneralDescription from "../components/GeneralDescription";
-import ResumeLink from "../components/ResumeLink";
+// import ResumeLink from "../components/ResumeLink";
 import CallToContact from "../components/CallToContact";
 import Greeting from "../components/Greeting";
 import Layout from "../components/Layout";
-// import PageTransition from "gatsby-plugin-page-transitions";
 
 const IndexPage = () => (
   // <PageTransition>
