@@ -3,6 +3,7 @@ import "./style.scss";
 import Link from "gatsby-link";
 import React from "react";
 import RetinaImage from "react-retina-image";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const PostLink = ({ post }) => {
   const langFlag =
@@ -15,7 +16,12 @@ const PostLink = ({ post }) => {
       : require("./br-flag@2x.png");
   return (
     <div className="PostLink__item">
-      <Link to={post.frontmatter.path}>
+      <AniLink
+        to={post.frontmatter.path}
+        paintDrip
+        hex="#5C4B77"
+        rel="preload"
+      >
         <div className="PostLink__item__date">{post.frontmatter.date}</div>
         <div className="PostLink__item__title">
           <RetinaImage src={[langFlag, langFlagLarger]} alt={post.frontmatter.lang === "en" ? "American Flag": "Brazilian Flag"} /> -{" "}
@@ -24,7 +30,7 @@ const PostLink = ({ post }) => {
         <div className="PostLink__item__description">
           {post.frontmatter.description}
         </div>
-      </Link>
+      </AniLink>
     </div>
   );
 };
