@@ -14,7 +14,7 @@ const GeneralDescription = () => (
         I currently work developing universal web applications with Javascript
         and APIs with Go. I also love to play with docker-related projects.
       </p>
-      <p>Presently I live in Orange County, and work on Zillow.</p>
+      <p>Presently I live in Austin-TX, and work for Episource LLC.</p>
     </div>
     <div>
       <p>
