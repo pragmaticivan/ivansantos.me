@@ -21,7 +21,7 @@
     "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-netlify": "^2.0.10",
     "gatsby-plugin-nprogress": "^2.0.7",
-    "gatsby-plugin-offline": "^2.0.20",
+    "gatsby-plugin-offline": "^3.0.29",
     "gatsby-plugin-page-transitions": "^1.0.7",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-sass": "^2.0.7",
@@ -33,7 +33,7 @@
     "gatsby-source-filesystem": "^2.0.12",
     "gatsby-transformer-remark": "^2.1.19",
     "gatsby-transformer-sharp": "^2.1.10",
-    "gsap": "^2.1.3",
+    "gsap": "^3.0.4",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -48,7 +48,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "serve -p 8099 public/",
     "format": "prettier-eslint --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
