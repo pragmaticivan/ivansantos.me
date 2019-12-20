@@ -31,7 +31,7 @@ const NavigationBar = (props) => {
         return (
           <div className="NavigationBar">
             <h1 className="NavigationBar__logo">
-              <AniLink to="/" paintDrip
+              <AniLink to="/" cover
                     hex="#5C4B77" title="Ivan Santos - home">
                 <Img fixed={props.dark ? data.logoWhite.childImageSharp.fixed : data.logoBlack.childImageSharp.fixed} />
               </AniLink>
@@ -41,7 +41,7 @@ const NavigationBar = (props) => {
                 <li>
                   <AniLink
                     to="/blog"
-                    paintDrip
+                    cover
                     hex="#5C4B77"
                     rel="preload"
                   >

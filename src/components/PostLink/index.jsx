@@ -18,7 +18,7 @@ const PostLink = ({ post }) => {
     <div className="PostLink__item">
       <AniLink
         to={post.frontmatter.path}
-        paintDrip
+        cover
         hex="#5C4B77"
         rel="preload"
       >
