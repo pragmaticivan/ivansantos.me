@@ -17,8 +17,8 @@ const IndexPage = () => (
 
       <section className="main-description">
         Hi, I’ m Ivan, a Brazilian software engineer specializing on
-        fault-tolerant applications and DevOps. Well-versed in numerous
-        technologies including Elixir, Ruby, Javascript, Ansible, Docker,
+        fault-tolerant applications and Distributed Systems. Well-versed in numerous
+        technologies including Node.js, Go, React, Graphql, Docker,
         Kubernetes and AWS.
       </section>
 
