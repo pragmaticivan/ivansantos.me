@@ -32,6 +32,7 @@ const NavigationBar = (props) => {
           <div className="NavigationBar">
             <h1 className="NavigationBar__logo">
               <AniLink to="/" cover
+                    duration={0.5}
                     hex="#5C4B77" title="Ivan Santos - home">
                 <Img fixed={props.dark ? data.logoWhite.childImageSharp.fixed : data.logoBlack.childImageSharp.fixed} />
               </AniLink>
@@ -41,6 +42,7 @@ const NavigationBar = (props) => {
                 <li>
                   <AniLink
                     to="/blog"
+                    duration={0.5}
                     cover
                     hex="#5C4B77"
                     rel="preload"
@@ -49,8 +51,14 @@ const NavigationBar = (props) => {
                   </AniLink>
                 </li>
                 {/* <li>
-                <Link to="/pics">Pics</Link>
-              </li> */}
+                  <AniLink duration={0.5} to="/pics">Projects</AniLink>
+                </li>
+                <li>
+                  <AniLink duration={0.5} to="/pics">Talks</AniLink>
+                </li> */}
+                {/* <li>
+                  <AniLink duration={0.5} cover to="/pics">Pics</AniLink>
+                </li> */}
               </ul>
             </nav>
           </div>

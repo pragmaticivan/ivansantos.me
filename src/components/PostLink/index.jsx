@@ -19,6 +19,7 @@ const PostLink = ({ post }) => {
       <AniLink
         to={post.frontmatter.path}
         cover
+        duration={0.5}
         hex="#5C4B77"
         rel="preload"
       >
