@@ -7,7 +7,6 @@ import Greeting from "../components/Greeting";
 import Layout from "../components/Layout";
 
 const IndexPage = () => (
-  // <PageTransition>
   <Layout>
     <div>
       <header className="header__home">
@@ -22,12 +21,10 @@ const IndexPage = () => (
         Kubernetes and AWS.
       </section>
 
-      <GeneralDescription />
       {/* <ResumeLink /> */}
       <CallToContact />
     </div>
   </Layout>
-  // </PageTransition>
 );
 
 export default IndexPage;

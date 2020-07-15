@@ -27,7 +27,6 @@ module.exports = {
             }
           }) => {
             return allMarkdownRemark.edges.map(edge => {
-              console.log('edge', JSON.stringify(edge, 2, 2))
               return Object.assign({}, edge.node.frontmatter, {
                 description: edge.node.excerpt,
                 url: site.siteMetadata.siteUrl + edge.node.frontmatter
@@ -72,8 +71,6 @@ module.exports = {
         start_url: `/`,
         background_color: `#FFFFFF`,
         theme_color: `#5C4B77`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
         icon: `static/favicon.png`, // This path is relative to the root of the site.
         include_favicon: true, // Include favicon
@@ -113,6 +110,20 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/content/pics`,
+        name: "markdown-pages",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/talks`,
+        name: "markdown-pages",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/out-there`,
         name: "markdown-pages",
       },
     },

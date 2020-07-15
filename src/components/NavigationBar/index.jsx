@@ -50,15 +50,30 @@ const NavigationBar = (props) => {
                     Blog
                   </AniLink>
                 </li>
-                {/* <li>
-                  <AniLink duration={0.5} to="/pics">Projects</AniLink>
+                <li>
+                  <AniLink duration={0.5}
+                    cover
+                    hex="#5C4B77"
+                    rel="preload" to="/talks">Talks</AniLink>
                 </li>
                 <li>
-                  <AniLink duration={0.5} to="/pics">Talks</AniLink>
-                </li> */}
-                {/* <li>
-                  <AniLink duration={0.5} cover to="/pics">Pics</AniLink>
-                </li> */}
+                  <AniLink duration={0.5}
+                    cover
+                    hex="#5C4B77"
+                    rel="preload" to="/out-there">Out there</AniLink>
+                </li>
+                <li>
+                  <AniLink duration={0.5}
+                    cover
+                    hex="#5C4B77"
+                    rel="preload" to="/pics">Pics</AniLink>
+                </li>
+                <li>
+                  <AniLink duration={0.5}
+                    cover
+                    hex="#5C4B77"
+                    rel="preload" to="/about">About</AniLink>
+                </li>
               </ul>
             </nav>
           </div>

@@ -30,7 +30,7 @@ const PicsPage = ({
 export default PicsPage;
 
 export const pageQuery = graphql`
-  query PicsIndexQuery {
+  query IntoTheWildIndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: {fileAbsolutePath: {regex: "/(pics)/.*\\.md$/"}}
