@@ -281,12 +281,28 @@ body {
     font-size: 20px;
     color: rgba(0,0,0,0.90);
     line-height: 27px;
+    letter-spacing: 0.16px;
     a {
       color: #5C4B77;
     }
+    
+  }
+  strong {
+    font-weight: bold;
   }
   & > p {
-    padding: 0 0 20px 0;
+    padding: 0 0 28px 0;
+  }
+
+  & > ul {
+    list-style: circle;
+    padding: 30px 0 30px 50px;
+    li {
+      font-size: 18px;
+      padding-bottom: 10px;
+      line-height: 28px;
+      
+    }
   }
   blockquote {
     font-style: italic;
