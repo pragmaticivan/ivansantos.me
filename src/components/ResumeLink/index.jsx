@@ -6,7 +6,7 @@ const Link = styled.a`
   border-radius: 8px;
   border: 1px solid #DCDCDC;
   color: #595959;
-  font-family: Philosopher;
+  font-family: 'Playfair Display', serif;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1.54px;
