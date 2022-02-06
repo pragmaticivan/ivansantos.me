@@ -30,9 +30,7 @@ const NavigationBar = (props: Props = { dark: false }) => {
         <ul>
           <li>
             <Link href="/blog">
-              <a title='Blog'>
-                Blog
-              </a>
+              <a title="Blog">Blog</a>
             </Link>
           </li>
           {/* <li>
@@ -48,9 +46,7 @@ const NavigationBar = (props: Props = { dark: false }) => {
           </li> */}
           <li>
             <Link href="/about">
-              <a title='About'>
-                About
-              </a>
+              <a title="About">About</a>
             </Link>
           </li>
         </ul>

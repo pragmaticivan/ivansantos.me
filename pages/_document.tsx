@@ -24,8 +24,11 @@ export default class Doc extends Document {
           <meta property="og:type" content="website" />
           <meta content="summary_large_image" name="twitter:card" />
           <meta name="theme-color" content="#ffffff" />
-          <meta name="description" content="A Brazilian software engineer specializing in
-          fault-tolerant applications and Distributed Systems" />
+          <meta
+            name="description"
+            content="A Brazilian software engineer specializing in
+          fault-tolerant applications and Distributed Systems"
+          />
 
           <title>Ivan Santos</title>
 

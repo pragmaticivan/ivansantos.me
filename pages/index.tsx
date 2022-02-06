@@ -10,8 +10,11 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>Ivan Santos</title>
-        <meta name="description" content="A Brazilian software engineer specializing in
-          fault-tolerant applications and Distributed Systems" />
+        <meta
+          name="description"
+          content="A Brazilian software engineer specializing in
+          fault-tolerant applications and Distributed Systems"
+        />
       </Head>
 
       <main>
