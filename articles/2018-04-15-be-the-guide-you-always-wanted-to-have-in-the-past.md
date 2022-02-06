@@ -4,6 +4,7 @@ description: "How the influence of many professionals have helped me to become w
 image: /content/images/articles/be-the-guide-you-always-wanted-to-have-in-the-past.jpg
 date: "2018-04-15"
 language: "en"
+draft: true
 slug: 2018-04-15-be-the-guide-you-always-wanted-to-have-in-the-past
 ---
 
