@@ -1,9 +1,13 @@
-import { GetStaticPaths, GetStaticProps } from "next"
-import BlogAvatar from "../../components/BlogAvatar"
-import NavigationBar from "../../components/NavigationBar"
-import { Article } from "../../types/article";
+import { GetStaticPaths, GetStaticProps } from 'next';
+import BlogAvatar from '../../components/BlogAvatar';
+import NavigationBar from '../../components/NavigationBar';
+import { Article } from '../../types/article';
 import { ParsedUrlQuery } from 'querystring';
-import { convertMarkdownToHtml, getAllArticles, getArticleBySlug } from "../../lib/article";
+import {
+  convertMarkdownToHtml,
+  getAllArticles,
+  getArticleBySlug,
+} from '../../lib/article';
 import styles from '../../styles/article.module.scss';
 
 interface Params extends ParsedUrlQuery {
@@ -22,25 +26,24 @@ export const getStaticProps: GetStaticProps = async (context) => {
       'language',
       'slug',
       'title',
-    ])
+    ]);
 
-    const content = await convertMarkdownToHtml(article.content || '')
+    const content = await convertMarkdownToHtml(article.content || '');
 
     return {
       props: {
         ...article,
-        content
+        content,
       },
-      revalidate: 60
-    }
+      revalidate: 60,
+    };
+  } catch (e) {
+    return { props: { errorCode: 404 } };
   }
-  catch (e) {
-    return { props: { errorCode: 404 } }
-  }
-}
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const articles = getAllArticles(['slug'])
+  const articles = getAllArticles(['slug']);
 
   return {
     paths: articles.map((article) => {
@@ -48,11 +51,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
         params: {
           slug: article.slug,
         },
-      }
+      };
     }),
     fallback: 'blocking',
-  }
-}
+  };
+};
 
 export default function ArticleView(article: Article) {
   return (
@@ -60,7 +63,7 @@ export default function ArticleView(article: Article) {
       <header
         className={styles.articleHeader}
         style={{
-          backgroundImage: `url(${article.image})`
+          backgroundImage: `url(${article.image})`,
         }}
       >
         <NavigationBar dark={true} /> <BlogAvatar />
@@ -72,12 +75,11 @@ export default function ArticleView(article: Article) {
           <div
             className={styles.content}
             dangerouslySetInnerHTML={{
-              __html: article.content
+              __html: article.content,
             }}
           />
         </div>
       </div>
     </>
-  )
+  );
 }
-

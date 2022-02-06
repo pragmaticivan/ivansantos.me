@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 interface Props {
-  dark?: boolean
+  dark?: boolean;
 }
 
 const NavigationBar = (props: Props = { dark: false }) => {
@@ -14,7 +14,11 @@ const NavigationBar = (props: Props = { dark: false }) => {
         <Link href="/" passHref={true}>
           <a>
             <Image
-              src={props.dark ? require('../../public/images/ivan-logo-white.png') : require('../../public/images/ivan-logo-black.png')}
+              src={
+                props.dark
+                  ? require('../../public/images/ivan-logo-white.png')
+                  : require('../../public/images/ivan-logo-black.png')
+              }
               width={200}
               height={77}
               alt="Logo Ivan Santos"

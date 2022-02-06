@@ -40,10 +40,12 @@ export function getArticleBySlug(slug: string, fields: string[] = []) {
 }
 
 export function getAllArticles(fields: string[] = []): Partial<Article>[] {
-  return getArticleFiles()
-    .map((slug) => getArticleBySlug(slug, fields))
-    // @ts-ignore
-    .sort((post1, post2) => (post1.date > post2.date ? '-1' : '1'));
+  return (
+    getArticleFiles()
+      .map((slug) => getArticleBySlug(slug, fields))
+      // @ts-ignore
+      .sort((post1, post2) => (post1.date > post2.date ? '-1' : '1'))
+  );
 }
 
 export async function convertMarkdownToHtml(markdown: VFileCompatible) {

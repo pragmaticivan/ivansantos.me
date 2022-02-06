@@ -21,7 +21,10 @@ const Home: NextPage = () => {
         </header>
 
         <section className={styles.description}>
-          Hi, I’m Ivan! A Brazilian software engineer specializing in fault-tolerant applications and Distributed Systems. Currently adventuring with Node.js, Go, Typescript, Terraform, Kubernetes, and AWS.
+          Hi, I’m Ivan! A Brazilian software engineer specializing in
+          fault-tolerant applications and Distributed Systems. Currently
+          adventuring with Node.js, Go, Typescript, Terraform, Kubernetes, and
+          AWS.
         </section>
 
         <CallToContact />

@@ -1,15 +1,14 @@
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
-import Link from 'next/link';
-import Image from 'next/image';
+// import Link from 'next/link';
+// import Image from 'next/image';
 
-import React from "react";
-import { Talk } from "../../types/talk";
+import React from 'react';
+// import { Talk } from '../../types/talk';
 
-
-interface Props {
-  talk: Talk
-}
+// interface Props {
+//   talk: Talk;
+// }
 const TalkYear = () => {
   // const langFlagLarger =
   //   talk.language === "en"

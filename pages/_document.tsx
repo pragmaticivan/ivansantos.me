@@ -25,12 +25,7 @@ export default class Doc extends Document {
           <meta content="summary_large_image" name="twitter:card" />
           <meta name="theme-color" content="#ffffff" />
 
-          <link
-            rel="icon"
-            href="/favicon.png"
-            sizes="any"
-            type="image/png"
-          />
+          <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
         </Head>
         <Main />
         <NextScript />

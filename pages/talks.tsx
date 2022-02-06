@@ -1,6 +1,6 @@
-import NavigationBar from "../components/NavigationBar";
-import TalkYear from "../components/TalkYear";
-import React from "react";
+import NavigationBar from '../components/NavigationBar';
+import TalkYear from '../components/TalkYear';
+import React from 'react';
 import items from '../content/talks';
 
 export async function getStaticProps() {
@@ -11,13 +11,12 @@ export async function getStaticProps() {
   };
 }
 
-
 const Talks = () => {
   const renderAll = () => {
     return items.map((item, index) => {
-      return <TalkYear />;
-    })
-  }
+      return <TalkYear key={index} />;
+    });
+  };
 
   return (
     <div>

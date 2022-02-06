@@ -24,7 +24,9 @@ const ArticleItem = ({ article }: Props) => {
               src={langFlagLarger}
               width={36}
               height={23}
-              alt={article.language === 'en' ? 'American Flag' : 'Brazilian Flag'}
+              alt={
+                article.language === 'en' ? 'American Flag' : 'Brazilian Flag'
+              }
             />{' '}
             - {article.title}
           </div>
