@@ -15,7 +15,7 @@ export async function getStaticProps() {
 const Talks = () => {
   const renderAll = () => {
     return items.map((item, index) => {
-      return <TalkYear talkYear={item} />;
+      return <TalkYear />;
     })
   }
 

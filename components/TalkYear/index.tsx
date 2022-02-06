@@ -10,7 +10,7 @@ import { Talk } from "../../types/talk";
 interface Props {
   talk: Talk
 }
-const TalkYear = ({ talk }: Props) => {
+const TalkYear = () => {
   // const langFlagLarger =
   //   talk.language === "en"
   //     ? require("./en-flag@2x.png")
