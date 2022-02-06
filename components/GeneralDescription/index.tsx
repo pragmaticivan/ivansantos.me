@@ -15,19 +15,27 @@ const GeneralDescription = () => (
     <div className={styles.content}>
       <div>
         <p>
-          Born and raised in Brazil, in a tropical state called Alagoas, I discovered my love for technology at a young age. Years later, I have delved into software development and have challenged myself to develop many projects.
+          Born and raised in Brazil, in a tropical state called Alagoas, I
+          discovered my love for technology at a young age. Years later, I have
+          delved into software development and have challenged myself to develop
+          many projects.
         </p>
         <p>
-          I currently work developing universal web applications with Javascript and APIs with Go. I also love to play with docker-related projects.
+          I currently work developing universal web applications with Javascript
+          and APIs with Go. I also love to play with docker-related projects.
         </p>
         <p>Presently I live in Austin-TX and work for Everquote.</p>
       </div>
       <div>
         <p>
-          When I'm not at my computer, I love to travel and capture everything through my camera lens. Not looking to be a professional, but just another memory-lover who wants to remember how extraordinary life is.
+          When I`&apos;`m not at my computer, I love to travel and capture
+          everything through my camera lens. Not looking to be a professional,
+          but just another memory-lover who wants to remember how extraordinary
+          life is.
         </p>
         <p>
-          I've been adventuring with a few dance styles in my free time, but my favorite is Lindy Hop!
+          I`&apos;`ve been adventuring with a few dance styles in my free time,
+          but my favorite is Lindy Hop!
         </p>
         <p>Fun fact: My dog knows how to dance.</p>
       </div>

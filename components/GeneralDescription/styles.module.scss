@@ -3,12 +3,7 @@
   max-width: 1200px;
   padding: 50px 0 50px 0;
 
-  .content {
-    div {
-      float: left;
-      width: 50%;
-    }
-  }
+
 
   p {
     color: rgba(0, 0, 0, 0.90);
@@ -26,6 +21,15 @@
     div {
       width: 100%;
     }
+  }
+}
+
+.content {
+  padding-top: 100px;
+
+  div {
+    float: left;
+    width: 50%;
   }
 }
 
