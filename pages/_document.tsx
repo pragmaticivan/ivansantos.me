@@ -6,6 +6,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document';
+import { GA_TRACKING_ID } from '../lib/google-analytics';
 
 export default class Doc extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -33,6 +34,21 @@ export default class Doc extends Document {
           <title>Ivan Santos</title>
 
           <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
+
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}');
+          `,
+            }}
+          />
         </Head>
         <Main />
         <NextScript />
