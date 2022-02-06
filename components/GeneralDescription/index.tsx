@@ -28,13 +28,13 @@ const GeneralDescription = () => (
       </div>
       <div>
         <p>
-          When I`&apos;`m not at my computer, I love to travel and capture
+          When I&apos;m not at my computer, I love to travel and capture
           everything through my camera lens. Not looking to be a professional,
           but just another memory-lover who wants to remember how extraordinary
           life is.
         </p>
         <p>
-          I`&apos;`ve been adventuring with a few dance styles in my free time,
+          I&apos;ve been adventuring with a few dance styles in my free time,
           but my favorite is Lindy Hop!
         </p>
         <p>Fun fact: My dog knows how to dance.</p>
