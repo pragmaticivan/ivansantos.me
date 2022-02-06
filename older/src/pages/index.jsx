@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationBar from "../components/NavigationBar";
 import GeneralDescription from "../components/GeneralDescription";
-// import ResumeLink from "../components/ResumeLink";
+import ResumeLink from "../components/ResumeLink";
 import CallToContact from "../components/CallToContact";
 import Greeting from "../components/Greeting";
 import Layout from "../components/Layout";
@@ -21,7 +21,7 @@ const IndexPage = () => (
         Kubernetes and AWS.
       </section>
 
-      {/* <ResumeLink /> */}
+      <ResumeLink />
       <CallToContact />
     </div>
   </Layout>

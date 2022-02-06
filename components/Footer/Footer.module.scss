@@ -1,0 +1,18 @@
+.social {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 10px 10px 40px 10px;
+
+    a {
+      font-size: 30px;
+      color: rgba(0, 0, 0, 0.90);
+      text-decoration: none;
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.50);
+      }
+    }
+  }
+}
