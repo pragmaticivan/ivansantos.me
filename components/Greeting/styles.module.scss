@@ -1,34 +1,27 @@
 .greeting {
-  left: 50%;
-  margin-left: -164px;
-  position: absolute;
-  top: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    left: 0;
-    margin-left: 0;
-    position: relative;
-    text-align: center;
-    top: 20px;
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    margin-top: 40px;
   }
 }
 
 .calling {
-  border: 4px solid #5C4B77;
-  color: #5C4B77;
-  display: inline-block;
-  font-family: 'Playfair Display', serif;
+  border: 4px solid var(--secondaryColor);
+  color: var(--secondaryColor);
   font-size: 80px;
   padding: 6px 22px;
+  border-radius: 10px;
 
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    display: inline-block;
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    font-size: 40px;
   }
 }
 
 .aboutme {
   color: #050505;
-  font-family: 'Playfair Display', serif;
   font-size: 56px;
   letter-spacing: -2.95px;
   padding-top: 10px;

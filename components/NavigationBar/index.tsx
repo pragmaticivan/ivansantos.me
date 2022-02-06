@@ -21,7 +21,7 @@ const NavigationBar = (props: Props = { dark: false }) => {
               }
               width={200}
               height={77}
-              alt="Logo Ivan Santos"
+              alt="Ivan Santos - Logo"
             />
           </a>
         </Link>
@@ -29,7 +29,11 @@ const NavigationBar = (props: Props = { dark: false }) => {
       <nav className={styles.menu}>
         <ul>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog">
+              <a title='Blog'>
+                Blog
+              </a>
+            </Link>
           </li>
           {/* <li>
             <Link href="/talks">Talks</Link>
@@ -43,7 +47,11 @@ const NavigationBar = (props: Props = { dark: false }) => {
               href="/pics">Pics</Link>
           </li> */}
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about">
+              <a title='About'>
+                About
+              </a>
+            </Link>
           </li>
         </ul>
       </nav>

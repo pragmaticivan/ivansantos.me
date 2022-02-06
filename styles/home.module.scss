@@ -2,23 +2,22 @@
   position: relative;
   background: url('../public/images/bg-home-header.png');
   height: 550px;
+  border-bottom: 3px solid #f1f1f1;
 
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     height: 450px;
   }
 }
 
-
 .description {
   max-width: 1000px;
   margin: 0 auto;
-  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 26px;
-  color: #000000;
+  color: var(--primaryColor);
   text-align: center;
   line-height: 40px;
-  padding: 100px 0;
+  padding: 50px 0;
 
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     padding: 50px 20px;

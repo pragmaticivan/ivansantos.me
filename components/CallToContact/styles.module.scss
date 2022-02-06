@@ -1,6 +1,5 @@
 .contact {
   color: rgba(0, 0, 0, 0.90);
-  font-family: 'Playfair Display', serif;
   font-size: 20px;
   line-height: 22px;
   letter-spacing: 2px;
@@ -13,5 +12,10 @@
   a {
     color: rgba(0, 0, 0, 0.90);
     text-decoration: none;
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
