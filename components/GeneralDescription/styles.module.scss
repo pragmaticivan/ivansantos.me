@@ -1,18 +1,8 @@
-.GeneralDescription {
+.description {
   margin: 0 auto;
   max-width: 1200px;
   padding: 50px 0 50px 0;
-  .picture {
-    display: flex;
-    justify-content: center;
 
-  }
-  img {
-    width: 300px;
-    align-self: center;
-    border-radius: 50%;
-    margin-bottom: 100px;;
-  }
   .content {
     div {
       float: left;
@@ -21,7 +11,7 @@
   }
 
   p {
-    color: rgba(0,0,0,0.90);
+    color: rgba(0, 0, 0, 0.90);
     font-size: 18px;
     font-weight: 300;
     letter-spacing: 1px;
@@ -29,8 +19,10 @@
     padding-bottom: 20px;
     padding: 0 10px 20px 10px;
   }
+
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     padding: 0 20px;
+
     div {
       width: 100%;
     }
@@ -44,4 +36,18 @@
   font-size: 0;
   height: 0;
   visibility: hidden;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 300px;
+    height: 300px;
+    align-self: center;
+    border-radius: 50%;
+    margin-bottom: 100px;
+    ;
+  }
 }

@@ -1,17 +1,24 @@
-import React from "react";
-import styles from "./styles.module.scss";
+import React from 'react';
+import styles from './styles.module.scss';
+import Image from 'next/image';
 
 const GeneralDescription = () => (
-  <div className={styles.GeneralDescription}>
+  <div className={styles.description}>
     <div className={styles.picture}>
-      <img src="https://avatars2.githubusercontent.com/u/301291?s=400&v=4" alt="Ivan Santos Jr" />
+      <Image
+        src="https://avatars2.githubusercontent.com/u/301291?s=400&v=4"
+        alt="Ivan Santos Jr"
+        width={300}
+        height={300}
+      />
     </div>
     <div className={styles.content}>
       <div>
         <p>
           Born and raised in Brazil, in a tropical state called Alagoas, I
-          discovered my love for technology at young age. Years later I have delved into software development, and
-          have challenged myself to develop many projects.
+          discovered my love for technology at young age. Years later I have
+          delved into software development, and have challenged myself to
+          develop many projects.
         </p>
         <p>
           I currently work developing universal web applications with Javascript

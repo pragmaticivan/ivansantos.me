@@ -1,10 +1,9 @@
-import React from "react";
-import styles from "./Greeting.module.scss";
+import React from 'react';
+import styles from './styles.module.scss';
 
 const Greeting = () => (
-  <div className={styles.Greeting}>
-    <div className={styles.Greeting__calling}>HOWDY!</div>
-    <div className={styles.Greeting__aboutme}>I am Ivan Santos</div>
+  <div className={styles.greeting}>
+    <div className={styles.calling}>HOWDY!</div>
   </div>
 );
 

@@ -1,9 +1,9 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import CallToContact from '../components/CallToContact';
 import Greeting from '../components/Greeting';
 import NavigationBar from '../components/NavigationBar';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/home.module.scss';
 
 const Home: NextPage = () => {
   return (
@@ -21,16 +21,13 @@ const Home: NextPage = () => {
         </header>
 
         <section className={styles.description}>
-          Hi, I’ m Ivan, a Brazilian software engineer specializing on
-          fault-tolerant applications and Distributed Systems. Well-versed in numerous
-          technologies including Node.js, Go, React, Graphql, Docker,
-          Kubernetes and AWS.
+          Hi, I’m Ivan! A Brazilian software engineer specializing in fault-tolerant applications and Distributed Systems. Currently adventuring with Node.js, Go, Typescript, Terraform, Kubernetes, and AWS.
         </section>
 
         <CallToContact />
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
