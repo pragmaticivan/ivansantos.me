@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleItem from '../components/ArticleItem';
 import NavigationBar from '../components/NavigationBar';
+import DefaultLayout from '../layouts/DefaultLayout';
 import { getAllArticles } from '../lib/article';
 import styles from '../styles/blog.module.scss';
 import { Article } from '../types/article';
@@ -29,7 +30,11 @@ interface Props {
   articles: Article[];
 }
 
-const IndexPage = ({ articles }: Props) => {
+const title = 'Blog ✍️';
+const subtitle =
+  "I share anything that may help others, technologies I'm using and cool things I've made.";
+
+const BlogPage = ({ articles }: Props) => {
   const renderAll = () => {
     return articles.map((post, index) => {
       if (!post.draft) {
@@ -39,13 +44,13 @@ const IndexPage = ({ articles }: Props) => {
   };
 
   return (
-    <div>
+    <DefaultLayout title={title} description={subtitle}>
       <header className={styles.header}>
         <NavigationBar />
       </header>
       <div className={styles.articleList}>{renderAll()}</div>
-    </div>
+    </DefaultLayout>
   );
 };
 
-export default IndexPage;
+export default BlogPage;

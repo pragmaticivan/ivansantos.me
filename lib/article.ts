@@ -7,7 +7,7 @@ import prism from 'remark-prism';
 import { VFileCompatible } from 'vfile';
 import { Article } from '../types/article';
 
-const articlesDirectory = join(process.cwd(), 'articles');
+const articlesDirectory = join(process.cwd(), 'content/articles');
 
 export function getArticleFiles(): string[] {
   return fs.readdirSync(articlesDirectory);

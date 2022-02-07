@@ -9,6 +9,7 @@ import {
   getArticleBySlug,
 } from '../../lib/article';
 import styles from '../../styles/article.module.scss';
+import DefaultLayout from '../../layouts/DefaultLayout';
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -59,7 +60,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export default function ArticleView(article: Article) {
   return (
-    <>
+    <DefaultLayout title={article.title} description={article.description}>
       <header
         className={styles.articleHeader}
         style={{
@@ -80,6 +81,6 @@ export default function ArticleView(article: Article) {
           />
         </div>
       </div>
-    </>
+    </DefaultLayout>
   );
 }

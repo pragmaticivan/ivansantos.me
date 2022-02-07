@@ -3,11 +3,15 @@ import Head from 'next/head';
 import CallToContact from '../components/CallToContact';
 import Greeting from '../components/Greeting';
 import NavigationBar from '../components/NavigationBar';
+import DefaultLayout from '../layouts/DefaultLayout';
 import styles from '../styles/home.module.scss';
+
+const title = "Hello, I'm Ivan 👋";
+const subtitle = "I'm a software engineer, currently living in Austin, TX.";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <DefaultLayout title="Home" description={`${title} - ${subtitle}`}>
       <Head>
         <title>Ivan Santos</title>
         <meta
@@ -32,7 +36,7 @@ const Home: NextPage = () => {
 
         <CallToContact />
       </main>
-    </div>
+    </DefaultLayout>
   );
 };
 
