@@ -14,7 +14,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -100 },
 }
 
-const DefaultLayout = ({ children, title, description }: Props): JSX.Element => (
+const ArticleLayout = ({ children, title, description }: Props): JSX.Element => (
   <div>
     <NextSeo title={title} description={description} openGraph={{ title, description }} />
     <motion.main
@@ -29,4 +29,4 @@ const DefaultLayout = ({ children, title, description }: Props): JSX.Element => 
   </div>
 )
 
-export default DefaultLayout;
+export default ArticleLayout;

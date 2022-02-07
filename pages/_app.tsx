@@ -20,8 +20,14 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           site_name: 'Ivan Santos | ivansantos.me',
           images: [],
         }}
+        twitter={{
+          handle: '@pragmaticivan',
+          site: 'http://ivansantos.me',
+          cardType: 'summary_large_image',
+        }}
         canonical={url}
       />
+
       <AnimatePresence
         exitBeforeEnter
         initial={false}
