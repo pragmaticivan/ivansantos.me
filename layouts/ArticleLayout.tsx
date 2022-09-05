@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import { NextSeo } from 'next-seo';
-import { motion } from 'framer-motion';
 
 type Props = {
   children: ReactNode
@@ -17,15 +16,7 @@ const variants = {
 const ArticleLayout = ({ children, title, description }: Props): JSX.Element => (
   <div>
     <NextSeo title={title} description={description} openGraph={{ title, description }} />
-    <motion.main
-      initial="hidden"
-      animate="enter"
-      exit="exit"
-      variants={variants}
-      transition={{ type: 'linear' }}
-    >
-      {children}
-    </motion.main>
+    {children}
   </div>
 )
 

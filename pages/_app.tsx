@@ -1,15 +1,16 @@
 import '../styles/globals.scss';
 import 'remixicon/fonts/remixicon.css';
-import { AnimatePresence } from 'framer-motion';
 
 import type { AppProps } from 'next/app';
 import Footer from '../components/Footer';
 import { DefaultSeo } from 'next-seo';
+import NextNProgress from 'nextjs-progressbar';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const url = `https://ivansantos.me${router.route}`;
   return (
     <>
+      <NextNProgress color="#5C4B77" />
       <DefaultSeo
         titleTemplate="%s - Ivan Santos"
         openGraph={{
@@ -28,13 +29,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         canonical={url}
       />
 
-      <AnimatePresence
-        exitBeforeEnter
-        initial={false}
-        onExitComplete={() => window.scrollTo(0, 0)}
-      >
-        <Component {...pageProps} canonical={url} key={url} />
-      </AnimatePresence>
+      <Component {...pageProps} canonical={url} key={url} />
       <Footer />
     </>
   );
