@@ -12,25 +12,25 @@ const NavigationBar = (props: Props = { dark: false }) => {
     <div className={styles.bar}>
       <h1 className={styles.logo}>
         <Link href="/" passHref={true}>
-          <a>
-            <Image
-              src={
-                props.dark
-                  ? require('../../public/images/ivan-logo-white.png')
-                  : require('../../public/images/ivan-logo-black.png')
-              }
-              width={200}
-              height={77}
-              alt="Ivan Santos - Logo"
-            />
-          </a>
+
+          <Image
+            src={
+              props.dark
+                ? require('../../public/images/ivan-logo-white.png')
+                : require('../../public/images/ivan-logo-black.png')
+            }
+            width={200}
+            height={77}
+            alt="Ivan Santos - Logo"
+          />
+
         </Link>
       </h1>
       <nav className={styles.menu}>
         <ul>
           <li>
-            <Link href="/blog">
-              <a title="Blog">Blog</a>
+            <Link href="/blog" title="Blog">
+              Blog
             </Link>
           </li>
           {/* <li>
@@ -45,8 +45,8 @@ const NavigationBar = (props: Props = { dark: false }) => {
               href="/pics">Pics</Link>
           </li> */}
           <li>
-            <Link href="/about">
-              <a title="About">About</a>
+            <Link href="/about" title="About">
+              About
             </Link>
           </li>
         </ul>

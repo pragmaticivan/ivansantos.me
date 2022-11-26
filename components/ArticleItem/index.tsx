@@ -17,21 +17,21 @@ const ArticleItem = ({ article }: Props) => {
   return (
     <div className={styles.articleItem}>
       <Link href={`/blog/${article.slug}/`} passHref={true}>
-        <a>
-          <div className={styles.date}>{article.date}</div>
-          <div className={styles.title}>
-            <Image
-              src={langFlagLarger}
-              width={36}
-              height={23}
-              alt={
-                article.language === 'en' ? 'American Flag' : 'Brazilian Flag'
-              }
-            />{' '}
-            - {article.title}
-          </div>
-          <div className={styles.description}>{article.description}</div>
-        </a>
+
+        <div className={styles.date}>{article.date}</div>
+        <div className={styles.title}>
+          <Image
+            src={langFlagLarger}
+            width={36}
+            height={23}
+            alt={
+              article.language === 'en' ? 'American Flag' : 'Brazilian Flag'
+            }
+          />{' '}
+          - {article.title}
+        </div>
+        <div className={styles.description}>{article.description}</div>
+
       </Link>
     </div>
   );
