@@ -12,7 +12,6 @@ const NavigationBar = (props: Props = { dark: false }) => {
     <div className={styles.bar}>
       <h1 className={styles.logo}>
         <Link href="/" passHref={true}>
-
           <Image
             src={
               props.dark
@@ -23,7 +22,6 @@ const NavigationBar = (props: Props = { dark: false }) => {
             height={77}
             alt="Ivan Santos - Logo"
           />
-
         </Link>
       </h1>
       <nav className={styles.menu}>
