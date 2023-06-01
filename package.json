@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "13.3.4",
+    "next": "13.4.4",
     "next-seo": "^6.0.0",
     "nextjs-progressbar": "^0.0.16",
     "react": "18.2.0",
