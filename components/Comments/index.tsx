@@ -1,22 +1,20 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 
-function Comments() {
-  const ref = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    const scriptElement = document.createElement('script');
-    scriptElement.async = true;
-    scriptElement.crossOrigin = 'anonymous';
-    scriptElement.src = 'https://utteranc.es/client.js';
+import useScript from '../../lib/use-script';
 
-    scriptElement.setAttribute('issue-term', 'url');
-    scriptElement.setAttribute('label', 'comment');
-    scriptElement.setAttribute('repo', 'pragmaticivan/ivansantos.me');
-    scriptElement.setAttribute('theme', 'preferred-color-scheme');
+const Comments = () => {
+  const comment = useRef(null);
 
-    ref.current?.appendChild(scriptElement);
-  }, []);
+  const status = useScript({
+    url: 'https://utteranc.es/client.js',
+    theme: 'github-light',
+    issueTerm: 'url',
+    repo: 'pragmaticivan/ivansantos.me',
+    ref: comment,
+  });
+  console.log('assasas', status);
 
-  return <div ref={ref} />;
-}
+  return <div>{<div ref={comment}></div>}</div>;
+};
 
 export default Comments;
