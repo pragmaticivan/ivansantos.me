@@ -1,5 +1,6 @@
 import '../styles/globals.scss';
 import 'remixicon/fonts/remixicon.css';
+import 'prismjs/themes/prism-okaidia.css';
 
 import type { AppProps } from 'next/app';
 import Footer from '../components/Footer';
