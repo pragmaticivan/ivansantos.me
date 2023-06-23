@@ -3,6 +3,7 @@ import BlogAvatar from '../../components/BlogAvatar';
 import NavigationBar from '../../components/NavigationBar';
 import { Article } from '../../types/article';
 import { ParsedUrlQuery } from 'querystring';
+import Comments from '../../components/Comments';
 import {
   convertMarkdownToHtml,
   getAllArticles,
@@ -79,6 +80,7 @@ export default function ArticleView(article: Article) {
               __html: article.content,
             }}
           />
+          <Comments />
         </div>
       </div>
     </DefaultLayout>
