@@ -13,6 +13,8 @@ Because native HPA only offers scaling by memory and CPU, extending its capabili
 
 Before Keda 2.11.0, replacing your HPA resources with ScaledObjects would require the deletion of the existing HPA before you create a new ScaledObject for a deployment resource.
 
+<img src="/content/images/articles/keda-ownership-transfer-diagram.png" alt="Keda Ownership Transfer" />
+
 
 ## Replacing an HPA with a KEDA ScaledObject
 
