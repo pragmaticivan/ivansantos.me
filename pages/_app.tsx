@@ -7,7 +7,7 @@ import { DefaultSeo } from 'next-seo';
 import NextNProgress from 'nextjs-progressbar';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  const url = `https://ivansantos.me${router.route}`;
+  const url = `https://ivansantos.me${router.asPath}`;
   return (
     <>
       <NextNProgress color="#5C4B77" />
