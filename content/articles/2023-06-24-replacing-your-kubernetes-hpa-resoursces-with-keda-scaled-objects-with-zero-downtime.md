@@ -13,7 +13,7 @@ Because native HPA only offers scaling by memory and CPU, extending its capabili
 
 Before Keda 2.11.0, replacing your HPA resources with ScaledObjects would require the deletion of the existing HPA before you create a new ScaledObject for a deployment resource.
 
-<img src="/content/images/articles/keda-ownership-transfer-diagram.png" alt="Keda Ownership Transfer" />
+<img src="/content/images/articles/keda-ownership-transfer-diagram.png"  width="100%" alt="Keda Ownership Transfer" />
 
 
 ## Replacing an HPA with a KEDA ScaledObject
@@ -31,7 +31,7 @@ spec:
   selector:
     matchLabels:
       app: example-service
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -54,7 +54,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: example-service
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   metrics:
     - resource:
@@ -86,7 +86,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: example-service
-  minReplicaCount:  1
+  minReplicaCount:  2
   maxReplicaCount:  10
   advanced:
     horizontalPodAutoscalerConfig:
@@ -102,10 +102,17 @@ spec:
         value: "50"
     - type: cron
       metadata:
-        timezone: Asia/Kolkata  # The acceptable values would be a value from the IANA Time Zone Database.
-        start: 30 * * * *       # Every hour on the 30th minute
-        end: 45 * * * *         # Every hour on the 45th minute
-        desiredReplicas: "10"
+        timezone: America/Chicago  # The acceptable values would be a value from the IANA Time Zone Database.
+        start: 0 8 * * 1-6      # At 08:00 on every day-of-week from Monday through Saturday.
+        end: 0 18 * * 1-6       # At 18:00 on every day-of-week from Monday through Saturday.
+        desiredReplicas: "5"
+    - type: new-relic
+      metadata:
+        nrql: "SELECT rate(count(apm.service.transaction.duration), 1 second) as 'Web throughput' FROM Metric WHERE (appName like 'example-service-%') AND (transactionType = 'Web') since 20 seconds ago"
+        threshold: '10'
+      authenticationRef:
+        name: __REDACTED__
+        kind: ClusterTriggerAuthentication
 ```
 
 By using the combination of the annotation `autoscaling.keda.sh/transfer-hpa-ownership: "true"` and by setting `advanced.horizontalPodAutoscalerConfig.name` to match the existing HPA name, you are able to achive drop-in replacement of the HPA resource without any disruption.
