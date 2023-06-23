@@ -8,7 +8,7 @@ function Comments() {
     scriptElement.crossOrigin = 'anonymous';
     scriptElement.src = 'https://utteranc.es/client.js';
 
-    scriptElement.setAttribute('issue-term', 'pathname');
+    scriptElement.setAttribute('issue-term', 'url');
     scriptElement.setAttribute('label', 'comment');
     scriptElement.setAttribute('repo', 'pragmaticivan/ivansantos.me');
     scriptElement.setAttribute('theme', 'preferred-color-scheme');
