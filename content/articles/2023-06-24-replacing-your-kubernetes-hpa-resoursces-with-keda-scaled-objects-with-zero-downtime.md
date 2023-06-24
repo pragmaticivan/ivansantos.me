@@ -87,7 +87,7 @@ kind: ScaledObject
 metadata:
   name: example-service
   annotations:
-    autoscaling.keda.sh/transfer-hpa-ownership: "true" # Use to transfer an existing HPA ownership to this ScaledObject
+    scaledobject.keda.sh/transfer-hpa-ownership: "true" # Use to transfer an existing HPA ownership to this ScaledObject
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
