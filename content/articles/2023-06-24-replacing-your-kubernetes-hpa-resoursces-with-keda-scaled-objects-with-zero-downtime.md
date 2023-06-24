@@ -16,6 +16,10 @@ Before Keda 2.11.0, replacing your HPA resources with ScaledObjects would requir
 <img src="/content/images/articles/keda-ownership-transfer-diagram.png"  width="100%" alt="Keda Ownership Transfer" />
 
 
+## Benefits
+
+If your platform team is currently introducing Keda to your organization, instead of requesting planned updates for existing applications, the teams can now progressively update their HPA resource, or your platform team can programmatically send pull requests updating all the HPA manifests to perform an HPA take-over across all your company HPA resources.
+
 ## Replacing an HPA with a KEDA ScaledObject
 
 Given you already have a deployment and an HPA in place:
