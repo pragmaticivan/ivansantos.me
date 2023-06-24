@@ -4,6 +4,7 @@ description: "Um guia prático sobre como contribuir para projetos utilizando gi
 image: /content/images/articles/github-bg.jpg
 date: "2020-07-14"
 language: "pt-br"
+draft: true
 slug: "2020-07-14-contribuindo-em-projectos-open-source-part-1"
 ---
 
