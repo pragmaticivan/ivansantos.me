@@ -1,5 +1,5 @@
 ---
-title: Replacing your Kubernetes HPA resources with Keda ScaledObjects with zero downtime
+title: Replacing your Kubernetes HPA resources with KEDA ScaledObjects with zero downtime
 description: "A guide to steping up your kubernetes HPA game"
 image: /content/images/articles/rocket-sky-1.jpg
 date: "2023-06-24"
@@ -9,16 +9,16 @@ slug: "2023-06-24-replacing-your-kubernetes-hpa-resoursces-with-keda-scaled-obje
 
 ## Context
 
-Because native HPA only offers scaling by memory and CPU, extending its capabilities with Keda is fundamental to achieving reliable resource autoscaling.
+Because native HPA only offers scaling by memory and CPU, extending its capabilities with KEDA is fundamental to achieving reliable resource autoscaling.
 
-Before Keda 2.11.0, replacing your HPA resources with ScaledObjects would require the deletion of the existing HPA before you create a new ScaledObject for a deployment resource.
+Before KEDA 2.11.0, replacing your HPA resources with ScaledObjects would require the deletion of the existing HPA before you create a new ScaledObject for a deployment resource.
 
-<img src="/content/images/articles/keda-ownership-transfer-diagram.png"  width="100%" alt="Keda Ownership Transfer" />
+<img src="/content/images/articles/keda-ownership-transfer-diagram.png"  width="100%" alt="KEDA Ownership Transfer" />
 
 
 ## Benefits
 
-If your platform team is currently introducing Keda to your organization, instead of requesting planned updates for existing applications, the teams can now progressively update their HPA resource, or your platform team can programmatically send pull requests updating all the HPA manifests to perform an HPA take-over across all your company HPA resources.
+If your platform team is currently introducing KEDA to your organization, instead of requesting planned updates for existing applications, the teams can now progressively update their HPA resource, or your platform team can programmatically send pull requests updating all the HPA manifests to perform an HPA take-over across all your company HPA resources.
 
 ## Replacing an HPA with a KEDA ScaledObject
 
