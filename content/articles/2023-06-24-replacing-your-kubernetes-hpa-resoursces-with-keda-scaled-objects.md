@@ -1,10 +1,10 @@
 ---
-title: Replacing your Kubernetes HPA resources with KEDA ScaledObjects with zero downtime
-description: "A guide to steping up your kubernetes HPA game"
+title: Replacing your Kubernetes HPA resources with KEDA ScaledObjects
+description: "A guide to steping up your kubernetes HPA game while achieving zero downtime"
 image: /content/images/articles/rocket-sky-1.jpg
 date: "2023-06-24"
 language: "en"
-slug: "2023-06-24-replacing-your-kubernetes-hpa-resoursces-with-keda-scaled-objects-with-zero-downtime"
+slug: "2023-06-24-replacing-your-kubernetes-hpa-resoursces-with-keda-scaled-objects"
 ---
 
 ## Context
