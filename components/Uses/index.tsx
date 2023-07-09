@@ -29,6 +29,11 @@ const Uses = () => (
         done—I&apos;ll keep this page updated as my setup changes.
       </p>
 
+      <p>
+        Most of these links are amazon affiliate links, so I&apos;ll support my
+        passion for coffee and adventures if you buy through them.
+      </p>
+
       <h2>Desk Setup</h2>
       <ul>
         <li>
@@ -71,8 +76,8 @@ const Uses = () => (
           </a>
         </li>
         <li>
-          Magic Trackpad 2 - I don&apos;t remember the last time I&apos;ve used
-          a mouse.
+          <a href="https://amzn.to/3XHpGUy">Magic Trackpad 2</a> - I don&apos;t
+          remember the last time I&apos;ve used a mouse.
         </li>
       </ul>
 
