@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import Image from 'next/image';
 import lindyComputerImage from '../../public/images/lindy-computer.jpg';
+import Comments from '../Comments';
 
 const Uses = () => (
   <div className={styles.uses}>
@@ -142,12 +143,24 @@ const Uses = () => (
           of choice. I&apos;ve been using it for years and that&apos;s usually
           the first app I install in any new supported device.
         </li>
+        <li>
+          I was born in Brazil and I&apos;ve been living in the US for the past
+          11 years, yet, english doesn&apos;t feel like my first language. I use{' '}
+          <a href="https://www.grammarly.com/">Grammarly</a> to help me with
+          that.
+        </li>
+        <li>
+          Don&apos;t judge me! I still use Apple Mail app. It&apos;s simple, and
+          straight to the point. Open to suggestions.
+        </li>
       </ul>
 
       <h2>Changelog</h2>
       <ul>
         <li>2023-07-09 - Initial draft</li>
       </ul>
+
+      <Comments />
     </div>
   </div>
 );
