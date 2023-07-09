@@ -43,6 +43,11 @@ const NavigationBar = (props: Props = { dark: false }) => {
               href="/pics">Pics</Link>
           </li> */}
           <li>
+            <Link href="/uses" title="Uses">
+              Uses
+            </Link>
+          </li>
+          <li>
             <Link href="/about" title="About">
               About
             </Link>
