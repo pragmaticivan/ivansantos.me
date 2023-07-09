@@ -1,15 +1,18 @@
 import React from 'react';
 import NavigationBar from '../components/NavigationBar';
 import Uses from '../components/Uses';
+import DefaultLayout from '../layouts/DefaultLayout';
 
 const IndexPage = () => (
-  <div>
-    <header className="header__blog">
-      <NavigationBar />
-    </header>
+  <DefaultLayout title="Uses" description={`Uses`}>
+    <div>
+      <header className="header__blog">
+        <NavigationBar />
+      </header>
 
-    <Uses />
-  </div>
+      <Uses />
+    </div>
+  </DefaultLayout>
 );
 
 export default IndexPage;

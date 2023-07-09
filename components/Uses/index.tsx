@@ -15,7 +15,7 @@ const Uses = () => (
       />
     </div>
     <div className={styles.content}>
-      <h2>Uses</h2>
+      <h1>Uses</h1>
       <p>
         There&apos;s something magical about tools. Whether we&apos;re talking
         equipment for a hobby you practice or devices for your profession,
@@ -37,9 +37,9 @@ const Uses = () => (
       <h2>Desk Setup</h2>
       <ul>
         <li>
-          I use{' '}
+          I use 2{' '}
           <a href="https://amzn.to/44mm1Ov">
-            2 Samsung Monitors - 28&apos;&apos;
+            Samsung Monitors - 28&apos;&apos;
           </a>
           . Best developer monitor bang for your buck hands down. Works well if
           you have a ARM based macbook pro.
@@ -62,8 +62,11 @@ const Uses = () => (
           .
         </li>
         <li>
-          I currently use a 2023 16&apos;&apos; Macbook Pro M2 Max with 64 GB
-          ram, 1TB drive.
+          I currently use a{' '}
+          <a href="https://amzn.to/3JQkg3I">
+            2023 16&apos;&apos; Macbook Pro M2 Max with 64 GB ram, 1TB drive
+          </a>
+          .
         </li>
         <li>
           <a href="https://amzn.to/3XIF96K">TerraMaster F4-422 10GbE NAS</a> for
@@ -157,6 +160,11 @@ const Uses = () => (
         <li>
           Don&apos;t judge me! I still use Apple Mail app. It&apos;s simple, and
           straight to the point. Open to suggestions.
+        </li>
+        <li>
+          <a href="https://affinity.serif.com/en-us/">Affinity Suite</a> is my
+          go to for all my design needs. I use Affinity Designer and Affinity
+          Photo.
         </li>
       </ul>
 
