@@ -43,8 +43,9 @@ const Uses = () => (
           <a href="https://www.autonomous.ai/standing-desks/smartdesk-2-home?option_code=Smartdesk2Home-FrameSmartDesk2_DeskFrame.Black%2CModel.Coreframe-Surface_DeskDesign.705x30XLClassic%2CDeskTop.Black">
             Autonomous SmartDesk Core XL Classic
           </a>
-          . This desk has been around for a while, but it's still a great desk.
-          I've had it for 5 years now and it's still going strong.
+          . This desk has been around for a while, but it&apos;s still a great
+          desk. I&apos;ve had it for 5 years now and it&apos;s still going
+          strong.
         </li>
         <li>
           Everything — Monitors, Ethernet, Hard Drives, Webcam, and Power — is
@@ -55,8 +56,8 @@ const Uses = () => (
           .
         </li>
         <li>
-          I currently use a 2023 16" Macbook Pro M2 Max with 64 GB ram, 1TB
-          drive.
+          I currently use a 2023 16&apos;&apos; Macbook Pro M2 Max with 64 GB
+          ram, 1TB drive.
         </li>
         <li>
           <a href="https://amzn.to/3XIF96K">TerraMaster F4-422 10GbE NAS</a> for
@@ -69,27 +70,29 @@ const Uses = () => (
           </a>
         </li>
         <li>
-          Magic Trackpad 2 - I don't remember the last time I've used a mouse.
+          Magic Trackpad 2 - I don&apos;t remember the last time I&apos;ve used
+          a mouse.
         </li>
       </ul>
 
       <h2>Sound & Video</h2>
       <ul>
         <li>
-          <a href="https://amzn.to/3pGbUVD">Sony WH-1000XM5</a>
+          🎧 <a href="https://amzn.to/3pGbUVD">Sony WH-1000XM5</a>
         </li>
         <li>
+          🎧{' '}
           <a href="https://amzn.to/3XH84YQ">
             Apple AirPods Pro (2nd Generation)
           </a>
         </li>
         <li>
-          My webcan is a{' '}
+          📷 My webcan is a{' '}
           <a href="https://amzn.to/44vDJP6">Insta360 Link 4k Webcam</a>, Hands
           down the best webcam I&apos;ve ever used.
         </li>
         <li>
-          <a href="https://amzn.to/3NBpBNq">Blue Yeti USB Microphone</a>
+          🎤 <a href="https://amzn.to/3NBpBNq">Blue Yeti USB Microphone</a>
         </li>
       </ul>
 
@@ -98,7 +101,7 @@ const Uses = () => (
         <li>
           <a href="https://code.visualstudio.com">Visual Studio</a> Code is my
           current editor. I&apos;ve been using it for a few years now and I
-          don't have any reason to switch. I do use vim for quick edits.
+          don&apos;t have any reason to switch. I do use vim for quick edits.
         </li>
         <li>
           I mainly use <a href="https://iterm2.com/">iTerm2</a>, but have been
@@ -111,20 +114,20 @@ const Uses = () => (
         </li>
       </ul>
 
-      <h2>Productivity</h2>
+      <h2>App</h2>
       <ul>
         <li>
           I use <a href="#">Magnet</a> for window management. Sweet!
         </li>
         <li>
-          I've been using <a href="https://www.alfredapp.com/">Alfred</a> for
-          many years and have many workflows but have recently switched over to{' '}
-          <a href="https://www.raycast.com">Raycast</a> which is a very powerful
-          alternative!
+          I&apos;ve been using <a href="https://www.alfredapp.com/">Alfred</a>{' '}
+          for many years and have many workflows but have recently switched over
+          to <a href="https://www.raycast.com">Raycast</a> which is a very
+          powerful alternative!
         </li>
         <li>
           <a href="https://lunar.fyi/">Lunar</a> app is one of the best apps
-          I've used to manage my monitors.
+          I&apos;ve used to manage my monitors.
         </li>
         <li>
           Get truly powerful control over all the audio on your Mac. I use{' '}
@@ -133,6 +136,11 @@ const Uses = () => (
         </li>
         <li>
           It’s about time. I use <a href="#">Cron</a> for scheduling.
+        </li>
+        <li>
+          <a href="https://1password.com/">1Password</a> is my password manager
+          of choice. I&apos;ve been using it for years and that&apos;s usually
+          the first app I install in any new supported device.
         </li>
       </ul>
 
