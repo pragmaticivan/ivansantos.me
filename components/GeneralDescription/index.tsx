@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import Image from 'next/image';
+import FastReadText from '../FastReadText';
 
 const GeneralDescription = () => (
   <div className={styles.description}>
@@ -14,21 +15,30 @@ const GeneralDescription = () => (
     </div>
     <div className={styles.content}>
       <div>
-        <p>American citizen, born and raised in Brazil.</p>
         <p>
-          I currently work on Platform Engineering and Developer Experience with
-          Typescript, Go and Kubernetes.
+          <FastReadText text={'American citizen, born and raised in Brazil.'} />
         </p>
-        <p>I live in Austin-TX and work for Everquote.</p>
+        <p>
+          <FastReadText
+            text={
+              'I currently work on Platform Engineering and Developer Experience with Typescript, Go and Kubernetes.'
+            }
+          />
+        </p>
+        <p>
+          <FastReadText text={'I live in Austin-TX and work for Everquote.'} />
+        </p>
       </div>
       <div>
         <p>
-          When I&apos;m not at my computer, I love to travel, geek about
-          finance, coffee, dancing, and volleyball.
+          <FastReadText
+            text={`When I'm not at my computer, I love to travel, geek about finance, coffee, dancing, and volleyball.`}
+          />
         </p>
         <p>
-          I&apos;ve been adventuring with a few dance styles in my free time,
-          but my favorite is Lindy Hop!
+          <FastReadText
+            text={`I've been adventuring with a few dance styles in my free time, but my favorite is Lindy Hop!`}
+          />
         </p>
       </div>
     </div>
