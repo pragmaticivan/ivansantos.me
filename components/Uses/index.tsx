@@ -1,18 +1,13 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import Image from 'next/image';
-import lindyComputerImage from '../../public/images/lindy-computer.jpg';
+import ivanDeskSetup from '../../public/images/ivan-desk-setup.jpg';
 import Comments from '../Comments';
 
 const Uses = () => (
   <div className={styles.uses}>
     <div className={styles.picture}>
-      <Image
-        src={lindyComputerImage}
-        alt="Ivan Santos Jr"
-        width={200}
-        height={200}
-      />
+      <Image src={ivanDeskSetup} alt="Ivan Santos Desk Setup" />
     </div>
     <div className={styles.content}>
       <h1>Uses</h1>

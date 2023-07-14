@@ -54,14 +54,9 @@
 }
 
 .picture {
-  display: flex;
-  justify-content: center;
-
   img {
-    width: 200px;
-    height: 200px;
-    align-self: center;
-    border-radius: 50%;
-    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px 5px;
   }
 }
