@@ -33,3 +33,11 @@ code {
   background-color: #F0E8E4;
   padding: 1px 3px;
 }
+
+.errorpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
