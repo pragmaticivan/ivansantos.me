@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   const url = `https://ivansantos.me${router.asPath}`;
   return (
     <>
-      <NextNProgress color="#5C4B77" />
+      <NextNProgress color="#093747" />
       <DefaultSeo
         titleTemplate="%s - Ivan Santos"
         openGraph={{
