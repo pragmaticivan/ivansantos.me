@@ -14,11 +14,12 @@ export function getArticleFiles(): string[] {
   return fs.readdirSync(articlesDirectory);
 }
 
-export function getArticleBySlug(slug: string, fields: string[] = []) {
+export function getArticleBySlug(slug: string, fields: (keyof Article)[] = []) {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(articlesDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
+  const { data, content }: { data: Partial<Article>; content: string } =
+    matter(fileContents);
 
   const items: Partial<Article> = {};
 
@@ -40,7 +41,9 @@ export function getArticleBySlug(slug: string, fields: string[] = []) {
   return items;
 }
 
-export function getAllArticles(fields: string[] = []): Partial<Article>[] {
+export function getAllArticles(
+  fields: (keyof Article)[] = []
+): Partial<Article>[] {
   return (
     getArticleFiles()
       .map((slug) => getArticleBySlug(slug, fields))

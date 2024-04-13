@@ -1,4 +1,4 @@
-import { TalkYear } from "../types/talk";
+import { TalkYear } from '../types/talk';
 
 export default [
   {
@@ -18,7 +18,6 @@ export default [
           },
         ],
       },
-    ]
+    ],
   },
 ] as TalkYear[];
-
