@@ -1,10 +1,10 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
-import prism from 'remark-prism';
-import { VFileCompatible } from 'vfile';
+import rehypeStringify from 'rehype-stringify';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
 import { Article } from '../types/article';
 
 const articlesDirectory = join(process.cwd(), 'content/articles');
@@ -48,11 +48,11 @@ export function getAllArticles(fields: string[] = []): Partial<Article>[] {
   );
 }
 
-export async function convertMarkdownToHtml(markdown: VFileCompatible) {
-  const result = await remark()
-    .use(html, { sanitize: false })
-    // @ts-ignore
-    .use(prism)
+export async function convertMarkdownToHtml(markdown: string) {
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeStringify)
     .process(markdown);
   return result.toString();
 }
