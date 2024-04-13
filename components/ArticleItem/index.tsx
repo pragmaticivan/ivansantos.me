@@ -9,6 +9,8 @@ interface Props {
   article: Article;
 }
 
+const escape = require('escape-html');
+
 const ArticleItem = ({ article }: Props) => {
   const langFlagLarger =
     article.language === 'en'
@@ -16,7 +18,7 @@ const ArticleItem = ({ article }: Props) => {
       : require('./br-flag@2x.png');
   return (
     <div className={styles.articleItem}>
-      <Link href={`/blog/${article.slug}/`} passHref={true}>
+      <Link href={`/blog/${escape(article.slug)}/`} passHref={true}>
         <div className={styles.date}>{article.date}</div>
         <div className={styles.title}>
           <Image
