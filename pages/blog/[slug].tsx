@@ -20,7 +20,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   try {
     const { slug } = context.params as Params;
     const article = getArticleBySlug(slug, [
-      'canonical_url',
       'content',
       'date',
       'description',
