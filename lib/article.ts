@@ -5,6 +5,7 @@ import rehypeStringify from 'rehype-stringify';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
+import rehypeHighlight from 'rehype-highlight';
 import { Article } from '../types/article';
 
 const articlesDirectory = join(process.cwd(), 'content/articles');
@@ -52,6 +53,7 @@ export async function convertMarkdownToHtml(markdown: string) {
   const result = await unified()
     .use(remarkParse)
     .use(remarkRehype)
+    .use(rehypeHighlight)
     .use(rehypeStringify)
     .process(markdown);
   return result.toString();
