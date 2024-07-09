@@ -22,6 +22,7 @@ const BlogPage = async () => {
   const renderAll = () => {
     return articles.map((post, index) => {
       if (!post.draft) {
+        // @ts-ignore
         return <ArticleItem key={index} article={post} />;
       }
     });
