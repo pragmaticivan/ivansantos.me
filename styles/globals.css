@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
 
 :root {
-  // Defaults
   --defaultFont: 'Playfair Display', serif;
   --codeFont: arial, sans-serif;
-  // Animation
   --duration: 0.3s;
 
-  // Colors
   --backgroundColor: #ffffff;
   --primaryColor: #000000;
   --secondaryColor: #5C4B77;

@@ -1,7 +1,7 @@
 import React from 'react';
-import NavigationBar from '../components/NavigationBar';
-import OpenSource from '../components/OpenSource';
-import DefaultLayout from '../layouts/DefaultLayout';
+import NavigationBar from '../../components/NavigationBar';
+import OpenSource from '../../components/OpenSource';
+import DefaultLayout from '../../layouts/DefaultLayout';
 
 const OpenSourcePage = () => (
   <DefaultLayout title="Open Source" description={`Open Source`}>

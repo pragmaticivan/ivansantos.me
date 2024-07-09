@@ -9,8 +9,8 @@ interface Props {
 
 const NavigationBar = (props: Props = { dark: false }) => {
   return (
-    <div className={styles.bar}>
-      <h1 className={styles.logo}>
+    <div className="flex sm:justify-between justify-center px-10 pt-10 flex-wrap">
+      <h1>
         <Link href="/" passHref={true}>
           <Image
             src={
@@ -31,17 +31,9 @@ const NavigationBar = (props: Props = { dark: false }) => {
               Blog
             </Link>
           </li>
-          {/* <li>
-            <Link href="/talks">Talks</Link>
-          </li> */}
-          {/* <li>
-            <Link
-              href="/out-there">Out there</Link>
-          </li>
           <li>
-            <Link
-              href="/pics">Pics</Link>
-          </li> */}
+            <Link href="/talks">Talks</Link>
+          </li>
           <li>
             <Link href="/uses" title="Uses">
               Uses

@@ -3,7 +3,7 @@ import { join } from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
-import prism from 'remark-prism';
+// import prism from 'remark-prism';
 import { VFileCompatible } from 'vfile';
 import { Article } from '../types/article';
 
@@ -40,19 +40,19 @@ export function getArticleBySlug(slug: string, fields: string[] = []) {
 }
 
 export function getAllArticles(fields: string[] = []): Partial<Article>[] {
-  return (
+  const data = (
     getArticleFiles()
       .map((slug) => getArticleBySlug(slug, fields))
       // @ts-ignore
       .sort((post1, post2) => (post1.date > post2.date ? '-1' : '1'))
   );
+  return data;
 }
 
 export async function convertMarkdownToHtml(markdown: VFileCompatible) {
   const result = await remark()
     .use(html, { sanitize: false })
-    // @ts-ignore
-    .use(prism)
+    // .use(prism)
     .process(markdown);
   return result.toString();
 }
