@@ -21,14 +21,16 @@ export async function generateStaticParams() {
     'slug',
     'title',
   ]);
-  const data =  articles?.map((article) => {
+  const data = articles?.map((article) => {
     return { slug: article.slug };
   });
 
   return data;
 }
 
-export default async function ArticleView({ params }: Readonly<{ params: { slug: string } }>) {
+export default async function ArticleView({
+  params,
+}: Readonly<{ params: { slug: string } }>) {
   const article = getArticleBySlug(params.slug, [
     'canonical_url',
     'content',

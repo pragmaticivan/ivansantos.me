@@ -8,7 +8,8 @@ import styles from '../styles/home.module.scss';
 
 export const metadata: Metadata = {
   title: `Hello, I'm Ivan 👋`,
-  description: 'Hello, I&#x27;m Ivan 👋 - I&#x27;m a software engineer, currently living in Austin, TX.',
+  description:
+    'Hello, I&#x27;m Ivan 👋 - I&#x27;m a software engineer, currently living in Austin, TX.',
   twitter: {
     card: 'summary_large_image',
   },
@@ -27,13 +28,25 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <header className={clsx('w-full', 'relative', 'border-b-4', 'border-b-gray-100', styles.header)} >
+      <header
+        className={clsx(
+          'w-full',
+          'relative',
+          'border-b-4',
+          'border-b-gray-100',
+          styles.header
+        )}
+      >
         <NavigationBar />
         <Greeting />
       </header>
-      <section className={'container max-w-screen-lg mx-auto font-bold text-2xl leading-10 text-center p-4'}>
-        Hi, my name is Ivan! A Brazilian/American software engineer specializing in
-        fault-tolerant applications and Distributed Systems. Currently
+      <section
+        className={
+          'container mx-auto max-w-screen-lg p-4 text-center text-2xl font-bold leading-10'
+        }
+      >
+        Hi, my name is Ivan! A Brazilian/American software engineer specializing
+        in fault-tolerant applications and Distributed Systems. Currently
         adventuring with Node.js, Go, Typescript, Terraform, Kubernetes, and
         AWS.
       </section>

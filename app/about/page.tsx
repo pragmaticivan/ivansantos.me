@@ -13,6 +13,6 @@ const AboutPage = () => (
     </header>
     <GeneralDescription />
   </>
-)
+);
 
 export default AboutPage;

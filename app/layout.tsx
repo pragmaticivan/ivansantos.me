@@ -16,9 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="RSS 2.0"
+        href="/feed.xml"
+      ></link>
+      <body>{children}</body>
     </html>
   );
 }

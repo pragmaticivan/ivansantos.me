@@ -9,7 +9,7 @@ interface Props {
 
 const NavigationBar = (props: Props = { dark: false }) => {
   return (
-    <div className="flex sm:justify-between justify-center px-10 pt-10 flex-wrap">
+    <div className="flex flex-wrap justify-center px-10 pt-10 sm:justify-between">
       <h1>
         <Link href="/" passHref={true}>
           <Image
