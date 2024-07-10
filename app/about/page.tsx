@@ -2,9 +2,12 @@ import React from 'react';
 
 import NavigationBar from '../../components/NavigationBar';
 import GeneralDescription from '../../components/GeneralDescription';
+import { genPageMetadata } from '../seo';
 
-// const title = "Hello, I'm Ivan 👋";
-// const subtitle = "I'm a software engineer, currently living in Austin, TX.";
+export const metadata = genPageMetadata({
+  title: `Hello, I'm Ivan 👋`,
+  description: `I'm a software engineer, currently living in Austin, TX`,
+});
 
 const AboutPage = () => (
   <>

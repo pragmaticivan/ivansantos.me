@@ -3,10 +3,12 @@ import ArticleItem from '../../components/ArticleItem';
 import NavigationBar from '../../components/NavigationBar';
 import { getAllArticles } from '../../lib/article';
 import styles from '../../styles/blog.module.scss';
+import { genPageMetadata } from '../seo';
 
-// const title = 'Blog ✍️';
-// const subtitle =
-//   "I share anything that may help others, technologies I'm using and cool things I've made.";
+export const metadata = genPageMetadata({
+  title: `Blog ✍️`,
+  description: `I share anything that may help others, technologies I'm using and cool things I've made`,
+});
 
 const BlogPage = async () => {
   const articles = getAllArticles([
