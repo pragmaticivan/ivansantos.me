@@ -4,6 +4,8 @@ import '../styles/globals.css';
 import React from 'react';
 import { Metadata } from 'next';
 import { siteMetadata } from '../lib/site-metadata';
+import { GA_TRACKING_ID } from '../lib/google-analytics';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -52,7 +54,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
+
       <body>{children}</body>
+      <GoogleAnalytics gaId={GA_TRACKING_ID} />
     </html>
   );
 }
