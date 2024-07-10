@@ -25,12 +25,10 @@ export async function generateStaticParams() {
     return { slug: article.slug };
   });
 
-  console.log('dataaaaa', data);
   return data;
 }
 
 export default async function ArticleView({ params }: Readonly<{ params: { slug: string } }>) {
-  console.log('params', params);
   const article = getArticleBySlug(params.slug, [
     'canonical_url',
     'content',
