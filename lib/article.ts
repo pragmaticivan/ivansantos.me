@@ -1,6 +1,15 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import {unified} from 'unified';
+import rehypeDocument from 'rehype-document'
+import rehypeFormat from 'rehype-format'
+import rehypeStringify from 'rehype-stringify'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeHighlight from 'rehype-highlight';
+
+
 import { remark } from 'remark';
 import html from 'remark-html';
 // import prism from 'remark-prism';
@@ -49,10 +58,22 @@ export function getAllArticles(fields: string[] = []): Partial<Article>[] {
   return data;
 }
 
-export async function convertMarkdownToHtml(markdown: VFileCompatible) {
-  const result = await remark()
-    .use(html, { sanitize: false })
-    // .use(prism)
-    .process(markdown);
-  return result.toString();
+export async function convertMarkdownToHtml(markdown: string) {
+
+
+  const file = await unified()
+  .use(remarkParse)
+  .use(remarkRehype)
+  .use(rehypeDocument)
+  .use(rehypeFormat)
+  .use(rehypeStringify)
+  .use(rehypeHighlight)
+  .process(markdown)
+
+
+  // const result = await remark()
+  //   .use(html, { sanitize: false })
+  //   // .use(prism)
+  //   .process(markdown);
+  return String(file)
 }

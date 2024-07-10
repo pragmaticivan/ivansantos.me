@@ -7,6 +7,7 @@ import {
   getArticleBySlug,
 } from '../../../lib/article';
 import styles from '../../../styles/article.module.scss';
+import '../../../styles/highlightjs.css';
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
