@@ -41,6 +41,9 @@ export const siteMetadata = {
     // googleAnalytics: {
     //   googleAnalyticsId: '', // e.g. G-XXXXXXX
     // },
+    googleTagManager: {
+      googleTagManagerId: 'G-7ZH9QQZZZ1'
+    }
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus

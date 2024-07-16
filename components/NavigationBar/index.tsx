@@ -27,6 +27,11 @@ const NavigationBar = (props: Props = { dark: false }) => {
       <nav className={styles.menu}>
         <ul>
           <li>
+            <Link href="/about" title="About">
+              About
+            </Link>
+          </li>
+          <li>
             <Link href="/blog" title="Blog">
               Blog
             </Link>
@@ -42,11 +47,6 @@ const NavigationBar = (props: Props = { dark: false }) => {
           <li>
             <Link href="/open-source" title="Open Source">
               Open Source
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" title="About">
-              About
             </Link>
           </li>
         </ul>
