@@ -15,8 +15,8 @@ const NavigationBar = (props: Props = { dark: false }) => {
           <Image
             src={
               props.dark
-                ? require('../../public/images/ivan-logo-white.png')
-                : require('../../public/images/ivan-logo-black.png')
+                ? '/images/ivan-logo-white.png'
+                : '/images/ivan-logo-black.png'
             }
             width={200}
             height={77}
@@ -32,6 +32,11 @@ const NavigationBar = (props: Props = { dark: false }) => {
             </Link>
           </li>
           <li>
+            <Link href="/uses" title="Uses">
+              Uses
+            </Link>
+          </li>
+          <li>
             <Link href="/blog" title="Blog">
               Blog
             </Link>
@@ -39,11 +44,6 @@ const NavigationBar = (props: Props = { dark: false }) => {
           {/* <li>
             <Link href="/talks">Talks</Link>
           </li> */}
-          <li>
-            <Link href="/uses" title="Uses">
-              Uses
-            </Link>
-          </li>
           <li>
             <Link href="/open-source" title="Open Source">
               Open Source

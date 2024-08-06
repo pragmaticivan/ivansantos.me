@@ -3,7 +3,7 @@ import '../styles/globals.css';
 
 import React from 'react';
 import { Metadata } from 'next';
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google';
 import { siteMetadata } from '../lib/site-metadata';
 
 export const metadata: Metadata = {
@@ -57,7 +57,9 @@ export default function RootLayout({
 
       <body>{children}</body>
 
-      <GoogleTagManager gtmId={siteMetadata.analytics.googleTagManager.googleTagManagerId} />
+      <GoogleTagManager
+        gtmId={siteMetadata.analytics.googleTagManager.googleTagManagerId}
+      />
     </html>
   );
 }

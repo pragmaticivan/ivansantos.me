@@ -1,7 +1,6 @@
 import { clsx } from 'clsx';
 
 import CallToContact from '../components/CallToContact';
-import Greeting from '../components/Greeting';
 import NavigationBar from '../components/NavigationBar';
 import styles from '../styles/home.module.scss';
 
@@ -18,7 +17,11 @@ export default function Page() {
         )}
       >
         <NavigationBar />
-        <Greeting />
+        <div className="flex justify-center pt-28">
+          <div className="rounded-xl border-4 border-cyan-700 px-14 py-6 text-7xl text-cyan-700">
+            HOWDY!
+          </div>
+        </div>
       </header>
       <section
         className={
