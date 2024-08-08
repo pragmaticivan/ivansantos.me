@@ -15,9 +15,7 @@ export const metadata = genPageMetadata({
 
 const IndexPage = () => (
   <>
-    <header className="header__blog">
-      <NavigationBar />
-    </header>
+    <NavigationBar />
 
     <main className="flex-auto">
       <div className="mt-16 sm:mt-32 sm:px-8">

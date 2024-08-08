@@ -7,7 +7,7 @@ import styles from '../styles/home.module.scss';
 export default function Page() {
   return (
     <>
-      <header
+      <div
         className={clsx(
           'w-full',
           'relative',
@@ -22,7 +22,7 @@ export default function Page() {
             HOWDY!
           </div>
         </div>
-      </header>
+      </div>
       <section
         className={
           'container mx-auto max-w-screen-lg p-4 text-center text-2xl font-bold leading-10'

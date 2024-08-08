@@ -11,9 +11,8 @@ export const metadata = genPageMetadata({
 
 const AboutPage = () => (
   <>
-    <header className="header__blog">
-      <NavigationBar />
-    </header>
+    <NavigationBar />
+
     <main className="flex-auto">
       <div className="mt-16 sm:mt-32 sm:px-8">
         <div className="mx-auto w-full max-w-7xl lg:px-8">
