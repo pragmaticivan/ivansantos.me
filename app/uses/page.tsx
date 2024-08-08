@@ -29,35 +29,39 @@ const IndexPage = () => (
               />
             </div>
             <div className={clsx('px-8', styles.content)}>
-              <h1 className="pb-3 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
                 Uses
               </h1>
-              <p>
-                There&apos;s something magical about tools. Whether we&apos;re
-                talking equipment for a hobby you practice or devices for your
-                profession, researching and learning about new potential
-                additions to our toolboxes is an important part of our
-                development.
-              </p>
 
-              <p>
-                Occasionally I&apos;ll get asked about the hardware or software
-                I own and use. I decided to create a list of things that help me
-                get stuff done—I&apos;ll keep this page updated as my setup
-                changes.
-              </p>
+              <div className="my-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400 leading-7">
+                <p>
+                  There&apos;s something magical about tools. Whether we&apos;re
+                  talking equipment for a hobby you practice or devices for your
+                  profession, researching and learning about new potential
+                  additions to our toolboxes is an important part of our
+                  development.
+                </p>
 
-              <p>
-                Most of these links are amazon affiliate links, so I&apos;ll
-                support my passion for coffee and adventures if you buy through
-                them.
-              </p>
+                <p>
+                  Occasionally I&apos;ll get asked about the hardware or software
+                  I own and use. I decided to create a list of things that help me
+                  get stuff done—I&apos;ll keep this page updated as my setup
+                  changes.
+                </p>
 
-              <h2 className="pb-3 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+                <p>
+                  Most of these links are amazon affiliate links, so I&apos;ll
+                  support my passion for coffee and adventures if you buy through
+                  them.
+                </p>
+              </div>
+
+
+              <h2 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
                 Desk Setup
               </h2>
 
-              <ul>
+              <ul className="my-6 text-base text-zinc-600 dark:text-zinc-400 leading-7">
                 <li>
                   I use 2{' '}
                   <a href="https://amzn.to/44mm1Ov">
@@ -109,8 +113,11 @@ const IndexPage = () => (
                 </li>
               </ul>
 
-              <h2>Sound & Video</h2>
-              <ul>
+              <h2 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+                Sound & Video
+              </h2>
+
+              <ul className="my-6 text-base text-zinc-600 dark:text-zinc-400 leading-7">
                 <li>
                   🎧 <a href="https://amzn.to/3pGbUVD">Sony WH-1000XM5</a>
                 </li>
@@ -131,8 +138,10 @@ const IndexPage = () => (
                 </li>
               </ul>
 
-              <h2>Editor & Terminal</h2>
-              <ul>
+              <h2 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+                Editor & Terminal
+              </h2>
+              <ul className="my-6 text-base text-zinc-600 dark:text-zinc-400 leading-7">
                 <li>
                   <a href="https://code.visualstudio.com">Visual Studio</a> Code
                   is my current editor. I&apos;ve been using it for a few years
@@ -153,8 +162,10 @@ const IndexPage = () => (
                 </li>
               </ul>
 
-              <h2>App</h2>
-              <ul>
+              <h2 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+                App
+              </h2>
+              <ul className="my-6 text-base text-zinc-600 dark:text-zinc-400 leading-7">
                 <li>
                   I use <a href="#">Magnet</a> for window management. Sweet!
                 </li>
@@ -202,8 +213,11 @@ const IndexPage = () => (
                 </li>
               </ul>
 
-              <h2>Changelog</h2>
-              <ul>
+              <h2 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+                Changelog
+              </h2>
+
+              <ul className="my-6 text-base text-zinc-600 dark:text-zinc-400 leading-7">
                 <li>2023-07-09 - Initial draft</li>
               </ul>
 
