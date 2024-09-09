@@ -104,11 +104,11 @@ spec:
       name: example-service # Custom HPA name is required and should match the existing HPA name
   triggers:
     - type: memory
-      metricType: AverageValue
+      metricType: Utilization
       metadata:
         value: "50"
     - type: cpu
-      metricType: AverageValue
+      metricType: Utilization
       metadata:
         value: "50"
     - type: cron
