@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ReactNode } from 'react';
+import React, { JSX, ReactNode } from 'react';
 import { NextSeo } from 'next-seo';
 
 type Props = {

@@ -28,10 +28,13 @@ export async function generateStaticParams() {
   return data;
 }
 
+type Params = Promise<{ slug: string }>
+
 export default async function ArticleView({
   params,
-}: Readonly<{ params: { slug: string } }>) {
-  const article = getArticleBySlug(params.slug, [
+}: Readonly<{ params: Params }>) {
+  const {slug} = await params;
+  const article = getArticleBySlug(slug, [
     'canonical_url',
     'content',
     'date',
