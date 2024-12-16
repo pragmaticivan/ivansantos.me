@@ -5,6 +5,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { siteMetadata } from '../lib/site-metadata';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -57,6 +58,7 @@ export default function RootLayout({
 
       <body>{children}</body>
 
+      <SpeedInsights />
       <GoogleTagManager
         gtmId={siteMetadata.analytics.googleTagManager.googleTagManagerId}
       />
