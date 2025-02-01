@@ -16,7 +16,7 @@ const Custom404 = () => (
       </p>
       <Link
         href="/"
-        className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-cyan-700 px-4 py-2 text-sm font-medium leading-5 text-white shadow transition-colors duration-150 hover:bg-cyan-600 focus:outline-none dark:hover:bg-cyan-500"
+        className="focus:shadow-outline-blue inline rounded-lg border border-transparent bg-cyan-700 px-4 py-2 text-sm font-medium leading-5 text-white shadow-sm transition-colors duration-150 hover:bg-cyan-600 focus:outline-hidden dark:hover:bg-cyan-500"
       >
         Back to homepage
       </Link>

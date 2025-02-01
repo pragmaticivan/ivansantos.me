@@ -57,7 +57,7 @@ const OpenSourcePage = () => (
     >
       <h1 className="my-20 text-center text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
         Open Source
-        <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-cyan-700"></hr>
+        <hr className="mx-auto my-4 h-1 w-6 rounded-sm border-0 bg-cyan-700"></hr>
       </h1>
 
       <div className="mb-32 flex flex-col space-y-20">

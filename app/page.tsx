@@ -25,7 +25,7 @@ export default function Page() {
       </div>
       <section
         className={
-          'container mx-auto max-w-screen-lg p-4 text-center text-2xl font-bold leading-10'
+          'container mx-auto max-w-(--breakpoint-lg) p-4 text-center text-2xl font-bold leading-10'
         }
       >
         Hi, my name is Ivan! A Brazilian/American software engineer specializing
