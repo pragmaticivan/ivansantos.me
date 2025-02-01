@@ -3,8 +3,7 @@ import NavigationBar from '../../components/NavigationBar';
 import { genPageMetadata } from '../seo';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BsGithub, BsArrowUpRightSquare } from 'react-icons/bs';
-import SlideUp from '../../components/SlideUp';
+import { BsGithub } from 'react-icons/bs';
 
 export const metadata = genPageMetadata({
   title: `Open Source ✍️`,
@@ -39,6 +38,13 @@ const projects = [
     image: '/images/project-logo.png',
     github: 'https://github.com/pragmaticivan/nestjs-otel-prom-grafana-tempo',
   },
+  {
+    name: 'ivansantos.me',
+    description:
+      'My Personal Website',
+    image: '/images/project-logo.png',
+    github: 'https://github.com/pragmaticivan/ivansantos.me',
+  },
 ];
 
 const OpenSourcePage = () => (
@@ -54,12 +60,12 @@ const OpenSourcePage = () => (
         <hr className="mx-auto my-4 h-1 w-6 rounded border-0 bg-cyan-700"></hr>
       </h1>
 
-      <div className="mb-32 flex flex-col space-y-28">
+      <div className="mb-32 flex flex-col space-y-20">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
               <div className="animate-slideUpCubiBezier animation-delay-2 flex flex-col md:flex-row md:space-x-12">
-                <div className="md:w-1/3">
+                <div className="md:w-1/4">
                   <Image
                     src={project.image}
                     alt=""
@@ -68,9 +74,9 @@ const OpenSourcePage = () => (
                     className="rounded-xl shadow-xl hover:opacity-70"
                   />
                 </div>
-                <div className="mt-1 md:w-1/2">
-                  <h1 className="mb-6 text-4xl font-bold">{project.name}</h1>
-                  <p className="mb-4 text-xl leading-7 text-neutral-600 dark:text-neutral-400">
+                <div>
+                  <h1 className="mb-2 text-4xl font-bold">{project.name}</h1>
+                  <p className="mb-2 text-l leading-7 text-neutral-600 dark:text-neutral-400">
                     {project.description}
                   </p>
                   <div className="flex flex-row space-x-4 align-bottom">
