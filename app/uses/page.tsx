@@ -19,7 +19,7 @@ const IndexPage = () => (
 
     <main className="flex-auto">
       <div className="mt-16 sm:mt-32 sm:px-8">
-        <div className="lg:px-18 mx-auto mt-16 w-full max-w-6xl sm:mt-32 sm:px-8">
+        <div className="mx-auto mt-16 w-full max-w-6xl sm:mt-32 sm:px-8 lg:px-18">
           <div className="relative px-4 sm:px-10 lg:px-16">
             <div>
               <Image

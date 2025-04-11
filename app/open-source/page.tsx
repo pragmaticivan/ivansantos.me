@@ -40,8 +40,7 @@ const projects = [
   },
   {
     name: 'ivansantos.me',
-    description:
-      'My Personal Website',
+    description: 'My Personal Website',
     image: '/images/project-logo.png',
     github: 'https://github.com/pragmaticivan/ivansantos.me',
   },
@@ -76,7 +75,7 @@ const OpenSourcePage = () => (
                 </div>
                 <div>
                   <h1 className="mb-2 text-4xl font-bold">{project.name}</h1>
-                  <p className="mb-2 text-l leading-7 text-neutral-600 dark:text-neutral-400">
+                  <p className="text-l mb-2 leading-7 text-neutral-600 dark:text-neutral-400">
                     {project.description}
                   </p>
                   <div className="flex flex-row space-x-4 align-bottom">
