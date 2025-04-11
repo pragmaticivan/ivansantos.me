@@ -42,7 +42,7 @@ export const siteMetadata = {
     //   googleAnalyticsId: '', // e.g. G-XXXXXXX
     // },
     googleTagManager: {
-      googleTagManagerId: 'G-7ZH9QQZZZ1',
+      googleTagManagerId: 'GTM-TW3VZ3TX',
     },
   },
   newsletter: {
