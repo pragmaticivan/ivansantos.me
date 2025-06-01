@@ -11,7 +11,7 @@
     "e2e:ui": "playwright test --ui"
   },
   "dependencies": {
-    "@radix-ui/react-tooltip": "^1.2.0",
+    "@radix-ui/react-tooltip": "^1.2.7",
     "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "gray-matter": "^4.0.3",
