@@ -39,22 +39,22 @@ const AboutPage = () => (
                   </h1>
                   <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
                     <p className="leading-7">
-                      Howdy! I'm Ivan Santos, a software engineer with a passion
-                      for distributed systems and coffee. Born and raised in
-                      Brazil, I moved to the US to pursue my career in tech.
-                      I’ve loved taking things apart and putting them back
-                      together since I was a kid. Learning and improving my
+                      Howdy! I&apos;m Ivan Santos, a software engineer with a
+                      passion for distributed systems and coffee. Born and
+                      raised in Brazil, I moved to the US to pursue my career in
+                      tech. I&apos;ve loved taking things apart and putting them
+                      back together since I was a kid. Learning and improving my
                       craft is what drives me every day.
                     </p>
                     <p>
-                      I'm currently exploring Platform Engineering at EverQuote
-                      where I had the opportunity to work on really awesome
-                      stuff such as Kubernetes, Observability, Terraform, Go,
-                      and more.
+                      I&apos;m currently exploring Platform Engineering at
+                      EverQuote where I had the opportunity to work on really
+                      awesome stuff such as Kubernetes, Observability,
+                      Terraform, Go, and more.
                     </p>
                     <p>
-                      When I'm not at my computer, I love to travel, geek about
-                      finance, coffee, dancing, and volleyball.
+                      When I&apos;m not at my computer, I love to travel, geek
+                      about finance, coffee, dancing, and volleyball.
                     </p>
                   </div>
                 </div>

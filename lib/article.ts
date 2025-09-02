@@ -8,11 +8,6 @@ import rehypeStringify from 'rehype-stringify';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeHighlight from 'rehype-highlight';
-
-import { remark } from 'remark';
-import html from 'remark-html';
-// import prism from 'remark-prism';
-import { VFileCompatible } from 'vfile';
 import { Article } from '../types/article';
 
 const articlesDirectory = join(process.cwd(), 'content/articles');
@@ -39,8 +34,7 @@ export function getArticleBySlug(slug: string, fields: string[] = []) {
     }
 
     if (data[field]) {
-      // @ts-ignore
-      items[field] = data[field];
+      items[field as keyof Article] = data[field];
     }
   }
 
@@ -50,8 +44,13 @@ export function getArticleBySlug(slug: string, fields: string[] = []) {
 export function getAllArticles(fields: string[] = []): Partial<Article>[] {
   const data = getArticleFiles()
     .map((slug) => getArticleBySlug(slug, fields))
-    // @ts-ignore
-    .sort((post1, post2) => (post1.date > post2.date ? '-1' : '1'));
+    .sort((post1, post2) =>
+      post1.date && post2.date
+        ? new Date(post1.date) > new Date(post2.date)
+          ? -1
+          : 1
+        : 0
+    );
   return data;
 }
 

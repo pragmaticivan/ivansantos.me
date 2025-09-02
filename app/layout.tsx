@@ -6,6 +6,8 @@ import { Metadata } from 'next';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { siteMetadata } from '../lib/site-metadata';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import ErrorBoundary from '../components/ErrorBoundary';
+import StructuredData from '../components/StructuredData';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -54,14 +56,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData />
+      </head>
       <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
 
-      <body>{children}</body>
+      <body>
+        <ErrorBoundary>{children}</ErrorBoundary>
 
-      <SpeedInsights />
-      <GoogleTagManager
-        gtmId={siteMetadata.analytics.googleTagManager.googleTagManagerId}
-      />
+        <SpeedInsights />
+        <GoogleTagManager
+          gtmId={siteMetadata.analytics.googleTagManager.googleTagManagerId}
+        />
+      </body>
     </html>
   );
 }

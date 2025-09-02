@@ -2,8 +2,15 @@ import { useEffect, useState } from 'react';
 
 // we need a function that accepts the script src and couple of other parameters
 
-// TODO: type params
-const useScript = (params: any) => {
+interface UseScriptParams {
+  url: string;
+  theme: string;
+  issueTerm: string;
+  repo: string;
+  ref: React.RefObject<HTMLElement | null>;
+}
+
+const useScript = (params: UseScriptParams) => {
   const { url, theme, issueTerm, repo, ref } = params;
 
   const [status, setStatus] = useState(url ? 'loading' : 'idle');
@@ -15,7 +22,7 @@ const useScript = (params: any) => {
       return;
     }
 
-    let script = document.createElement('script');
+    const script = document.createElement('script');
     script.src = url;
     script.async = true;
     script.crossOrigin = 'anonymous';
@@ -24,16 +31,18 @@ const useScript = (params: any) => {
     script.setAttribute('repo', repo);
 
     // Add script to document body
-    ref.current.appendChild(script);
+    ref.current?.appendChild(script);
 
     // store status of the script
 
     // TODO: type event
-    const setAttributeStatus = (event: any) => {
+    const setAttributeStatus = (event: Event) => {
       /**
          * Console.log value from event
             {
                 bubbles: false
+                cancelBubble: false
+                cancelable: false
                 cancelBubble: false
                 cancelable: false
                 composed: false
@@ -65,7 +74,7 @@ const useScript = (params: any) => {
         script.removeEventListener('error', setAttributeStatus);
       }
     };
-  }, [url]);
+  }, [url, theme, issueTerm, repo, ref]);
   return status;
 };
 

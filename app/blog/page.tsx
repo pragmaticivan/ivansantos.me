@@ -4,6 +4,7 @@ import NavigationBar from '../../components/NavigationBar';
 import { getAllArticles } from '../../lib/article';
 import styles from '../../styles/blog.module.scss';
 import { genPageMetadata } from '../seo';
+import { Article } from '../../types/article';
 
 export const metadata = genPageMetadata({
   title: `Blog ✍️`,
@@ -23,9 +24,8 @@ const BlogPage = async () => {
   ]);
   const renderAll = () => {
     return articles.map((post, index) => {
-      if (!post.draft) {
-        // @ts-ignore
-        return <ArticleItem key={index} article={post} />;
+      if (!post.draft && post.slug && post.title) {
+        return <ArticleItem key={index} article={post as Article} />;
       }
     });
   };

@@ -5,7 +5,7 @@ interface PageSEOProps {
   title: string;
   description?: string;
   image?: string;
-  [key: string]: any;
+  [key: string]: string | undefined;
 }
 
 export function genPageMetadata({
