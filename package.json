@@ -39,7 +39,7 @@
   "devDependencies": {
     "@catppuccin/highlightjs": "^1.0.1",
     "@next/third-parties": "^15.5.2",
-    "@tailwindcss/postcss": "^4.1.12",
+    "@tailwindcss/postcss": "^4.1.13",
     "@types/node": "24.3.0",
     "@types/react": "19.1.12",
     "@types/remark-prism": "^1.3.7",
