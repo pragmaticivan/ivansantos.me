@@ -1,35 +1,44 @@
 export default function Loading() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-md w-full mx-4">
-        <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-gray-50 to-white">
+      <div className="mx-4 w-full max-w-md">
+        <div className="rounded-xl border border-gray-100 bg-white p-8 shadow-lg">
           <div className="flex flex-col items-center">
             {/* Main loading spinner */}
             <div className="relative mb-6">
-              <div className="w-16 h-16 border-4 border-cyan-700/20 border-t-cyan-700 rounded-full animate-spin" />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-700/10 to-blue-700/10 blur-xl scale-150 animate-pulse" />
+              <div className="h-16 w-16 animate-spin rounded-full border-4 border-cyan-700/20 border-t-cyan-700" />
+              <div className="absolute inset-0 scale-150 animate-pulse rounded-full bg-gradient-to-r from-cyan-700/10 to-blue-700/10 blur-xl" />
             </div>
 
             {/* Loading text with animation */}
-            <div className="text-center mb-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2 animate-pulse">
+            <div className="mb-4 text-center">
+              <h3 className="mb-2 animate-pulse text-xl font-semibold text-gray-800">
                 Loading page...
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-sm text-gray-600">
                 Please wait while we prepare your content
               </p>
             </div>
 
             {/* Animated dots */}
             <div className="flex justify-center space-x-2">
-              <div className="w-2 h-2 bg-cyan-700 rounded-full animate-bounce" style={{ animationDelay: '0s', animationDuration: '0.8s' }} />
-              <div className="w-2 h-2 bg-cyan-700 rounded-full animate-bounce" style={{ animationDelay: '0.2s', animationDuration: '0.8s' }} />
-              <div className="w-2 h-2 bg-cyan-700 rounded-full animate-bounce" style={{ animationDelay: '0.4s', animationDuration: '0.8s' }} />
+              <div
+                className="h-2 w-2 animate-bounce rounded-full bg-cyan-700"
+                style={{ animationDelay: '0s', animationDuration: '0.8s' }}
+              />
+              <div
+                className="h-2 w-2 animate-bounce rounded-full bg-cyan-700"
+                style={{ animationDelay: '0.2s', animationDuration: '0.8s' }}
+              />
+              <div
+                className="h-2 w-2 animate-bounce rounded-full bg-cyan-700"
+                style={{ animationDelay: '0.4s', animationDuration: '0.8s' }}
+              />
             </div>
 
             {/* Progress bar */}
-            <div className="w-full mt-6 bg-gray-200 rounded-full h-1 overflow-hidden">
-              <div className="h-full bg-gradient-to-r from-cyan-700 to-blue-700 rounded-full loading-bar-progress" />
+            <div className="mt-6 h-1 w-full overflow-hidden rounded-full bg-gray-200">
+              <div className="loading-bar-progress h-full rounded-full bg-gradient-to-r from-cyan-700 to-blue-700" />
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ const Loading: React.FC<LoadingProps> = ({
         className={`animate-spin rounded-full border-4 border-cyan-700/20 border-t-cyan-700 ${sizeClasses[size]}`}
       />
       {size === 'xl' && (
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-700/10 to-blue-700/10 blur-xl scale-150 animate-pulse" />
+        <div className="absolute inset-0 scale-150 animate-pulse rounded-full bg-gradient-to-r from-cyan-700/10 to-blue-700/10 blur-xl" />
       )}
     </div>
   );
@@ -38,7 +38,7 @@ const Loading: React.FC<LoadingProps> = ({
       {[0, 1, 2].map((i) => (
         <div
           key={i}
-          className={`bg-cyan-700 rounded-full animate-pulse ${sizeClasses[size]}`}
+          className={`animate-pulse rounded-full bg-cyan-700 ${sizeClasses[size]}`}
           style={{
             animationDelay: `${i * 0.2}s`,
             animationDuration: '1.5s',
@@ -53,7 +53,7 @@ const Loading: React.FC<LoadingProps> = ({
       {[0, 1, 2].map((i) => (
         <div
           key={i}
-          className={`bg-cyan-700 rounded-full animate-bounce ${sizeClasses[size]}`}
+          className={`animate-bounce rounded-full bg-cyan-700 ${sizeClasses[size]}`}
           style={{
             animationDelay: `${i * 0.1}s`,
             animationDuration: '0.6s',
@@ -68,7 +68,7 @@ const Loading: React.FC<LoadingProps> = ({
       {[0, 1, 2, 3].map((i) => (
         <div
           key={i}
-          className={`bg-cyan-700 animate-pulse ${size === 'sm' ? 'w-1' : size === 'md' ? 'w-1.5' : 'w-2'} h-8`}
+          className={`animate-pulse bg-cyan-700 ${size === 'sm' ? 'w-1' : size === 'md' ? 'w-1.5' : 'w-2'} h-8`}
           style={{
             animationDelay: `${i * 0.1}s`,
             animationDuration: '1s',
@@ -101,19 +101,19 @@ const Loading: React.FC<LoadingProps> = ({
 
       {message && (
         <div className="mt-4 text-center">
-          <span className="text-sm font-medium text-gray-700 animate-pulse">
+          <span className="animate-pulse text-sm font-medium text-gray-700">
             {message}
           </span>
         </div>
       )}
 
       {showProgress && (
-        <div className="w-full mt-4 bg-gray-200 rounded-full h-1 overflow-hidden max-w-xs">
+        <div className="mt-4 h-1 w-full max-w-xs overflow-hidden rounded-full bg-gray-200">
           <div
-            className="h-full bg-gradient-to-r from-cyan-700 to-blue-700 rounded-full animate-pulse"
+            className="h-full animate-pulse rounded-full bg-gradient-to-r from-cyan-700 to-blue-700"
             style={{
               width: '60%',
-              animation: 'loading-bar 2s ease-in-out infinite'
+              animation: 'loading-bar 2s ease-in-out infinite',
             }}
           />
         </div>
