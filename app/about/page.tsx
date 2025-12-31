@@ -37,7 +37,7 @@ const AboutPage = () => (
                   <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
                     Software Engineering. Distributed Systems. Coffee
                   </h1>
-                  <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+                  <div className="mt-6 space-y-7 text-base font-medium text-zinc-600 dark:text-zinc-400">
                     <p className="leading-7">
                       Howdy! I&apos;m Ivan Santos, a software engineer with a
                       passion for distributed systems and coffee. Born and

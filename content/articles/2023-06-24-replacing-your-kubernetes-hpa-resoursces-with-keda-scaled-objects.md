@@ -25,6 +25,8 @@ If your platform team is currently introducing KEDA to your organization, instea
 Given you already have a deployment and an HPA in place:
 
 ```yml
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -85,6 +87,7 @@ spec:
 You can replace the existing HPA with a ScaledObject including the same inputs, as well as extend functionalities with scalers such as CronJobs:
 
 ```yml
+---
 
 apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
