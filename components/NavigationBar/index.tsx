@@ -25,7 +25,10 @@ const NavigationBar = (props: Props = { dark: false }) => {
             />
           </Link>
         </h1>
-        <nav aria-label="Main navigation" className={styles.menu}>
+        <nav
+          aria-label="Main navigation"
+          className={`${styles.menu} ${props.dark ? styles.dark : ""}`}
+        >
           <ul>
             <li>
               <Link href="/about" title="About">

@@ -21,11 +21,11 @@
 
         padding: 6px 16px;
         border-radius: 6px;
-        transition: color var(--duration) ease-in-out;
+        transition: all var(--duration) ease-in-out;
 
         &:hover {
           color: var(--secondaryColor);
-          background-color: #f3f3f3;
+          background-color: rgba(0, 0, 0, 0.05);
         }
       }
     }
@@ -40,6 +40,17 @@
       &:last-child {
         margin-right: 20px;
       }
+    }
+  }
+}
+
+.dark {
+  ul li a {
+    color: #ffffff;
+
+    &:hover {
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.2);
     }
   }
 }

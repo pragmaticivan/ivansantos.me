@@ -1,4 +1,9 @@
 .header {
-  background: url('../public/images/bg-home-header.png');
+  background: url("../public/images/bg-home-header.png");
   height: 550px;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background: linear-gradient(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)),
+      url("../public/images/bg-home-header.png");
+  }
 }
