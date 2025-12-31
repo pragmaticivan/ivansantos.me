@@ -117,6 +117,22 @@
     }
   }
 
+  &>ol {
+    list-style: decimal;
+    padding: 30px 0 30px 50px;
+
+    li {
+      font-size: 20px;
+      padding-bottom: 10px;
+      line-height: 34px;
+      letter-spacing: 0.26px;
+
+      a {
+        color: #5C4B77;
+      }
+    }
+  }
+
   blockquote {
     font-style: italic;
     border-left: #5C4B77 solid 3px;
