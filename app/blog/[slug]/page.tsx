@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import BlogAvatar from "../../../components/BlogAvatar";
 import Comments from "../../../components/Comments";
 import NavigationBar from "../../../components/NavigationBar";
@@ -29,6 +30,32 @@ export async function generateStaticParams() {
 }
 
 type Params = Promise<{ slug: string }>;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const article = getArticleBySlug(slug, ["title", "description", "image"]);
+
+  return {
+    title: article.title,
+    description: article.description,
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      images: article.image ? [article.image] : undefined,
+      type: "article",
+    },
+    twitter: {
+      title: article.title,
+      description: article.description,
+      images: article.image ? [article.image] : undefined,
+      card: "summary_large_image",
+    },
+  };
+}
 
 export default async function ArticleView({
   params,

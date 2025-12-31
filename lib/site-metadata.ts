@@ -3,7 +3,7 @@ export const siteMetadata = {
   author: "Ivan Santos",
   headerTitle: "Ivan Santos - Software Engineer",
   description:
-    "Hello, I&#x27;m Ivan 👋 - I&#x27;m a software engineer, currently living in Austin, TX.",
+    "Hello, I'm Ivan 👋 - I'm a software engineer, currently living in Austin, TX.",
   language: "en-us",
   theme: "system", // system, dark or light
   siteUrl: "https://ivansantos.me",
