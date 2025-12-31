@@ -1,7 +1,7 @@
 ---
 title: "Organizing Dotfiles with Chezmoi, GitHub Actions, and Bats"
 date: "2025-12-31"
-summary: "A deep dive into a robust dotfiles setup that works across macOS and Ubuntu, handling personal and restricted environments with automated testing."
+description: "A deep dive into a robust dotfiles setup that works across macOS and Ubuntu, handling personal and restricted environments with automated testing."
 image: /content/images/articles/chezmoi.png
 language: "en"
 tags: ["dotfiles", "chezmoi", "automation", "github-actions", "testing"]
