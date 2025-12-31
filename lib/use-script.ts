@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 // we need a function that accepts the script src and couple of other parameters
 
@@ -13,22 +13,22 @@ interface UseScriptParams {
 const useScript = (params: UseScriptParams) => {
   const { url, theme, issueTerm, repo, ref } = params;
 
-  const [status, setStatus] = useState(url ? 'loading' : 'idle');
+  const [status, setStatus] = useState(url ? "loading" : "idle");
 
   // run the useEffect when the url of the script changes
   useEffect(() => {
     if (!url) {
-      setStatus('idle');
+      setStatus("idle");
       return;
     }
 
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.src = url;
     script.async = true;
-    script.crossOrigin = 'anonymous';
-    script.setAttribute('theme', theme);
-    script.setAttribute('issue-term', issueTerm);
-    script.setAttribute('repo', repo);
+    script.crossOrigin = "anonymous";
+    script.setAttribute("theme", theme);
+    script.setAttribute("issue-term", issueTerm);
+    script.setAttribute("repo", repo);
 
     // Add script to document body
     ref.current?.appendChild(script);
@@ -61,17 +61,17 @@ const useScript = (params: UseScriptParams) => {
             based on the type property we will get know whether script is ready or errored out
             */
 
-      setStatus(event.type === 'load' ? 'ready' : 'error');
+      setStatus(event.type === "load" ? "ready" : "error");
     };
 
-    script.addEventListener('load', setAttributeStatus);
-    script.addEventListener('error', setAttributeStatus);
+    script.addEventListener("load", setAttributeStatus);
+    script.addEventListener("error", setAttributeStatus);
 
     return () => {
       // useEffect clean up
       if (script) {
-        script.removeEventListener('load', setAttributeStatus);
-        script.removeEventListener('error', setAttributeStatus);
+        script.removeEventListener("load", setAttributeStatus);
+        script.removeEventListener("error", setAttributeStatus);
       }
     };
   }, [url, theme, issueTerm, repo, ref]);

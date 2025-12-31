@@ -1,13 +1,13 @@
-import '../styles/tailwind.css';
-import '../styles/globals.css';
+import "../styles/tailwind.css";
+import "../styles/globals.css";
 
-import React from 'react';
-import { Metadata } from 'next';
-import { GoogleTagManager } from '@next/third-parties/google';
-import { siteMetadata } from '../lib/site-metadata';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import ErrorBoundary from '../components/ErrorBoundary';
-import StructuredData from '../components/StructuredData';
+import { GoogleTagManager } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
+import type React from "react";
+import ErrorBoundary from "../components/ErrorBoundary";
+import StructuredData from "../components/StructuredData";
+import { siteMetadata } from "../lib/site-metadata";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -19,16 +19,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
-    url: './',
+    url: "./",
     siteName: siteMetadata.title,
     images: [siteMetadata.socialBanner],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   },
   alternates: {
-    canonical: './',
+    canonical: "./",
     types: {
-      'application/rss+xml': `${siteMetadata.siteUrl}/feed.xml`,
+      "application/rss+xml": `${siteMetadata.siteUrl}/feed.xml`,
     },
   },
   robots: {
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   twitter: {
     title: siteMetadata.title,
-    card: 'summary_large_image',
+    card: "summary_large_image",
     images: [siteMetadata.socialBanner],
   },
 };
@@ -59,7 +59,7 @@ export default function RootLayout({
       <head>
         <StructuredData />
       </head>
-      <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
+      <link href="/favicon.png" rel="icon" sizes="any" type="image/png" />
 
       <body>
         <ErrorBoundary>{children}</ErrorBoundary>

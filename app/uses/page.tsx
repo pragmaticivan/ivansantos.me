@@ -1,16 +1,15 @@
-import React from 'react';
-import Image from 'next/image';
-import clsx from 'clsx';
+import clsx from "clsx";
+import Image from "next/image";
 
-import Comments from '../../components/Comments';
-import NavigationBar from '../../components/NavigationBar';
-import { genPageMetadata } from '../seo';
-import styles from './styles.module.scss';
-import ivanDeskSetup from '../../public/images/ivan-desk-setup.jpg';
+import Comments from "../../components/Comments";
+import NavigationBar from "../../components/NavigationBar";
+import ivanDeskSetup from "../../public/images/ivan-desk-setup.jpg";
+import { genPageMetadata } from "../seo";
+import styles from "./styles.module.scss";
 
 export const metadata = genPageMetadata({
-  title: `Ivan Santos Toolbox 🧰`,
-  description: `Ivan Santos Toolbox`,
+  title: "Ivan Santos Toolbox 🧰",
+  description: "Ivan Santos Toolbox",
 });
 
 const IndexPage = () => (
@@ -23,17 +22,17 @@ const IndexPage = () => (
           <div className="relative px-4 sm:px-10 lg:px-16">
             <div>
               <Image
-                src={ivanDeskSetup}
-                className="rounded-2xl"
                 alt="Ivan Santos Desk Setup"
+                className="rounded-2xl"
+                src={ivanDeskSetup}
               />
             </div>
-            <div className={clsx('px-8', styles.content)}>
-              <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+            <div className={clsx("px-8", styles.content)}>
+              <h1 className="font-bold text-4xl text-zinc-800 tracking-tight sm:text-5xl dark:text-zinc-100">
                 Uses
               </h1>
 
-              <div className="my-6 space-y-7 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+              <div className="my-6 space-y-7 text-base text-zinc-600 leading-7 dark:text-zinc-400">
                 <p>
                   There&apos;s something magical about tools. Whether we&apos;re
                   talking equipment for a hobby you practice or devices for your
@@ -56,13 +55,13 @@ const IndexPage = () => (
                 </p>
               </div>
 
-              <h2 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              <h2 className="font-bold text-4xl text-zinc-800 tracking-tight sm:text-5xl dark:text-zinc-100">
                 Desk Setup
               </h2>
 
-              <ul className="my-6 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+              <ul className="my-6 text-base text-zinc-600 leading-7 dark:text-zinc-400">
                 <li>
-                  I use 2{' '}
+                  I use 2{" "}
                   <a href="https://amzn.to/44mm1Ov">
                     Samsung Monitors - 28&apos;&apos;
                   </a>
@@ -70,7 +69,7 @@ const IndexPage = () => (
                   well if you have a ARM based macbook pro.
                 </li>
                 <li>
-                  My desk is an{' '}
+                  My desk is an{" "}
                   <a href="https://www.autonomous.ai/standing-desks/smartdesk-2-home?option_code=Smartdesk2Home-FrameSmartDesk2_DeskFrame.Black%2CModel.Coreframe-Surface_DeskDesign.705x30XLClassic%2CDeskTop.Black">
                     Autonomous SmartDesk Core XL Classic
                   </a>
@@ -80,14 +79,14 @@ const IndexPage = () => (
                 </li>
                 <li>
                   Everything — Monitors, Ethernet, Hard Drives, Webcam, and
-                  Power — is plugged in via a single USB cable and piped into my{' '}
+                  Power — is plugged in via a single USB cable and piped into my{" "}
                   <a href="https://amzn.to/3pGeL0N">
                     CalDigit TS3 Plus Thunderbolt 3 Dock (New version available)
                   </a>
                   .
                 </li>
                 <li>
-                  I currently use a{' '}
+                  I currently use a{" "}
                   <a href="https://amzn.to/3JQkg3I">
                     2023 16&apos;&apos; Macbook Pro M2 Max with 64 GB ram, 1TB
                     drive
@@ -97,11 +96,11 @@ const IndexPage = () => (
                 <li>
                   <a href="https://amzn.to/3XIF96K">
                     TerraMaster F4-422 10GbE NAS
-                  </a>{' '}
+                  </a>{" "}
                   for backups, plex and homebridge.
                 </li>
                 <li>
-                  My favorite keyboard is a{' '}
+                  My favorite keyboard is a{" "}
                   <a href="https://kono.store/products/kira-mechanical-keyboard">
                     Kira Mechanical Keyboard.
                   </a>
@@ -112,35 +111,35 @@ const IndexPage = () => (
                 </li>
               </ul>
 
-              <h2 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              <h2 className="font-bold text-4xl text-zinc-800 tracking-tight sm:text-5xl dark:text-zinc-100">
                 Sound & Video
               </h2>
 
-              <ul className="my-6 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+              <ul className="my-6 text-base text-zinc-600 leading-7 dark:text-zinc-400">
                 <li>
                   🎧 <a href="https://amzn.to/3pGbUVD">Sony WH-1000XM5</a>
                 </li>
                 <li>
-                  🎧{' '}
+                  🎧{" "}
                   <a href="https://amzn.to/3XH84YQ">
                     Apple AirPods Pro (2nd Generation)
                   </a>
                 </li>
                 <li>
-                  📷 My webcan is a{' '}
+                  📷 My webcan is a{" "}
                   <a href="https://amzn.to/44vDJP6">Insta360 Link 4k Webcam</a>,
                   Hands down the best webcam I&apos;ve ever used.
                 </li>
                 <li>
-                  🎤{' '}
+                  🎤{" "}
                   <a href="https://amzn.to/3NBpBNq">Blue Yeti USB Microphone</a>
                 </li>
               </ul>
 
-              <h2 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              <h2 className="font-bold text-4xl text-zinc-800 tracking-tight sm:text-5xl dark:text-zinc-100">
                 Editor & Terminal
               </h2>
-              <ul className="my-6 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+              <ul className="my-6 text-base text-zinc-600 leading-7 dark:text-zinc-400">
                 <li>
                   <a href="https://code.visualstudio.com">Visual Studio</a> Code
                   is my current editor. I&apos;ve been using it for a few years
@@ -149,29 +148,30 @@ const IndexPage = () => (
                 </li>
                 <li>
                   I mainly use <a href="https://iterm2.com/">iTerm2</a>, but
-                  have been contemplating a switch to{' '}
+                  have been contemplating a switch to{" "}
                   <a href="https://www.warp.dev">Warp Terminal</a>.
                 </li>
                 <li>
-                  You can see most of my config files over at my{' '}
+                  You can see most of my config files over at my{" "}
                   <a href="https://github.com/pragmaticivan/dotfiles">
                     DotFiles
-                  </a>{' '}
+                  </a>{" "}
                   repo.
                 </li>
               </ul>
 
-              <h2 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              <h2 className="font-bold text-4xl text-zinc-800 tracking-tight sm:text-5xl dark:text-zinc-100">
                 App
               </h2>
-              <ul className="my-6 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+              <ul className="my-6 text-base text-zinc-600 leading-7 dark:text-zinc-400">
                 <li>
-                  I use <a href="#">Magnet</a> for window management. Sweet!
+                  I use <a href="https://magnet.crowdcafe.com/">Magnet</a> for
+                  window management. Sweet!
                 </li>
                 <li>
-                  I&apos;ve been using{' '}
+                  I&apos;ve been using{" "}
                   <a href="https://www.alfredapp.com/">Alfred</a> for many years
-                  and have many workflows but have recently switched over to{' '}
+                  and have many workflows but have recently switched over to{" "}
                   <a href="https://www.raycast.com">Raycast</a> which is a very
                   powerful alternative!
                 </li>
@@ -181,12 +181,13 @@ const IndexPage = () => (
                 </li>
                 <li>
                   Get truly powerful control over all the audio on your Mac. I
-                  use{' '}
-                  <a href="https://rogueamoeba.com/soundsource/">SoundSource</a>{' '}
+                  use{" "}
+                  <a href="https://rogueamoeba.com/soundsource/">SoundSource</a>{" "}
                   for a superior sound management and redirects.
                 </li>
                 <li>
-                  It’s about time. I use <a href="#">Cron</a> for scheduling.
+                  It’s about time. I use <a href="https://cron.com/">Cron</a>{" "}
+                  for scheduling.
                 </li>
                 <li>
                   <a href="https://1password.com/">1Password</a> is my password
@@ -197,7 +198,7 @@ const IndexPage = () => (
                 <li>
                   I was born in Brazil and I&apos;ve been living in the US for
                   the past 11 years, yet, english doesn&apos;t feel like my
-                  first language. I use{' '}
+                  first language. I use{" "}
                   <a href="https://www.grammarly.com/">Grammarly</a> to help me
                   with that.
                 </li>
@@ -206,17 +207,17 @@ const IndexPage = () => (
                   simple, and straight to the point. Open to suggestions.
                 </li>
                 <li>
-                  <a href="https://affinity.serif.com/en-us/">Affinity Suite</a>{' '}
+                  <a href="https://affinity.serif.com/en-us/">Affinity Suite</a>{" "}
                   is my go to for all my design needs. I use Affinity Designer
                   and Affinity Photo.
                 </li>
               </ul>
 
-              <h2 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              <h2 className="font-bold text-4xl text-zinc-800 tracking-tight sm:text-5xl dark:text-zinc-100">
                 Changelog
               </h2>
 
-              <ul className="my-6 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+              <ul className="my-6 text-base text-zinc-600 leading-7 dark:text-zinc-400">
                 <li>2023-07-09 - Initial draft</li>
               </ul>
 

@@ -1,25 +1,25 @@
-import BlogAvatar from '../../../components/BlogAvatar';
-import NavigationBar from '../../../components/NavigationBar';
-import Comments from '../../../components/Comments';
+import BlogAvatar from "../../../components/BlogAvatar";
+import Comments from "../../../components/Comments";
+import NavigationBar from "../../../components/NavigationBar";
 import {
   convertMarkdownToHtml,
   getAllArticles,
   getArticleBySlug,
-} from '../../../lib/article';
-import styles from '../../../styles/article.module.scss';
-import '../../../styles/highlightjs.css';
+} from "../../../lib/article";
+import styles from "../../../styles/article.module.scss";
+import "../../../styles/highlightjs.css";
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
   const articles = getAllArticles([
-    'canonical_url',
-    'content',
-    'date',
-    'description',
-    'image',
-    'language',
-    'slug',
-    'title',
+    "canonical_url",
+    "content",
+    "date",
+    "description",
+    "image",
+    "language",
+    "slug",
+    "title",
   ]);
   const data = articles?.map((article) => {
     return { slug: article.slug };
@@ -35,17 +35,17 @@ export default async function ArticleView({
 }: Readonly<{ params: Params }>) {
   const { slug } = await params;
   const article = getArticleBySlug(slug, [
-    'canonical_url',
-    'content',
-    'date',
-    'description',
-    'image',
-    'language',
-    'slug',
-    'title',
+    "canonical_url",
+    "content",
+    "date",
+    "description",
+    "image",
+    "language",
+    "slug",
+    "title",
   ]);
 
-  const content = await convertMarkdownToHtml(article.content ?? '');
+  const content = await convertMarkdownToHtml(article.content ?? "");
 
   return (
     <>
@@ -63,6 +63,7 @@ export default async function ArticleView({
           <h1 className={styles.title}> {article.title} </h1>
           <div
             className={styles.content}
+            // biome-ignore lint/security/noDangerouslySetInnerHtml:  This is necessary to render HTML content
             dangerouslySetInnerHTML={{
               __html: content,
             }}

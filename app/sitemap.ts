@@ -1,17 +1,17 @@
-import { MetadataRoute } from 'next';
-import { getAllArticles } from '../lib/article';
-import { siteMetadata } from '../lib/site-metadata';
+import type { MetadataRoute } from "next";
+import { getAllArticles } from "../lib/article";
+import { siteMetadata } from "../lib/site-metadata";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles([
-    'date',
-    'draft',
-    'slug',
-    'title',
-    'image',
-    'content',
-    'language',
-    'description',
+    "date",
+    "draft",
+    "slug",
+    "title",
+    "image",
+    "content",
+    "language",
+    "description",
   ]).filter((article) => !article.draft);
 
   const blogRoutes = articles
@@ -21,10 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: post.date,
     }));
 
-  const routes = ['', 'about', 'open-source', 'talks', 'uses', 'blog'].map(
+  const routes = ["", "about", "open-source", "talks", "uses", "blog"].map(
     (route) => ({
       url: `${siteMetadata.siteUrl}/${route}`,
-      lastModified: new Date().toISOString().split('T')[0],
+      lastModified: new Date().toISOString().split("T")[0],
     })
   );
 

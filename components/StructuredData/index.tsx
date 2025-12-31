@@ -1,32 +1,33 @@
-import { siteMetadata } from '../../lib/site-metadata';
+import { siteMetadata } from "../../lib/site-metadata";
 
 interface StructuredDataProps {
-  type?: 'website' | 'article' | 'person';
+  type?: "website" | "article" | "person";
   data?: Record<string, string | number | boolean>;
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({
-  type = 'website',
+  type = "website",
   data = {},
 }) => {
+  const typeMap = {
+    website: "WebSite",
+    article: "Article",
+    person: "Person",
+  };
+
   const baseData = {
-    '@context': 'https://schema.org',
-    '@type':
-      type === 'website'
-        ? 'WebSite'
-        : type === 'article'
-          ? 'Article'
-          : 'Person',
+    "@context": "https://schema.org",
+    "@type": typeMap[type],
     name: siteMetadata.title,
     description: siteMetadata.description,
     url: siteMetadata.siteUrl,
     author: {
-      '@type': 'Person',
+      "@type": "Person",
       name: siteMetadata.author,
       url: siteMetadata.siteUrl,
     },
     publisher: {
-      '@type': 'Person',
+      "@type": "Person",
       name: siteMetadata.author,
     },
     ...data,
@@ -34,10 +35,11 @@ const StructuredData: React.FC<StructuredDataProps> = ({
 
   return (
     <script
-      type="application/ld+json"
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires this
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(baseData),
       }}
+      type="application/ld+json"
     />
   );
 };

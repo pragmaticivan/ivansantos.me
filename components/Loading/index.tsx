@@ -1,25 +1,25 @@
-import React from 'react';
+import type React from "react";
 
 interface LoadingProps {
   message?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'spinner' | 'pulse' | 'dots' | 'bars';
+  size?: "sm" | "md" | "lg" | "xl";
+  variant?: "spinner" | "pulse" | "dots" | "bars";
   showProgress?: boolean;
   className?: string;
 }
 
 const Loading: React.FC<LoadingProps> = ({
-  message = 'Loading...',
-  size = 'md',
-  variant = 'spinner',
+  message = "Loading...",
+  size = "md",
+  variant = "spinner",
   showProgress = false,
-  className = '',
+  className = "",
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
+    sm: "w-4 h-4",
+    md: "w-8 h-8",
+    lg: "w-12 h-12",
+    xl: "w-16 h-16",
   };
 
   const renderSpinner = () => (
@@ -27,7 +27,7 @@ const Loading: React.FC<LoadingProps> = ({
       <div
         className={`animate-spin rounded-full border-4 border-cyan-700/20 border-t-cyan-700 ${sizeClasses[size]}`}
       />
-      {size === 'xl' && (
+      {size === "xl" && (
         <div className="absolute inset-0 scale-150 animate-pulse rounded-full bg-gradient-to-r from-cyan-700/10 to-blue-700/10 blur-xl" />
       )}
     </div>
@@ -37,11 +37,11 @@ const Loading: React.FC<LoadingProps> = ({
     <div className="flex space-x-1">
       {[0, 1, 2].map((i) => (
         <div
-          key={i}
           className={`animate-pulse rounded-full bg-cyan-700 ${sizeClasses[size]}`}
+          key={i}
           style={{
             animationDelay: `${i * 0.2}s`,
-            animationDuration: '1.5s',
+            animationDuration: "1.5s",
           }}
         />
       ))}
@@ -52,26 +52,36 @@ const Loading: React.FC<LoadingProps> = ({
     <div className="flex space-x-1">
       {[0, 1, 2].map((i) => (
         <div
-          key={i}
           className={`animate-bounce rounded-full bg-cyan-700 ${sizeClasses[size]}`}
+          key={i}
           style={{
             animationDelay: `${i * 0.1}s`,
-            animationDuration: '0.6s',
+            animationDuration: "0.6s",
           }}
         />
       ))}
     </div>
   );
 
+  const getBarWidth = () => {
+    if (size === "sm") {
+      return "w-1";
+    }
+    if (size === "md") {
+      return "w-1.5";
+    }
+    return "w-2";
+  };
+
   const renderBars = () => (
     <div className="flex space-x-1">
       {[0, 1, 2, 3].map((i) => (
         <div
+          className={`animate-pulse bg-cyan-700 ${getBarWidth()} h-8`}
           key={i}
-          className={`animate-pulse bg-cyan-700 ${size === 'sm' ? 'w-1' : size === 'md' ? 'w-1.5' : 'w-2'} h-8`}
           style={{
             animationDelay: `${i * 0.1}s`,
-            animationDuration: '1s',
+            animationDuration: "1s",
           }}
         />
       ))}
@@ -80,11 +90,11 @@ const Loading: React.FC<LoadingProps> = ({
 
   const renderLoader = () => {
     switch (variant) {
-      case 'pulse':
+      case "pulse":
         return renderPulse();
-      case 'dots':
+      case "dots":
         return renderDots();
-      case 'bars':
+      case "bars":
         return renderBars();
       default:
         return renderSpinner();
@@ -92,16 +102,17 @@ const Loading: React.FC<LoadingProps> = ({
   };
 
   return (
+    // biome-ignore lint/a11y/useSemanticElements: role="status" is appropriate here
     <div
+      aria-label="Loading"
       className={`flex flex-col items-center justify-center p-4 ${className}`}
       role="status"
-      aria-label="Loading"
     >
       {renderLoader()}
 
       {message && (
         <div className="mt-4 text-center">
-          <span className="animate-pulse text-sm font-medium text-gray-700">
+          <span className="animate-pulse font-medium text-gray-700 text-sm">
             {message}
           </span>
         </div>
@@ -112,8 +123,8 @@ const Loading: React.FC<LoadingProps> = ({
           <div
             className="h-full animate-pulse rounded-full bg-gradient-to-r from-cyan-700 to-blue-700"
             style={{
-              width: '60%',
-              animation: 'loading-bar 2s ease-in-out infinite',
+              width: "60%",
+              animation: "loading-bar 2s ease-in-out infinite",
             }}
           />
         </div>

@@ -1,10 +1,8 @@
-import styles from './styles.module.scss';
+import Link from "next/link";
+import type { TalkYear } from "../../types/talk";
+import styles from "./styles.module.scss";
 
-import Link from 'next/link';
 // import Image from 'next/image';
-
-import React from 'react';
-import { TalkYear } from '../../types/talk';
 
 interface Props {
   talkYear: TalkYear;

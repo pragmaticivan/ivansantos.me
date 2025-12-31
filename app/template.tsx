@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react';
+import type React from "react";
+import { Suspense } from "react";
 
 interface TemplateProps {
   children: React.ReactNode;
@@ -15,21 +16,21 @@ function LoadingFallback() {
               <div className="absolute inset-0 scale-150 animate-pulse rounded-full bg-cyan-700/10 blur-xl" />
             </div>
             <div className="text-center">
-              <h3 className="mb-2 text-lg font-medium text-gray-800">
+              <h3 className="mb-2 font-medium text-gray-800 text-lg">
                 Loading content...
               </h3>
               <div className="flex justify-center space-x-1">
                 <div
                   className="h-1 w-1 animate-bounce rounded-full bg-cyan-700"
-                  style={{ animationDelay: '0s' }}
+                  style={{ animationDelay: "0s" }}
                 />
                 <div
                   className="h-1 w-1 animate-bounce rounded-full bg-cyan-700"
-                  style={{ animationDelay: '0.1s' }}
+                  style={{ animationDelay: "0.1s" }}
                 />
                 <div
                   className="h-1 w-1 animate-bounce rounded-full bg-cyan-700"
-                  style={{ animationDelay: '0.2s' }}
+                  style={{ animationDelay: "0.2s" }}
                 />
               </div>
             </div>

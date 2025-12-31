@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import React, { useRef } from 'react';
+import { useRef } from "react";
 
-import useScript from '../../lib/use-script';
+import useScript from "../../lib/use-script";
 
 const Comments = () => {
   const comment = useRef(null);
 
   useScript({
-    url: 'https://utteranc.es/client.js',
-    theme: 'github-light',
-    issueTerm: 'url',
-    repo: 'pragmaticivan/ivansantos.me',
+    url: "https://utteranc.es/client.js",
+    theme: "github-light",
+    issueTerm: "url",
+    repo: "pragmaticivan/ivansantos.me",
     ref: comment,
   });
 
-  return <div>{<div ref={comment}></div>}</div>;
+  return <div>{<div ref={comment} />}</div>;
 };
 
 export default Comments;

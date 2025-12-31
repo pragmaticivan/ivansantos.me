@@ -1,18 +1,18 @@
-import { clsx } from 'clsx';
+import { clsx } from "clsx";
 
-import CallToContact from '../components/CallToContact';
-import NavigationBar from '../components/NavigationBar';
-import styles from '../styles/home.module.scss';
+import CallToContact from "../components/CallToContact";
+import NavigationBar from "../components/NavigationBar";
+import styles from "../styles/home.module.scss";
 
 export default function Page() {
   return (
     <>
       <div
         className={clsx(
-          'w-full',
-          'relative',
-          'border-b-4',
-          'border-b-gray-100',
+          "w-full",
+          "relative",
+          "border-b-4",
+          "border-b-gray-100",
           styles.header
         )}
       >
@@ -25,7 +25,7 @@ export default function Page() {
       </div>
       <section
         className={
-          'container mx-auto max-w-(--breakpoint-lg) p-4 text-center text-2xl leading-10 font-bold'
+          "container mx-auto max-w-(--breakpoint-lg) p-4 text-center font-bold text-2xl leading-10"
         }
       >
         Hi, my name is Ivan! A Brazilian/American software engineer specializing

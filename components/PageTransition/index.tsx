@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
+import type React from "react";
+import { useEffect, useState } from "react";
 
 interface PageTransitionProps {
   children: React.ReactNode;
@@ -8,12 +9,13 @@ interface PageTransitionProps {
 
 const PageTransition: React.FC<PageTransitionProps> = ({
   children,
-  className = '',
+  className = "",
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const pathname = usePathname();
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: We want to trigger this effect when pathname changes
   useEffect(() => {
     // Handle route changes
     setIsLoading(true);
@@ -46,7 +48,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({
               <div className="absolute inset-0 scale-150 animate-pulse rounded-full bg-cyan-700/10 blur-xl" />
             </div>
             <div className="mt-6 text-center">
-              <span className="animate-pulse text-lg font-medium text-gray-800">
+              <span className="animate-pulse font-medium text-gray-800 text-lg">
                 Transitioning...
               </span>
             </div>
@@ -60,11 +62,11 @@ const PageTransition: React.FC<PageTransitionProps> = ({
     <div
       className={`page-transition ${
         isVisible
-          ? 'translate-y-0 scale-100 opacity-100'
-          : 'translate-y-4 scale-95 opacity-0'
+          ? "translate-y-0 scale-100 opacity-100"
+          : "translate-y-4 scale-95 opacity-0"
       } ${className}`}
       style={{
-        transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+        transition: "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
       }}
     >
       {children}

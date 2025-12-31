@@ -1,5 +1,5 @@
-import { Metadata } from 'next';
-import { siteMetadata } from '../lib/site-metadata';
+import type { Metadata } from "next";
+import { siteMetadata } from "../lib/site-metadata";
 
 interface PageSEOProps {
   title: string;
@@ -20,15 +20,15 @@ export function genPageMetadata({
     openGraph: {
       title: `${title} | ${siteMetadata.title}`,
       description: description ?? siteMetadata.description,
-      url: './',
+      url: "./",
       siteName: siteMetadata.title,
       images: image ? [image] : [siteMetadata.socialBanner],
-      locale: 'en_US',
-      type: 'website',
+      locale: "en_US",
+      type: "website",
     },
     twitter: {
       title: `${title} | ${siteMetadata.title}`,
-      card: 'summary_large_image',
+      card: "summary_large_image",
       images: image ? [image] : [siteMetadata.socialBanner],
     },
     ...rest,

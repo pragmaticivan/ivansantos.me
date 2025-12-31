@@ -1,7 +1,6 @@
-import styles from './styles.module.scss';
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./styles.module.scss";
 
 interface Props {
   dark?: boolean;
@@ -9,29 +8,25 @@ interface Props {
 
 const NavigationBar = (props: Props = { dark: false }) => {
   return (
-    <header role="banner">
+    <header>
       <div className="flex flex-wrap justify-center px-10 pt-10 sm:justify-between">
         <h1>
-          <Link href="/" aria-label="Ivan Santos - Go to homepage">
+          <Link aria-label="Ivan Santos - Go to homepage" href="/">
             <Image
+              alt="Ivan Santos - Logo"
+              height={77}
+              priority
               src={
                 props.dark
-                  ? '/images/ivan-logo-white.png'
-                  : '/images/ivan-logo-black.png'
+                  ? "/images/ivan-logo-white.png"
+                  : "/images/ivan-logo-black.png"
               }
               width={200}
-              height={77}
-              alt="Ivan Santos - Logo"
-              priority
             />
           </Link>
         </h1>
-        <nav
-          className={styles.menu}
-          role="navigation"
-          aria-label="Main navigation"
-        >
-          <ul role="menubar">
+        <nav aria-label="Main navigation" className={styles.menu}>
+          <ul>
             <li>
               <Link href="/about" title="About">
                 About

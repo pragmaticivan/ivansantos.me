@@ -1,11 +1,11 @@
-import React, { JSX, ReactNode } from 'react';
-import { NextSeo } from 'next-seo';
+import { NextSeo } from "next-seo";
+import type { JSX, ReactNode } from "react";
 
-type Props = {
+interface Props {
   children: ReactNode;
   title: string;
   description: string;
-};
+}
 
 const ArticleLayout = ({
   children,
@@ -14,9 +14,9 @@ const ArticleLayout = ({
 }: Props): JSX.Element => (
   <div>
     <NextSeo
-      title={title}
       description={description}
       openGraph={{ title, description }}
+      title={title}
     />
     {children}
   </div>

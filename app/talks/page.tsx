@@ -1,12 +1,11 @@
-import React from 'react';
-import NavigationBar from '../../components/NavigationBar';
-import TalkYearItem from '../../components/TalkYearItem';
-import items from '../../content/talks';
-import styles from '../../styles/blog.module.scss';
-import { genPageMetadata } from '../seo';
+import NavigationBar from "../../components/NavigationBar";
+import TalkYearItem from "../../components/TalkYearItem";
+import items from "../../content/talks";
+import styles from "../../styles/blog.module.scss";
+import { genPageMetadata } from "../seo";
 
 export const metadata = genPageMetadata({
-  title: `Talks ✍️`,
+  title: "Talks ✍️",
   description: `I share anything that may help others, technologies I'm using and cool things I've made`,
 });
 

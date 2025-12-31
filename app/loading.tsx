@@ -12,10 +12,10 @@ export default function Loading() {
 
             {/* Loading text with animation */}
             <div className="mb-4 text-center">
-              <h3 className="mb-2 animate-pulse text-xl font-semibold text-gray-800">
+              <h3 className="mb-2 animate-pulse font-semibold text-gray-800 text-xl">
                 Loading page...
               </h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-gray-600 text-sm">
                 Please wait while we prepare your content
               </p>
             </div>
@@ -24,15 +24,15 @@ export default function Loading() {
             <div className="flex justify-center space-x-2">
               <div
                 className="h-2 w-2 animate-bounce rounded-full bg-cyan-700"
-                style={{ animationDelay: '0s', animationDuration: '0.8s' }}
+                style={{ animationDelay: "0s", animationDuration: "0.8s" }}
               />
               <div
                 className="h-2 w-2 animate-bounce rounded-full bg-cyan-700"
-                style={{ animationDelay: '0.2s', animationDuration: '0.8s' }}
+                style={{ animationDelay: "0.2s", animationDuration: "0.8s" }}
               />
               <div
                 className="h-2 w-2 animate-bounce rounded-full bg-cyan-700"
-                style={{ animationDelay: '0.4s', animationDuration: '0.8s' }}
+                style={{ animationDelay: "0.4s", animationDuration: "0.8s" }}
               />
             </div>
 

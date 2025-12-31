@@ -1,8 +1,8 @@
-import React from 'react';
-import { parseText } from '../../lib/fast-reading';
+import { parseText } from "../../lib/fast-reading";
 
 const FastReadText = ({ text }: { text: string }) => {
-  return <span dangerouslySetInnerHTML={{ __html: parseText(text) }}></span>;
+  // biome-ignore lint/security/noDangerouslySetInnerHtml: This is a text processing component
+  return <span dangerouslySetInnerHTML={{ __html: parseText(text) }} />;
 };
 
 export default FastReadText;

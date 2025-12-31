@@ -1,35 +1,36 @@
-import fs from 'fs';
-import { join } from 'path';
-import matter from 'gray-matter';
-import { unified } from 'unified';
-import rehypeDocument from 'rehype-document';
-import rehypeFormat from 'rehype-format';
-import rehypeStringify from 'rehype-stringify';
-import remarkParse from 'remark-parse';
-import remarkRehype from 'remark-rehype';
-import rehypeHighlight from 'rehype-highlight';
-import { Article } from '../types/article';
+import fs from "node:fs";
+import { join } from "node:path";
+import matter from "gray-matter";
+import rehypeDocument from "rehype-document";
+import rehypeFormat from "rehype-format";
+import rehypeHighlight from "rehype-highlight";
+import rehypeStringify from "rehype-stringify";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import { unified } from "unified";
+import type { Article } from "../types/article";
 
-const articlesDirectory = join(process.cwd(), 'content/articles');
+const articlesDirectory = join(process.cwd(), "content/articles");
 
 export function getArticleFiles(): string[] {
   return fs.readdirSync(articlesDirectory);
 }
 
 export function getArticleBySlug(slug: string, fields: string[] = []) {
-  const realSlug = slug.replace(/\.md$/, '');
+  // biome-ignore lint/performance/useTopLevelRegex: Regular expression is necessary here
+  const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(articlesDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
   const items: Partial<Article> = {};
 
   for (const field of fields) {
-    if (field === 'slug') {
+    if (field === "slug") {
       items[field] = realSlug;
     }
 
-    if (field === 'content') {
+    if (field === "content") {
       items[field] = content;
     }
 
@@ -44,13 +45,12 @@ export function getArticleBySlug(slug: string, fields: string[] = []) {
 export function getAllArticles(fields: string[] = []): Partial<Article>[] {
   const data = getArticleFiles()
     .map((slug) => getArticleBySlug(slug, fields))
-    .sort((post1, post2) =>
-      post1.date && post2.date
-        ? new Date(post1.date) > new Date(post2.date)
-          ? -1
-          : 1
-        : 0
-    );
+    .sort((post1, post2) => {
+      if (post1.date && post2.date) {
+        return new Date(post1.date) > new Date(post2.date) ? -1 : 1;
+      }
+      return 0;
+    });
   return data;
 }
 

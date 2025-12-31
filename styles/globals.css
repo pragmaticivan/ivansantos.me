@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
-  --headingFont: 'Playfair Display', serif;
-  --defaultFont: 'Inter', sans-serif;
-  --codeFont: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --headingFont: "Playfair Display", serif;
+  --defaultFont: "Inter", sans-serif;
+  --codeFont:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
   --duration: 0.3s;
 
   --backgroundColor: #ffffff;
   --primaryColor: #000000;
-  --secondaryColor: #5C4B77;
+  --secondaryColor: #5c4b77;
 }
 
 html,
@@ -21,7 +23,12 @@ body {
   font-family: var(--defaultFont);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--headingFont);
 }
 
@@ -30,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code {
-  background-color: #F0E8E4;
+  background-color: #f0e8e4;
   padding: 1px 3px;
 }
 
@@ -44,7 +51,9 @@ code {
 
 /* Next.js Native Transitions */
 .page-transition {
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 /* Loading Animation Enhancements */
@@ -64,9 +73,15 @@ code {
 }
 
 @keyframes loading-bar {
-  0% { width: 0%; }
-  50% { width: 80%; }
-  100% { width: 60%; }
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 80%;
+  }
+  100% {
+    width: 60%;
+  }
 }
 
 .loading-bar-progress {
@@ -134,7 +149,9 @@ html {
 .route-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  transition:
+    opacity 0.3s ease-out,
+    transform 0.3s ease-out;
 }
 
 .route-exit {
@@ -145,5 +162,7 @@ html {
 .route-exit-active {
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  transition:
+    opacity 0.3s ease-in,
+    transform 0.3s ease-in;
 }

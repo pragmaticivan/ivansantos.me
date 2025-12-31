@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -48,15 +48,16 @@ class ErrorBoundary extends React.Component<
 
       return (
         <div className="flex min-h-screen flex-col items-center justify-center p-4">
-          <h1 className="mb-4 text-2xl font-bold text-red-600">
+          <h1 className="mb-4 font-bold text-2xl text-red-600">
             Something went wrong
           </h1>
           <p className="mb-4 text-gray-600">
             We&apos;re sorry, but something unexpected happened.
           </p>
           <button
-            onClick={this.resetError}
             className="rounded bg-cyan-700 px-4 py-2 text-white hover:bg-cyan-600"
+            onClick={this.resetError}
+            type="button"
           >
             Try again
           </button>
