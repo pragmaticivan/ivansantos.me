@@ -57,10 +57,10 @@ export function getAllArticles(fields: string[] = []): Partial<Article>[] {
 export async function convertMarkdownToHtml(markdown: string) {
   const file = await unified()
     .use(remarkParse)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeDocument)
     .use(rehypeFormat)
-    .use(rehypeStringify)
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .use(rehypeHighlight)
     .process(markdown);
 
