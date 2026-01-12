@@ -1,5 +1,6 @@
 import Image from "next/image";
 import NavigationBar from "../../components/NavigationBar";
+import StructuredData from "../../components/StructuredData";
 import { genPageMetadata } from "../seo";
 
 export const metadata = genPageMetadata({
@@ -10,6 +11,7 @@ export const metadata = genPageMetadata({
 const AboutPage = () => (
   <>
     <NavigationBar />
+    <StructuredData type="person" />
 
     <main className="flex-auto">
       <div className="mt-16 sm:mt-32 sm:px-8">
@@ -62,6 +64,7 @@ const AboutPage = () => (
                       <a
                         className="group flex font-medium text-sm text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
                         href="https://x.com/pragmaticivan"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           aria-hidden="true"
@@ -77,6 +80,7 @@ const AboutPage = () => (
                       <a
                         className="group flex font-medium text-sm text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
                         href="https://github.com/pragmaticivan/"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           aria-hidden="true"
@@ -96,6 +100,7 @@ const AboutPage = () => (
                       <a
                         className="group flex font-medium text-sm text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
                         href="https://www.linkedin.com/in/pragmaticivan/"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           aria-hidden="true"

@@ -62,7 +62,7 @@ const IndexPage = () => (
               <ul className="my-6 text-base text-zinc-600 leading-7 dark:text-zinc-400">
                 <li>
                   I use 2{" "}
-                  <a href="https://amzn.to/44mm1Ov">
+                  <a href="https://amzn.to/44mm1Ov" rel="noopener noreferrer">
                     Samsung Monitors - 28&apos;&apos;
                   </a>
                   . Best developer monitor bang for your buck hands down. Works
@@ -70,7 +70,10 @@ const IndexPage = () => (
                 </li>
                 <li>
                   My desk is an{" "}
-                  <a href="https://www.autonomous.ai/standing-desks/smartdesk-2-home?option_code=Smartdesk2Home-FrameSmartDesk2_DeskFrame.Black%2CModel.Coreframe-Surface_DeskDesign.705x30XLClassic%2CDeskTop.Black">
+                  <a
+                    href="https://www.autonomous.ai/standing-desks/smartdesk-2-home?option_code=Smartdesk2Home-FrameSmartDesk2_DeskFrame.Black%2CModel.Coreframe-Surface_DeskDesign.705x30XLClassic%2CDeskTop.Black"
+                    rel="noopener noreferrer"
+                  >
                     Autonomous SmartDesk Core XL Classic
                   </a>
                   . This desk has been around for a while, but it&apos;s still a
@@ -80,21 +83,21 @@ const IndexPage = () => (
                 <li>
                   Everything — Monitors, Ethernet, Hard Drives, Webcam, and
                   Power — is plugged in via a single USB cable and piped into my{" "}
-                  <a href="https://amzn.to/3pGeL0N">
+                  <a href="https://amzn.to/3pGeL0N" rel="noopener noreferrer">
                     CalDigit TS3 Plus Thunderbolt 3 Dock (New version available)
                   </a>
                   .
                 </li>
                 <li>
                   I currently use a{" "}
-                  <a href="https://amzn.to/3JQkg3I">
+                  <a href="https://amzn.to/3JQkg3I" rel="noopener noreferrer">
                     2023 16&apos;&apos; Macbook Pro M2 Max with 64 GB ram, 1TB
                     drive
                   </a>
                   .
                 </li>
                 <li>
-                  <a href="https://amzn.to/3XIF96K">
+                  <a href="https://amzn.to/3XIF96K" rel="noopener noreferrer">
                     TerraMaster F4-422 10GbE NAS
                   </a>{" "}
                   for backups, plex and homebridge.

@@ -6,7 +6,7 @@ import styles from "../styles/home.module.scss";
 
 export default function Page() {
   return (
-    <>
+    <main>
       <div
         className={clsx(
           "w-full",
@@ -18,9 +18,9 @@ export default function Page() {
       >
         <NavigationBar />
         <div className="flex justify-center pt-28">
-          <div className="rounded-xl border-4 border-cyan-700 px-14 py-6 text-7xl text-cyan-700">
+          <h1 className="rounded-xl border-4 border-cyan-700 px-14 py-6 text-7xl text-cyan-700">
             HOWDY!
-          </div>
+          </h1>
         </div>
       </div>
       <section
@@ -28,12 +28,14 @@ export default function Page() {
           "container mx-auto max-w-(--breakpoint-lg) p-4 text-center font-bold text-2xl leading-10"
         }
       >
-        Hi, my name is Ivan! A Brazilian/American software engineer specializing
-        in fault-tolerant applications and Distributed Systems. Currently
-        adventuring with Node.js, Go, Typescript, Terraform, Kubernetes, and
-        AWS.
+        <p>
+          Hi, my name is Ivan! A Brazilian/American software engineer
+          specializing in fault-tolerant applications and Distributed Systems.
+          Currently adventuring with Node.js, Go, Typescript, Terraform,
+          Kubernetes, and AWS.
+        </p>
       </section>
       <CallToContact />
-    </>
+    </main>
   );
 }

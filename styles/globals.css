@@ -2,8 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
-  --headingFont: "Playfair Display", serif;
-  --defaultFont: "Inter", sans-serif;
+  /* Fonts injected by next/font in layout.tsx */
+  /* --headingFont: "Playfair Display", serif; */
+  /* --defaultFont: "Inter", sans-serif; */
   --codeFont:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;

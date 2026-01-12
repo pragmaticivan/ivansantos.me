@@ -18,6 +18,7 @@ const Talks = () => {
 
   return (
     <>
+      <h1 className="sr-only">Talks</h1>
       <header className={styles.header}>
         <NavigationBar />
       </header>

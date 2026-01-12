@@ -78,7 +78,11 @@ const OpenSourcePage = () => (
                     {project.description}
                   </p>
                   <div className="flex flex-row space-x-4 align-bottom">
-                    <Link href={project.github} target="_blank">
+                    <Link
+                      href={project.github}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
                       <BsGithub
                         className="cursor-pointer transition-transform hover:-translate-y-1"
                         size={30}

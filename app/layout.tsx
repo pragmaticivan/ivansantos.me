@@ -4,10 +4,23 @@ import "../styles/globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import type React from "react";
 import ErrorBoundary from "../components/ErrorBoundary";
 import StructuredData from "../components/StructuredData";
 import { siteMetadata } from "../lib/site-metadata";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--defaultFont",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--headingFont",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -55,14 +68,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      className={`${inter.variable} ${playfair.variable} scroll-smooth`}
+      lang="en"
+    >
       <head>
         <StructuredData />
       </head>
       <link href="/favicon.png" rel="icon" sizes="any" type="image/png" />
 
       <body>
-        <ErrorBoundary>{children}</ErrorBoundary>
+        <ErrorBoundary>
+          <main className="min-h-screen">{children}</main>
+        </ErrorBoundary>
 
         <SpeedInsights />
         <GoogleTagManager

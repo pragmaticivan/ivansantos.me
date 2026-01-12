@@ -1,5 +1,6 @@
 import ArticleItem from "../../components/ArticleItem";
 import NavigationBar from "../../components/NavigationBar";
+import StructuredData from "../../components/StructuredData";
 import { getAllArticles } from "../../lib/article";
 import styles from "../../styles/blog.module.scss";
 import type { Article } from "../../types/article";
@@ -34,6 +35,21 @@ const BlogPage = async () => {
 
   return (
     <>
+      <StructuredData
+        data={{
+          "@type": "CollectionPage",
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: articles.map((article, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              url: `https://ivansantos.me/blog/${article.slug}/`,
+              name: article.title,
+            })),
+          },
+        }}
+      />
+      <h1 className="sr-only">Blog</h1>
       <header className={styles.header}>
         <NavigationBar />
       </header>

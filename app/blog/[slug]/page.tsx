@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import BlogAvatar from "../../../components/BlogAvatar";
 import Comments from "../../../components/Comments";
 import NavigationBar from "../../../components/NavigationBar";
+import StructuredData from "../../../components/StructuredData";
 import {
   convertMarkdownToHtml,
   getAllArticles,
@@ -76,12 +78,29 @@ export default async function ArticleView({
 
   return (
     <>
-      <header
-        className={styles.articleHeader}
-        style={{
-          backgroundImage: `url(${article.image})`,
+      <StructuredData
+        data={{
+          headline: article.title,
+          datePublished: article.date,
+          image: article.image ? [article.image] : [],
+          description: article.description,
+          author: {
+            "@type": "Person",
+            name: "Ivan Santos",
+          },
         }}
-      >
+        type="article"
+      />
+      <header className={`relative ${styles.articleHeader}`}>
+        {article.image && (
+          <Image
+            alt={article.title}
+            className="-z-10 object-cover"
+            fill={true}
+            priority={true}
+            src={article.image}
+          />
+        )}
         <NavigationBar dark={true} /> <BlogAvatar />
       </header>
       <div className={styles.container}>
