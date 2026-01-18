@@ -1,7 +1,5 @@
 import clsx from "clsx";
 import Image from "next/image";
-
-import Comments from "../../components/Comments";
 import NavigationBar from "../../components/NavigationBar";
 import ivanDeskSetup from "../../public/images/ivan-desk-setup.jpg";
 import { genPageMetadata } from "../seo";
@@ -220,8 +218,6 @@ const IndexPage = () => (
               <ul className="my-6 text-base text-zinc-600 leading-7 dark:text-zinc-400">
                 <li>2023-07-09 - Initial draft</li>
               </ul>
-
-              <Comments />
             </div>
           </div>
         </div>

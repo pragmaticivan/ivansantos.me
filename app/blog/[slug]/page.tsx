@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import BlogAvatar from "../../../components/BlogAvatar";
-import Comments from "../../../components/Comments";
 import NavigationBar from "../../../components/NavigationBar";
 import {
   convertMarkdownToHtml,
@@ -95,7 +94,6 @@ export default async function ArticleView({
               __html: content,
             }}
           />
-          <Comments />
         </div>
       </div>
     </>

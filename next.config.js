@@ -2,7 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["avatars2.githubusercontent.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatars2.githubusercontent.com",
+      },
+    ],
     formats: ["image/webp", "image/avif"],
   },
   // Add security headers

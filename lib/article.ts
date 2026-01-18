@@ -1,7 +1,6 @@
 import fs from "node:fs";
 import { join } from "node:path";
 import matter from "gray-matter";
-import rehypeDocument from "rehype-document";
 import rehypeFormat from "rehype-format";
 import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
@@ -13,7 +12,9 @@ import type { Article } from "../types/article";
 const articlesDirectory = join(process.cwd(), "content/articles");
 
 export function getArticleFiles(): string[] {
-  return fs.readdirSync(articlesDirectory);
+  return fs
+    .readdirSync(articlesDirectory)
+    .filter((file) => file.endsWith(".md"));
 }
 
 export function getArticleBySlug(slug: string, fields: string[] = []) {
@@ -46,10 +47,9 @@ export function getAllArticles(fields: string[] = []): Partial<Article>[] {
   const data = getArticleFiles()
     .map((slug) => getArticleBySlug(slug, fields))
     .sort((post1, post2) => {
-      if (post1.date && post2.date) {
-        return new Date(post1.date) > new Date(post2.date) ? -1 : 1;
-      }
-      return 0;
+      const date1 = post1.date ? new Date(post1.date).getTime() : 0;
+      const date2 = post2.date ? new Date(post2.date).getTime() : 0;
+      return date1 > date2 ? -1 : 1;
     });
   return data;
 }
@@ -58,7 +58,6 @@ export async function convertMarkdownToHtml(markdown: string) {
   const file = await unified()
     .use(remarkParse)
     .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeDocument)
     .use(rehypeFormat)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .use(rehypeHighlight)
