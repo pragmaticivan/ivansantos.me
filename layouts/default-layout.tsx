@@ -1,6 +1,5 @@
 "use client";
 
-import { NextSeo } from "next-seo";
 import type { JSX, ReactNode } from "react";
 
 interface Props {
@@ -9,19 +8,8 @@ interface Props {
   description: string;
 }
 
-const DefaultLayout = ({
-  children,
-  title,
-  description,
-}: Props): JSX.Element => (
-  <div>
-    <NextSeo
-      description={description}
-      openGraph={{ title, description }}
-      title={title}
-    />
-    {children}
-  </div>
+const DefaultLayout = ({ children }: Props): JSX.Element => (
+  <div>{children}</div>
 );
 
 export default DefaultLayout;

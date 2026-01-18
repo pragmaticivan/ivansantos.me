@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArticleJsonLd } from "next-seo";
 import BlogAvatar from "../../../components/BlogAvatar";
 import NavigationBar from "../../../components/NavigationBar";
 import {
@@ -6,6 +7,7 @@ import {
   getAllArticles,
   getArticleBySlug,
 } from "../../../lib/article";
+import { siteMetadata } from "../../../lib/site-metadata";
 import styles from "../../../styles/article.module.scss";
 import "../../../styles/highlightjs.css";
 
@@ -72,9 +74,22 @@ export default async function ArticleView({
   ]);
 
   const content = await convertMarkdownToHtml(article.content ?? "");
+  const url = `${siteMetadata.siteUrl}/blog/${article.slug}`;
 
   return (
     <>
+      <ArticleJsonLd
+        author={{
+          "@type": "Person",
+          name: siteMetadata.author,
+          url: siteMetadata.siteUrl,
+        }}
+        datePublished={article.date ?? ""}
+        description={article.description ?? ""}
+        headline={article.title ?? ""}
+        image={article.image}
+        url={url}
+      />
       <header
         className={styles.articleHeader}
         style={{
