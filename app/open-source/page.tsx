@@ -18,10 +18,11 @@ const projects = [
     github: "https://github.com/pragmaticivan/nestjs-otel",
   },
   {
-    name: "nest-resend",
-    description: "Injectable Resend client for your nestjs projects",
+    name: "go-check-updates",
+    description:
+      "Find newer versions of package dependencies for go applications",
     image: "/images/project-logo.png",
-    github: "https://github.com/pragmaticivan/nest-resend",
+    github: "https://github.com/pragmaticivan/go-check-updates",
   },
   {
     name: "dotfiles",
@@ -42,6 +43,12 @@ const projects = [
     description: "My Personal Website",
     image: "/images/project-logo.png",
     github: "https://github.com/pragmaticivan/ivansantos.me",
+  },
+  {
+    name: "nest-resend",
+    description: "Injectable Resend client for your nestjs projects",
+    image: "/images/project-logo.png",
+    github: "https://github.com/pragmaticivan/nest-resend",
   },
 ];
 
