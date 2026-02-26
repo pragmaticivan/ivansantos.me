@@ -233,6 +233,105 @@ resource "aws_apigatewayv2_route" "billing_get_canary" {
 }
 ```
 
+### Node.js action engine snippets
+
+Below are the core signatures that power a lightweight rollout controller.
+
+```js
+async function runCanarySteps({
+  functionName,
+  alias,
+  oldVersion,
+  newVersion,
+  steps,
+  analysisProvider,
+  lambdaClient,
+  cloudWatchClient,
+  fetchImpl,
+  logger,
+}) {
+  for (const step of steps) {
+    if (step.setWeight != null) await setWeight(step.setWeight);
+    else if (step.pause) await sleep(step.pause.durationSeconds);
+    else if (step.analysis) await runAnalysis(step.analysis);
+    else throw new Error(`Unsupported rollout step: ${JSON.stringify(step)}`);
+  }
+}
+```
+
+```js
+async function setWeight(weight) {
+  const normalized = Math.max(0, Math.min(100, Number(weight)));
+
+  // 100% means promote alias primary version to newVersion
+  if (normalized === 100) {
+    return lambdaClient.send(
+      new UpdateAliasCommand({
+        FunctionName: functionName,
+        Name: alias,
+        FunctionVersion: newVersion,
+        RoutingConfig: { AdditionalVersionWeights: {} },
+      }),
+    );
+  }
+
+  // Partial traffic keeps old version as primary and adds weighted canary
+  return lambdaClient.send(
+    new UpdateAliasCommand({
+      FunctionName: functionName,
+      Name: alias,
+      FunctionVersion: oldVersion,
+      RoutingConfig: {
+        AdditionalVersionWeights: { [newVersion]: normalized / 100 },
+      },
+    }),
+  );
+}
+```
+
+```js
+async function runAnalysis(analysis) {
+  const provider = resolveProvider(analysis, analysisProvider);
+  if (provider === 'newrelic') return runNewRelicAnalysis(analysis);
+  if (provider === 'cloudwatch') return runCloudWatchAnalysis(analysis);
+  throw new Error(`Unsupported analysis provider: ${provider}`);
+}
+
+function evaluate(observed, operator, threshold) {
+  if (operator === 'LTE') return observed <= threshold;
+  if (operator === 'GTE') return observed >= threshold;
+  if (operator === 'LT') return observed < threshold;
+  if (operator === 'GT') return observed > threshold;
+  if (operator === 'EQ') return observed === threshold;
+  if (operator === 'NEQ') return observed !== threshold;
+  throw new Error(`Unsupported operator: ${operator}`);
+}
+```
+
+```js
+// GitHub Action wrapper flow (simplified)
+const oldVersion = await getAliasVersion(functionName, alias);
+const newVersion = await publishVersion(functionName);
+
+try {
+  await runCanarySteps({
+    functionName,
+    alias,
+    oldVersion,
+    newVersion,
+    steps,
+    analysisProvider: 'auto',
+    lambdaClient,
+    cloudWatchClient,
+    fetchImpl: fetch,
+    logger: console,
+  });
+} catch (error) {
+  await rollbackAlias(functionName, alias, oldVersion);
+  throw error;
+}
+```
+
 I love **Argo Rollouts**, and this approach is heavily inspired by its controller
 mindset: progressive delivery, metric-driven promotion, and safe automatic rollback.
 The difference is scope and simplicity: a focused GitHub Actions controller can be a
