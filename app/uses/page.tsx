@@ -6,8 +6,10 @@ import { genPageMetadata } from "../seo";
 import styles from "./styles.module.scss";
 
 export const metadata = genPageMetadata({
-  title: "Ivan Santos Toolbox 🧰",
-  description: "Ivan Santos Toolbox",
+  title: "Uses",
+  description:
+    "The hardware, software, development tools, and workspace Ivan Santos uses for platform and AI engineering.",
+  path: "/uses",
 });
 
 const IndexPage = () => (

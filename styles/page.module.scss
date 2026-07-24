@@ -279,6 +279,7 @@
   display: inline-flex;
   min-height: 3rem;
   align-items: center;
+  gap: 0.65rem;
   padding: 0 1.35rem;
   border: 0;
   border-radius: 999px;
@@ -331,6 +332,148 @@
   }
 }
 
+.consultingHero {
+  max-width: 62rem;
+  padding-bottom: clamp(6rem, 11vw, 9rem);
+}
+
+.eyebrow {
+  margin: 0 0 1.25rem;
+  color: var(--accentColor);
+  font-family: var(--codeFont);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.consultingLead {
+  max-width: 48rem;
+  margin: 2rem 0 2.25rem;
+  color: var(--mutedColor);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.sectionHeading {
+  max-width: 52rem;
+  margin-bottom: 2.5rem;
+}
+
+.sectionHeading h2,
+.consultingSplit h2,
+.consultingCta h2 {
+  margin: 0;
+  color: var(--primaryColor);
+  font-size: clamp(2.25rem, 4.5vw, 4rem);
+  font-weight: 620;
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.serviceCard {
+  min-height: 27rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--lineColor);
+  border-radius: 1.25rem;
+  background: rgba(237, 241, 248, 0.55);
+}
+
+.serviceCard > svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--accentColor);
+}
+
+.serviceCard h3 {
+  margin: 5rem 0 1rem;
+  color: var(--primaryColor);
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  font-weight: 620;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.serviceCard p {
+  margin: 0;
+  color: var(--mutedColor);
+  line-height: 1.65;
+}
+
+.serviceCard .serviceDetails {
+  margin-top: 1.25rem;
+  color: var(--subtleColor);
+  font-size: 0.9rem;
+}
+
+.consultingSplit {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(4rem, 10vw, 9rem);
+  margin-top: clamp(7rem, 12vw, 11rem);
+  padding-top: clamp(3rem, 5vw, 4rem);
+  border-top: 1px solid var(--lineStrongColor);
+}
+
+.problemList {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--lineStrongColor);
+  list-style: none;
+}
+
+.problemList li {
+  position: relative;
+  padding: 1.4rem 0 1.4rem 1.5rem;
+  border-bottom: 1px solid var(--lineColor);
+  color: var(--mutedColor);
+  line-height: 1.65;
+}
+
+.problemList li::before {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--accentColor);
+  content: "";
+}
+
+.consultingCta {
+  margin-top: clamp(7rem, 12vw, 11rem);
+  padding: clamp(2rem, 6vw, 5rem);
+  border-radius: 1.5rem;
+  background: var(--primaryColor);
+}
+
+.consultingCta h2 {
+  max-width: 13ch;
+  color: var(--backgroundColor);
+}
+
+.consultingCta > p:not(.eyebrow) {
+  max-width: 42rem;
+  margin: 1.5rem 0 2rem;
+  color: #b9c5dc;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.consultingCta .primaryButton {
+  background: var(--backgroundColor);
+  color: var(--primaryColor);
+}
+
 @media (max-width: 600px) {
   .page,
   .pageWide {
@@ -368,6 +511,23 @@
   .notFound {
     grid-template-columns: 1fr;
     align-content: center;
+  }
+
+  .serviceGrid,
+  .consultingSplit {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceCard {
+    min-height: auto;
+  }
+
+  .serviceCard h3 {
+    margin-top: 3.5rem;
+  }
+
+  .consultingSplit {
+    gap: 3rem;
   }
 }
 

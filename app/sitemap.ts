@@ -21,12 +21,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: post.date,
     }));
 
-  const routes = ["", "about", "open-source", "talks", "uses", "blog"].map(
-    (route) => ({
-      url: `${siteMetadata.siteUrl}/${route}`,
-      lastModified: new Date().toISOString().split("T")[0],
-    })
-  );
+  const routes = [
+    "",
+    "about",
+    "blog",
+    "consulting",
+    "indie-hacker",
+    "open-source",
+    "talks",
+    "uses",
+  ].map((route) => ({
+    url: `${siteMetadata.siteUrl}/${route}`,
+  }));
 
   return [...routes, ...blogRoutes];
 }

@@ -1,6 +1,7 @@
 import { parse } from "date-fns";
 import RSS from "rss";
 import { getAllArticles } from "../../lib/article";
+import { siteMetadata } from "../../lib/site-metadata";
 
 export function GET() {
   const articles = getAllArticles([
@@ -15,11 +16,12 @@ export function GET() {
   ]).filter((article) => !article.draft);
 
   const feed = new RSS({
-    title: "Ivan Santos",
-    description: "Ivan Santos's Blog",
+    title: "Ivan Santos — Platform & AI Engineering",
+    description:
+      "Practical writing on platform engineering, production AI systems, Kubernetes, observability, Go, and engineering judgment.",
     generator: "RSS for Node and Next.js",
-    feed_url: "https://ivansantos.me/feed.xml",
-    site_url: "https://ivansantos.me/",
+    feed_url: `${siteMetadata.siteUrl}/feed.xml`,
+    site_url: `${siteMetadata.siteUrl}/`,
     copyright: `Copyright ${new Date().getFullYear().toString()}, Ivan Santos`,
     language: "en-US",
     pubDate: new Date().toUTCString(),
@@ -31,7 +33,7 @@ export function GET() {
       feed.item({
         title: article.title ?? "",
         description: article.description ?? "",
-        url: `https://ivansantos.me/blog/${article.slug}/`,
+        url: `${siteMetadata.siteUrl}/blog/${article.slug}`,
         author: "Ivan Santos",
         date: parse(
           article.date ?? new Date().toDateString(),
