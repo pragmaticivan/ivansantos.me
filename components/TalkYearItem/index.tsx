@@ -9,18 +9,19 @@ interface Props {
 }
 const TalkYearItem = ({ talkYear }: Props) => {
   return (
-    <>
-      <div className={styles.item}>{talkYear.year}</div>
-      <ul>
+    <section className={styles.year}>
+      <h2>{talkYear.year}</h2>
+      <ul className={styles.list}>
         {talkYear.talks.map((talk, tIndex) => {
           return (
             <li key={`talk-${tIndex}`}>
-              <div className={styles.date}>{talk.date}</div>
-              <div className={styles.title}>
+              <p className={styles.date}>{talk.date}</p>
+              <h3 className={styles.title}>
                 {talk.title} - {talk.language}
-              </div>
-              <div className={styles.description}>{talk.where}</div>
+              </h3>
+              <p className={styles.description}>{talk.where}</p>
               <Link
+                className={styles.link}
                 href={talk.presentation.url}
                 passHref={true}
                 target="_blank"
@@ -31,7 +32,7 @@ const TalkYearItem = ({ talkYear }: Props) => {
           );
         })}
       </ul>
-    </>
+    </section>
   );
 };
 

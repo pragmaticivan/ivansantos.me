@@ -1,47 +1,82 @@
 .articleItem {
-  padding-bottom: 60px;
+  border-bottom: 1px solid var(--lineColor);
+}
 
-  a {
-    text-decoration: none;
-  }
+.articleItem:first-child {
+  border-top: 1px solid var(--lineStrongColor);
+}
+
+.articleItem a {
+  display: block;
+  padding: 2.25rem 0 2.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: padding 240ms var(--ease-out);
+}
+
+.articleItem a:hover {
+  padding-right: 0.35rem;
+  padding-left: 0.35rem;
 }
 
 .date {
-  color: rgba(0, 0, 0, 0.50);
-  font-size: 14px;
-  letter-spacing: 4.5px;
-  padding-bottom: 6px;
+  padding-bottom: 0.75rem;
+  color: var(--subtleColor);
+  font-family: var(--codeFont);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
 }
 
 .title {
-  color: rgba(0, 0, 0, 0.90);
-  font-size: 36px;
-  font-family: var(--headingFont);
-  letter-spacing: 2px;
-  line-height: 41px;
-  margin-left: -2px;
-  padding-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  color: var(--primaryColor);
+  font-size: clamp(1.6rem, 3vw, 2.45rem);
+  font-weight: 580;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  transition: color 220ms var(--ease-out);
+}
 
-  img {
-    width: 36px;
-    height: auto;
-    display: inline-block;
-    margin-right: 2px;
-  }
+.title img {
+  display: inline-block;
+  width: 1.65rem;
+  height: auto;
+  margin-top: 0.35rem;
+  flex: none;
+}
 
-  &:hover {
-    color: rgba(0, 0, 0, 0.50);
-  }
-
-  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    font-size: 28px;
-    line-height: 32px;
-  }
+.articleItem a:hover .title {
+  color: var(--accentColor);
 }
 
 .description {
-  color: rgba(0, 0, 0, 0.50);
-  font-size: 14px;
-  letter-spacing: 2px;
-  line-height: 20px;
+  max-width: 62rem;
+  padding-top: 0.85rem;
+  color: var(--mutedColor);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+@media (max-width: 600px) {
+  .articleItem a {
+    padding: 1.75rem 0 2rem;
+  }
+
+  .title {
+    gap: 0.7rem;
+  }
+
+  .title img {
+    width: 1.35rem;
+    margin-top: 0.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .articleItem a {
+    transition: none;
+  }
 }

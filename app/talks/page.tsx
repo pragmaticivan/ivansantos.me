@@ -1,7 +1,6 @@
-import NavigationBar from "../../components/NavigationBar";
 import TalkYearItem from "../../components/TalkYearItem";
 import items from "../../content/talks";
-import styles from "../../styles/blog.module.scss";
+import pageStyles from "../../styles/page.module.scss";
 import { genPageMetadata } from "../seo";
 
 export const metadata = genPageMetadata({
@@ -17,12 +16,16 @@ const Talks = () => {
   };
 
   return (
-    <>
-      <header className={styles.header}>
-        <NavigationBar />
+    <main className={pageStyles.page}>
+      <header className={pageStyles.intro}>
+        <h1 className={pageStyles.title}>Talks</h1>
+        <p className={pageStyles.lead}>
+          Presentations and workshops on platform engineering, AI, distributed
+          systems, observability, and dependable software.
+        </p>
       </header>
-      <div className={styles.articleList}>{renderAll()}</div>
-    </>
+      <div className={pageStyles.ruleList}>{renderAll()}</div>
+    </main>
   );
 };
 

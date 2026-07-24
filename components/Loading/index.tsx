@@ -25,10 +25,10 @@ const Loading: React.FC<LoadingProps> = ({
   const renderSpinner = () => (
     <div className="relative">
       <div
-        className={`animate-spin rounded-full border-4 border-cyan-700/20 border-t-cyan-700 ${sizeClasses[size]}`}
+        className={`animate-spin rounded-full border-4 border-indigo-600/20 border-t-indigo-600 ${sizeClasses[size]}`}
       />
       {size === "xl" && (
-        <div className="absolute inset-0 scale-150 animate-pulse rounded-full bg-gradient-to-r from-cyan-700/10 to-blue-700/10 blur-xl" />
+        <div className="absolute inset-0 scale-150 animate-pulse rounded-full bg-indigo-600/10 blur-xl" />
       )}
     </div>
   );
@@ -37,7 +37,7 @@ const Loading: React.FC<LoadingProps> = ({
     <div className="flex space-x-1">
       {[0, 1, 2].map((i) => (
         <div
-          className={`animate-pulse rounded-full bg-cyan-700 ${sizeClasses[size]}`}
+          className={`animate-pulse rounded-full bg-indigo-600 ${sizeClasses[size]}`}
           key={i}
           style={{
             animationDelay: `${i * 0.2}s`,
@@ -52,7 +52,7 @@ const Loading: React.FC<LoadingProps> = ({
     <div className="flex space-x-1">
       {[0, 1, 2].map((i) => (
         <div
-          className={`animate-bounce rounded-full bg-cyan-700 ${sizeClasses[size]}`}
+          className={`animate-bounce rounded-full bg-indigo-600 ${sizeClasses[size]}`}
           key={i}
           style={{
             animationDelay: `${i * 0.1}s`,
@@ -77,7 +77,7 @@ const Loading: React.FC<LoadingProps> = ({
     <div className="flex space-x-1">
       {[0, 1, 2, 3].map((i) => (
         <div
-          className={`animate-pulse bg-cyan-700 ${getBarWidth()} h-8`}
+          className={`animate-pulse bg-indigo-600 ${getBarWidth()} h-8`}
           key={i}
           style={{
             animationDelay: `${i * 0.1}s`,
@@ -121,7 +121,7 @@ const Loading: React.FC<LoadingProps> = ({
       {showProgress && (
         <div className="mt-4 h-1 w-full max-w-xs overflow-hidden rounded-full bg-gray-200">
           <div
-            className="h-full animate-pulse rounded-full bg-gradient-to-r from-cyan-700 to-blue-700"
+            className="h-full animate-pulse rounded-full bg-indigo-600"
             style={{
               width: "60%",
               animation: "loading-bar 2s ease-in-out infinite",

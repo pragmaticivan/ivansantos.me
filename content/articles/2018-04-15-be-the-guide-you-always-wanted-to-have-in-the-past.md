@@ -13,7 +13,7 @@ Life is full of twists and turns, and how we navigate them often defines who we 
 
 Many of our victories are owed to the mentors we have known throughout our lives, who have somehow helped us by guiding the path we have decided to pursue without asking for anything in return. They often do this subliminally, driven by a desire to see you overcome obstacles and succeed.
 
-A simple gesture showing how something works, a minute suggesting a book, a word of encouragement, or advice on avoiding pitfalls—these are things many of us can do.
+A simple gesture showing how something works, a minute suggesting a book, a word of encouragement, or advice on avoiding pitfalls: these are things many of us can do.
 
 ## For those who don't know where to go, should any destination be good?
 

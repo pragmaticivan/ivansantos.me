@@ -177,7 +177,7 @@ Finally, the entry point is a `setup.sh` script that bootstraps everything. It h
 
 ## Conclusion
 
-Treating your dotfiles like a software project—with CI/CD, testing, and modular configuration—pays off. It makes setting up a new machine a breeze and ensures you always have a working environment, no matter where you are.
+Treating your dotfiles like a software project, with CI/CD, testing, and modular configuration, pays off. It makes setting up a new machine a breeze and ensures you always have a working environment, no matter where you are.
 
 Check out the full repository here: [github.com/pragmaticivan/dotfiles](https://github.com/pragmaticivan/dotfiles)
 
@@ -188,4 +188,3 @@ This setup didn't happen in a vacuum. I stood on the shoulders of giants to buil
 - [shunk031/dotfiles](https://github.com/shunk031/dotfiles)
 - [caarlos0/dotfiles](https://github.com/caarlos0/dotfiles)
 - [KevinNitroG/dotfiles](https://github.com/KevinNitroG/dotfiles)
-

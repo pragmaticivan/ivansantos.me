@@ -44,8 +44,8 @@ const PageTransition: React.FC<PageTransitionProps> = ({
         <div className="mx-4 w-full max-w-md">
           <div className="flex min-h-[200px] flex-col items-center justify-center rounded-lg bg-white p-8 shadow-sm">
             <div className="relative">
-              <div className="h-12 w-12 animate-spin rounded-full border-2 border-cyan-700 border-t-transparent" />
-              <div className="absolute inset-0 scale-150 animate-pulse rounded-full bg-cyan-700/10 blur-xl" />
+              <div className="h-12 w-12 animate-spin rounded-full border-2 border-indigo-600 border-t-transparent" />
+              <div className="absolute inset-0 scale-150 animate-pulse rounded-full bg-indigo-600/10 blur-xl" />
             </div>
             <div className="mt-6 text-center">
               <span className="animate-pulse font-medium text-gray-800 text-lg">

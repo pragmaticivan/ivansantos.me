@@ -1,39 +1,54 @@
 "use client";
 
-import { type ReactNode, useEffect, useRef } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
+import styles from "./styles.module.scss";
 
 interface Props {
   offset?: string;
   children?: ReactNode;
 }
 
-export default function SlideUp({ children, offset = "0px" }: Props) {
-  const ref = useRef(null);
+export default function SlideUp({ children, offset = "-8% 0px" }: Props) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isEnhanced, setIsEnhanced] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove("opacity-0");
-            entry.target.classList.add("animate-slideUpCubiBezier");
-          }
-        }
-      },
-      { rootMargin: offset }
-    );
+    const element = ref.current;
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (!element) {
+      return;
     }
 
-    return () => {
-      observer.disconnect();
-    };
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setIsVisible(true);
+      return;
+    }
+
+    setIsEnhanced(true);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: offset, threshold: 0.1 }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
   }, [offset]);
 
   return (
-    <div className="relative opacity-0" ref={ref}>
+    <div
+      className={`${styles.reveal} ${isEnhanced ? styles.enhanced : ""} ${
+        isVisible ? styles.visible : ""
+      }`}
+      ref={ref}
+    >
       {children}
     </div>
   );
