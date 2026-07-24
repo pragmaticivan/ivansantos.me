@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleJsonLd } from "next-seo";
 import BlogAvatar from "../../../components/BlogAvatar";
-import NavigationBar from "../../../components/NavigationBar";
 import {
   convertMarkdownToHtml,
   getAllArticles,
@@ -96,11 +95,11 @@ export default async function ArticleView({
           backgroundImage: `url(${article.image})`,
         }}
       >
-        <NavigationBar dark={true} /> <BlogAvatar />
+        <BlogAvatar />
       </header>
       <div className={styles.container}>
         <div className="blog-post">
-          <h2 className={styles.date}> {article.date} </h2>
+          <p className={styles.date}> {article.date} </p>
           <h1 className={styles.title}> {article.title} </h1>
           <div
             className={styles.content}

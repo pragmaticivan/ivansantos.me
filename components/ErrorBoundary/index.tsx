@@ -55,7 +55,7 @@ class ErrorBoundary extends React.Component<
             We&apos;re sorry, but something unexpected happened.
           </p>
           <button
-            className="rounded bg-cyan-700 px-4 py-2 text-white hover:bg-cyan-600"
+            className="rounded bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-500"
             onClick={this.resetError}
             type="button"
           >

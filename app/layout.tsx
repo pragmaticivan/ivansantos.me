@@ -1,13 +1,28 @@
 import "../styles/tailwind.css";
 import "../styles/globals.css";
 
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import type React from "react";
 import ErrorBoundary from "../components/ErrorBoundary";
+import Footer from "../components/Footer";
+import NavigationBar from "../components/NavigationBar";
 import StructuredData from "../components/StructuredData";
 import { siteMetadata } from "../lib/site-metadata";
+
+const geistSans = localFont({
+  display: "swap",
+  src: "../public/fonts/geist-latin.woff2",
+  variable: "--font-geist-sans",
+});
+
+const geistMono = localFont({
+  display: "swap",
+  src: "../public/fonts/geist-mono-latin.woff2",
+  variable: "--font-geist-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -55,19 +70,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      className={`${geistSans.variable} ${geistMono.variable}`}
+      data-scroll-behavior="smooth"
+      lang="en"
+    >
       <head>
         <StructuredData />
       </head>
       <link href="/favicon.png" rel="icon" sizes="any" type="image/png" />
 
       <body>
-        <ErrorBoundary>{children}</ErrorBoundary>
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
+        <NavigationBar />
+        <div id="main-content" tabIndex={-1}>
+          <ErrorBoundary>{children}</ErrorBoundary>
+        </div>
+        <Footer />
 
         <SpeedInsights />
-        <GoogleTagManager
-          gtmId={siteMetadata.analytics.googleTagManager.googleTagManagerId}
-        />
+        {process.env.NODE_ENV === "production" ? (
+          <GoogleAnalytics gaId={siteMetadata.analytics.googleAnalytics.gaId} />
+        ) : null}
       </body>
     </html>
   );

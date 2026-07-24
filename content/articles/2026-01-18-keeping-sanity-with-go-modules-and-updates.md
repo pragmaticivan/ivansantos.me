@@ -8,7 +8,7 @@ slug: "2026-01-18-keeping-sanity-with-go-modules-and-updates"
 tags: ["dependabot", "go"]
 ---
 
-If you work in an environment where security is a first-class citizen of the SDLC, you know that keeping up with package and module updates can be incredibly demanding. It’s a constant stream of noise—patch bumps, minor releases, major overhauls.
+If you work in an environment where security is a first-class citizen of the SDLC, you know that keeping up with package and module updates can be incredibly demanding. It’s a constant stream of noise: patch bumps, minor releases, major overhauls.
 
 But there is a hidden risk in being too eager. When you update modules the moment a new version drops, you might unwittingly become the target of an exploited dependency that hasn't been patched or flagged by the maintainer yet. We've seen supply chain attacks happen, and being on the "bleeding edge" of updates sometimes means you're the one doing the bleeding.
 
@@ -64,7 +64,7 @@ First, install the tool:
 go install github.com/pragmaticivan/go-check-updates/cmd/gcu@latest
 ```
 
-Then you can use it to check for updates while respecting a cooldown period. By default, running `gcu` is a "dry run"—it just lists what's available without changing anything.
+Then you can use it to check for updates while respecting a cooldown period. By default, running `gcu` is a "dry run." It just lists what's available without changing anything.
 
 <img src="/content/images/articles/2026-01-18-keeping-sanity-with-go-modules-and-updates/gcu.png" width="100%" alt="GCU" />
 

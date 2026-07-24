@@ -1,46 +1,69 @@
-.item {
-  padding-bottom: 60px;
+.year {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  padding: 2.5rem 0 3rem;
+  border-bottom: 1px solid var(--lineColor);
+}
 
-  a {
-    text-decoration: none;
-  }
+.year h2 {
+  margin: 0;
+  color: var(--accentColor);
+  font-family: var(--codeFont);
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+}
+
+.list {
+  display: grid;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .date {
-  color: rgba(0, 0, 0, 0.50);
-  font-size: 14px;
-  letter-spacing: 4.5px;
-  padding-bottom: 6px;
+  margin: 0 0 0.65rem;
+  color: var(--subtleColor);
+  font-family: var(--codeFont);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
 }
 
 .title {
-  color: rgba(0, 0, 0, 0.90);
-  font-size: 36px;
-  letter-spacing: 2px;
-  line-height: 41px;
-  margin-left: -2px;
-  padding-bottom: 16px;
-
-  img {
-    width: 36px;
-    height: auto;
-    display: inline-block;
-    margin-right: 2px;
-  }
-
-  &:hover {
-    color: rgba(0, 0, 0, 0.50);
-  }
-
-  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    font-size: 28px;
-    line-height: 32px;
-  }
+  max-width: 42rem;
+  margin: 0;
+  color: var(--primaryColor);
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  font-weight: 590;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
 }
 
 .description {
-  color: rgba(0, 0, 0, 0.50);
-  font-size: 14px;
-  letter-spacing: 2px;
-  line-height: 20px;
+  margin: 0.75rem 0 0;
+  color: var(--mutedColor);
+  line-height: 1.65;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--accentColor);
+  font-size: 0.9rem;
+  font-weight: 620;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.link:hover {
+  color: var(--primaryColor);
+}
+
+@media (max-width: 600px) {
+  .year {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }

@@ -1,36 +1,57 @@
+import Link from "next/link";
+import {
+  RiGithubFill,
+  RiLinkedinBoxFill,
+  RiTwitterXFill,
+} from "react-icons/ri";
 import styles from "./styles.module.scss";
 
+const socialLinks = [
+  {
+    href: "https://x.com/pragmaticivan",
+    label: "X",
+    icon: RiTwitterXFill,
+  },
+  {
+    href: "https://github.com/pragmaticivan",
+    label: "GitHub",
+    icon: RiGithubFill,
+  },
+  {
+    href: "https://www.linkedin.com/in/pragmaticivan",
+    label: "LinkedIn",
+    icon: RiLinkedinBoxFill,
+  },
+];
+
 const Footer = () => (
-  <footer>
-    <ul className={styles.social}>
-      <li>
-        <a
-          aria-label="@pragmaticivan twitter"
-          href="https://twitter.com/pragmaticivan"
-          title="Twitter"
-        >
-          <i className="ri-twitter-fill" />
-        </a>
-      </li>
-      <li>
-        <a
-          aria-label="@pragmaticivan github"
-          href="https://github.com/pragmaticivan"
-          title="Github"
-        >
-          <i className="ri-github-fill" />
-        </a>
-      </li>
-      <li>
-        <a
-          aria-label="@pragmaticivan linkedin"
-          href="http://www.linkedin.com/in/pragmaticivan"
-          title="LinkedIn"
-        >
-          <i className="ri-linkedin-box-fill" />
-        </a>
-      </li>
-    </ul>
+  <footer className={styles.footer}>
+    <div className={styles.inner}>
+      <div>
+        <Link className={styles.name} href="/">
+          Ivan Santos
+        </Link>
+        <p>
+          Staff engineering and consulting across platforms, AI, and developer
+          productivity.
+        </p>
+      </div>
+
+      <div className={styles.social}>
+        {socialLinks.map(({ href, icon: Icon, label }) => (
+          <a
+            aria-label={`Ivan Santos on ${label}`}
+            href={href}
+            key={label}
+            rel="noreferrer"
+            target="_blank"
+            title={label}
+          >
+            <Icon aria-hidden="true" />
+          </a>
+        ))}
+      </div>
+    </div>
   </footer>
 );
 

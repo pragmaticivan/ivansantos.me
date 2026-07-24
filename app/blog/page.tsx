@@ -1,5 +1,4 @@
 import ArticleItem from "../../components/ArticleItem";
-import NavigationBar from "../../components/NavigationBar";
 import { getAllArticles } from "../../lib/article";
 import styles from "../../styles/blog.module.scss";
 import type { Article } from "../../types/article";
@@ -33,12 +32,16 @@ const BlogPage = async () => {
   };
 
   return (
-    <>
-      <header className={styles.header}>
-        <NavigationBar />
-      </header>
+    <main className={styles.blogPage}>
+      <div className={styles.blogIntro}>
+        <h1>Writing</h1>
+        <p>
+          Practical notes on platform and AI engineering, infrastructure, and
+          the lessons that survive contact with production.
+        </p>
+      </div>
       <div className={styles.articleList}>{renderAll()}</div>
-    </>
+    </main>
   );
 };
 

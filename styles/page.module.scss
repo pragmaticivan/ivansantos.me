@@ -1,0 +1,378 @@
+.page {
+  width: min(100% - 3rem, 1040px);
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 7rem) 0 clamp(7rem, 12vw, 11rem);
+}
+
+.pageWide {
+  width: min(100% - 3rem, 1180px);
+}
+
+.intro {
+  max-width: 43rem;
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.title {
+  margin: 0;
+  color: var(--primaryColor);
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 620;
+  letter-spacing: -0.065em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+.lead {
+  max-width: 38rem;
+  margin: 1.5rem 0 0;
+  color: var(--mutedColor);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.sectionTitle {
+  margin: clamp(4rem, 8vw, 6rem) 0 1.25rem;
+  color: var(--primaryColor);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 610;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.prose {
+  max-width: 43rem;
+  color: var(--mutedColor);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.prose p {
+  margin: 0 0 1.5rem;
+}
+
+.prose ul {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prose li {
+  position: relative;
+  padding: 0.75rem 0 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--lineColor);
+}
+
+.prose li::before {
+  position: absolute;
+  top: 1.45rem;
+  left: 0;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background: var(--accentColor);
+  content: "";
+}
+
+.prose a {
+  color: var(--accentColor);
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 200ms var(--ease-out);
+}
+
+.prose a:hover {
+  color: var(--primaryColor);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  background: var(--surfaceColor);
+  box-shadow: 0 2rem 5rem rgba(35, 50, 84, 0.12);
+}
+
+.ruleList {
+  border-top: 1px solid var(--lineStrongColor);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
+  align-items: start;
+  gap: clamp(4rem, 10vw, 9rem);
+}
+
+.aboutGrid .title {
+  font-size: clamp(3.25rem, 5.4vw, 5.25rem);
+}
+
+.aboutGrid .prose {
+  margin-top: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.portraitColumn {
+  position: sticky;
+  top: 7rem;
+}
+
+.portrait {
+  width: min(100%, 22rem);
+  height: auto;
+  border-radius: 1.5rem;
+  background: var(--surfaceColor);
+  box-shadow: 0 2rem 5rem rgba(35, 50, 84, 0.13);
+  transform: rotate(1.5deg);
+}
+
+.socialList {
+  margin: 2.5rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--lineStrongColor);
+  list-style: none;
+}
+
+.socialList li {
+  border-bottom: 1px solid var(--lineColor);
+}
+
+.socialList a {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 0;
+  color: var(--mutedColor);
+  font-size: 0.9rem;
+  font-weight: 580;
+  text-decoration: none;
+  transition:
+    color 200ms var(--ease-out),
+    padding 200ms var(--ease-out);
+}
+
+.socialList a:hover {
+  padding-left: 0.25rem;
+  color: var(--accentColor);
+}
+
+.socialList svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex: none;
+}
+
+.projectList {
+  border-top: 1px solid var(--lineStrongColor);
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--lineColor);
+}
+
+.projectMark {
+  display: grid;
+  width: 6rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 1rem;
+  background: var(--surfaceColor);
+  color: var(--accentColor);
+  font-size: 1.75rem;
+}
+
+.projectMark svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.project h2 {
+  margin: 0;
+  color: var(--primaryColor);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.project p {
+  max-width: 38rem;
+  margin: 0.7rem 0 0;
+  color: var(--mutedColor);
+  line-height: 1.65;
+}
+
+.projectAction {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--surfaceColor);
+  color: var(--accentColor);
+  font-size: 1.2rem;
+  transition:
+    color 200ms var(--ease-out),
+    background-color 200ms var(--ease-out),
+    transform 200ms var(--ease-out);
+}
+
+.projectAction:hover {
+  background: var(--accentColor);
+  color: var(--backgroundColor);
+  transform: translateY(-2px);
+}
+
+.status {
+  display: inline-block;
+  margin-left: 0.75rem;
+  color: var(--accentColor);
+  font-family: var(--codeFont);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.notFound {
+  display: grid;
+  grid-template-columns: auto minmax(0, 31rem);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 7vw, 6rem);
+  min-height: 65dvh;
+}
+
+.notFoundCode {
+  margin: 0;
+  color: var(--accentSoftColor);
+  font-size: clamp(6rem, 18vw, 13rem);
+  font-weight: 680;
+  letter-spacing: -0.08em;
+  line-height: 0.8;
+}
+
+.notFound h2 {
+  margin: 0;
+  color: var(--primaryColor);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 610;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.notFound p {
+  margin: 1.25rem 0 2rem;
+  color: var(--mutedColor);
+  line-height: 1.7;
+}
+
+.primaryButton {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  padding: 0 1.35rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primaryColor);
+  color: var(--backgroundColor);
+  font: inherit;
+  font-weight: 650;
+  text-decoration: none;
+  transition:
+    background-color 200ms var(--ease-out),
+    transform 200ms var(--ease-out);
+}
+
+.primaryButton:hover {
+  background: var(--accentColor);
+  transform: translateY(-2px);
+}
+
+.loader {
+  display: grid;
+  min-height: 55dvh;
+  place-items: center;
+  color: var(--mutedColor);
+}
+
+.loaderInner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.loaderMark {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 3px solid var(--accentSoftColor);
+  border-top-color: var(--accentColor);
+  border-radius: 50%;
+  animation: spin 800ms linear infinite;
+}
+
+.loader p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (max-width: 600px) {
+  .page,
+  .pageWide {
+    width: min(100% - 2rem, 36rem);
+    padding-top: 3.5rem;
+  }
+
+  .intro {
+    margin-bottom: 3.5rem;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .portraitColumn {
+    position: static;
+    grid-row: 2;
+  }
+
+  .portrait {
+    width: min(82%, 20rem);
+  }
+
+  .project {
+    grid-template-columns: 4.5rem minmax(0, 1fr) auto;
+    gap: 1rem;
+  }
+
+  .projectMark {
+    width: 4.5rem;
+  }
+
+  .notFound {
+    grid-template-columns: 1fr;
+    align-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prose a {
+    transition: none;
+  }
+}

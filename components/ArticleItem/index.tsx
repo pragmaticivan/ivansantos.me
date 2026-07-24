@@ -13,21 +13,23 @@ interface Props {
 const ArticleItem = ({ article }: Props) => {
   const langFlag = article.language === "en" ? enFlag : brFlag;
   return (
-    <div className={styles.articleItem}>
+    <article className={styles.articleItem}>
       <Link href={`/blog/${article.slug}/`} passHref={true}>
         <div className={styles.date}>{article.date}</div>
         <div className={styles.title}>
           <Image
-            alt={article.language === "en" ? "American Flag" : "Brazilian Flag"}
-            height={23}
+            alt={
+              article.language === "en"
+                ? "English language"
+                : "Portuguese language"
+            }
             src={langFlag}
-            width={36}
-          />{" "}
-          - {article.title}
+          />
+          <span>{article.title}</span>
         </div>
         <div className={styles.description}>{article.description}</div>
       </Link>
-    </div>
+    </article>
   );
 };
 

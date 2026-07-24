@@ -1,9 +1,9 @@
 export const siteMetadata = {
   title: "Ivan Santos",
   author: "Ivan Santos",
-  headerTitle: "Ivan Santos - Software Engineer",
+  headerTitle: "Ivan Santos - Staff Engineer & Engineering Consultant",
   description:
-    "Hello, I'm Ivan 👋 - I'm a software engineer, currently living in Austin, TX.",
+    "Staff engineer and engineering consultant helping teams build shared platforms, production AI tooling, and stronger engineering practices.",
   language: "en-us",
   theme: "system", // system, dark or light
   siteUrl: "https://ivansantos.me",
@@ -21,8 +21,8 @@ export const siteMetadata = {
   instagram: "https://www.instagram.com",
   locale: "en-US",
   analytics: {
-    googleTagManager: {
-      googleTagManagerId: "GTM-TW3VZ3TX",
+    googleAnalytics: {
+      gaId: "G-3V22VP1YR7",
     },
   },
 };

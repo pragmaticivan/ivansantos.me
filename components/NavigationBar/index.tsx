@@ -1,60 +1,81 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import styles from "./styles.module.scss";
 
-interface Props {
-  dark?: boolean;
-}
+const links = [
+  { href: "/about", label: "About" },
+  { href: "/uses", label: "Uses" },
+  { href: "/blog", label: "Blog" },
+  { href: "/open-source", label: "Open Source" },
+  { href: "/indie-hacker", label: "Indie Hacker" },
+];
 
-const NavigationBar = (props: Props = { dark: false }) => {
+const NavigationBar = () => {
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header>
-      <div className="flex flex-wrap justify-center px-10 pt-10 sm:justify-between">
-        <h1>
-          <Link aria-label="Ivan Santos - Go to homepage" href="/">
-            <Image
-              alt="Ivan Santos - Logo"
-              height={77}
-              priority
-              src={
-                props.dark
-                  ? "/images/ivan-logo-white.png"
-                  : "/images/ivan-logo-black.png"
-              }
-              width={200}
-            />
-          </Link>
-        </h1>
+    <header className={styles.header}>
+      <div className={styles.inner}>
+        <Link
+          aria-label="Ivan Santos - Go to homepage"
+          className={styles.logo}
+          href="/"
+          onClick={() => setIsOpen(false)}
+        >
+          <Image
+            alt="Ivan Santos"
+            height={58}
+            priority
+            src="/images/ivan-logo-black.png"
+            width={150}
+          />
+        </Link>
+
+        <button
+          aria-controls="primary-navigation"
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          className={styles.menuButton}
+          onClick={() => setIsOpen((open) => !open)}
+          type="button"
+        >
+          {isOpen ? (
+            <RiCloseLine aria-hidden="true" />
+          ) : (
+            <RiMenu3Line aria-hidden="true" />
+          )}
+        </button>
+
         <nav
           aria-label="Main navigation"
-          className={`${styles.menu} ${props.dark ? styles.dark : ""}`}
+          className={`${styles.menu} ${isOpen ? styles.open : ""}`}
+          id="primary-navigation"
         >
           <ul>
-            <li>
-              <Link href="/about" title="About">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/uses" title="Uses">
-                Uses
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" title="Blog">
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link href="/open-source" title="Open Source">
-                Open Source
-              </Link>
-            </li>
-            <li>
-              <Link href="/indie-hacker" title="Indie Hacker">
-                Indie Hacker
-              </Link>
-            </li>
+            {links.map((link) => {
+              const isActive =
+                pathname === link.href ||
+                (link.href === "/blog" && pathname.startsWith("/blog/"));
+
+              return (
+                <li key={link.href}>
+                  <Link
+                    aria-current={isActive ? "page" : undefined}
+                    className={isActive ? styles.active : undefined}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </div>

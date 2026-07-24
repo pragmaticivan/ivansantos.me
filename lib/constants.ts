@@ -1,9 +1,9 @@
 // App constants
 export const SITE_CONFIG = {
   name: "Ivan Santos",
-  title: "Ivan Santos - Software Engineer",
+  title: "Ivan Santos - Staff Engineer & Engineering Consultant",
   description:
-    "Hello, I'm Ivan 👋 - I'm a software engineer, currently living in Austin, TX.",
+    "Staff engineer and engineering consultant helping teams build shared platforms, production AI tooling, and stronger engineering practices.",
   url: "https://ivansantos.me",
   ogImage: "/static/images/twitter-card.png",
 } as const;

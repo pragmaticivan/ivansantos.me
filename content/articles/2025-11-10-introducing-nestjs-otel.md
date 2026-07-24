@@ -163,7 +163,7 @@ It's a great way to see how metrics, spans, and dashboards all come together in 
 
 ## Conclusion
 
-Building `nestjs-otel` has been a wild ride—part deep dive into the rabbit hole of observability, part scratching my own itch to make NestJS play nice with OpenTelemetry. It started as a simple wrapper and has grown into a tool that I rely on daily to keep my sanity when debugging distributed systems.
+Building `nestjs-otel` has been a wild ride: part deep dive into the rabbit hole of observability, part scratching my own itch to make NestJS play nice with OpenTelemetry. It started as a simple wrapper and has grown into a tool that I rely on daily to keep my sanity when debugging distributed systems.
 
 But this is just the beginning! The observability landscape is moving fast, and I'm excited to see where we can take this project. Whether you're a seasoned SRE or just a developer tired of `console.log` debugging, I'd love for you to take `nestjs-otel` for a spin. Break it, fix it, star it, or send a PR. It's all open source, and contributions are more than welcome. Let's make our NestJS apps not just functional, but truly observable, one span at a time.
 
