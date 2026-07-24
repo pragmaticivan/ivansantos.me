@@ -4,8 +4,10 @@ import pageStyles from "../../styles/page.module.scss";
 import { genPageMetadata } from "../seo";
 
 export const metadata = genPageMetadata({
-  title: "Open Source ✍️",
-  description: `I share anything that may help others, technologies I'm using and cool things I've made`,
+  title: "Open Source Engineering",
+  description:
+    "Open-source engineering tools by Ivan Santos for observability, Go dependencies, NestJS, automation, and developer infrastructure.",
+  path: "/open-source",
 });
 
 const projects = [

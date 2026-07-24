@@ -5,8 +5,17 @@ import type { Article } from "../../types/article";
 import { genPageMetadata } from "../seo";
 
 export const metadata = genPageMetadata({
-  title: "Blog ✍️",
-  description: `I share anything that may help others, technologies I'm using and cool things I've made`,
+  title: "Platform & AI Engineering Blog",
+  description:
+    "Practical writing on platform engineering, production AI systems, Kubernetes, observability, Go, and engineering judgment.",
+  path: "/blog",
+  keywords: [
+    "platform engineering blog",
+    "AI engineering blog",
+    "Kubernetes",
+    "observability",
+    "Go",
+  ],
 });
 
 const BlogPage = async () => {

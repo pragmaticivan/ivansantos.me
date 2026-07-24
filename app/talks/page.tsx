@@ -4,8 +4,10 @@ import pageStyles from "../../styles/page.module.scss";
 import { genPageMetadata } from "../seo";
 
 export const metadata = genPageMetadata({
-  title: "Talks ✍️",
-  description: `I share anything that may help others, technologies I'm using and cool things I've made`,
+  title: "Engineering Talks",
+  description:
+    "Technical talks by Ivan Santos on Kubernetes, platform engineering, distributed systems, observability, and dependable software.",
+  path: "/talks",
 });
 
 const Talks = () => {

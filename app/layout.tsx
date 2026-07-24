@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import NavigationBar from "../components/NavigationBar";
 import StructuredData from "../components/StructuredData";
 import { siteMetadata } from "../lib/site-metadata";
+import { websiteSchema } from "../lib/structured-data";
 
 const geistSans = localFont({
   display: "swap",
@@ -27,21 +28,21 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
-    default: siteMetadata.title,
+    default: siteMetadata.headerTitle,
     template: `%s | ${siteMetadata.title}`,
   },
   description: siteMetadata.description,
   openGraph: {
-    title: siteMetadata.title,
+    title: siteMetadata.headerTitle,
     description: siteMetadata.description,
-    url: "./",
+    url: "/",
     siteName: siteMetadata.title,
     images: [siteMetadata.socialBanner],
     locale: "en_US",
     type: "website",
   },
   alternates: {
-    canonical: "./",
+    canonical: "/",
     types: {
       "application/rss+xml": `${siteMetadata.siteUrl}/feed.xml`,
     },
@@ -58,9 +59,13 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: siteMetadata.title,
+    title: siteMetadata.headerTitle,
     card: "summary_large_image",
+    creator: "@pragmaticivan",
     images: [siteMetadata.socialBanner],
+  },
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
   },
 };
 
@@ -76,9 +81,8 @@ export default function RootLayout({
       lang="en"
     >
       <head>
-        <StructuredData />
+        <StructuredData schema={websiteSchema()} />
       </head>
-      <link href="/favicon.png" rel="icon" sizes="any" type="image/png" />
 
       <body>
         <a className="skip-link" href="#main-content">

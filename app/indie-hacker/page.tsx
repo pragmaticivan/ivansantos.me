@@ -4,8 +4,10 @@ import pageStyles from "../../styles/page.module.scss";
 import { genPageMetadata } from "../seo";
 
 export const metadata = genPageMetadata({
-  title: "Indie Hacker",
-  description: `Side projects and products I'm building in my free time`,
+  title: "Indie Projects",
+  description:
+    "Small, useful products and independent software projects built by Ivan Santos.",
+  path: "/indie-hacker",
 });
 
 const indieProjects = [

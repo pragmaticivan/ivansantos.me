@@ -10,6 +10,17 @@ const nextConfig = {
     ],
     formats: ["image/webp", "image/avif"],
   },
+  async redirects() {
+    return [
+      {
+        source:
+          "/blog/2023-06-24-replacing-your-kubernetes-hpa-resoursces-with-keda-scaled-objects",
+        destination:
+          "/blog/2023-06-24-replacing-your-kubernetes-hpa-resources-with-keda-scaled-objects",
+        permanent: true,
+      },
+    ];
+  },
   // Add security headers
   async headers() {
     return [

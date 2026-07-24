@@ -6,6 +6,7 @@ export interface Article {
   path: string;
   title: string;
   date: string;
+  updated?: string;
   description: string;
   draft: boolean;
   slug: string;

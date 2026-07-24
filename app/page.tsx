@@ -19,6 +19,12 @@ const capabilities = [
 
 const destinations = [
   {
+    title: "Consulting",
+    description:
+      "Hands-on help with platform architecture, production AI, and engineering strategy.",
+    href: "/consulting",
+  },
+  {
     title: "Writing",
     description:
       "Practical notes on platforms, AI, infrastructure, and engineering judgment.",
@@ -52,13 +58,10 @@ export default function Page() {
               confidence.
             </p>
             <div className={styles.heroActions}>
-              <a
-                className={styles.primaryAction}
-                href="mailto:hello@ivansantos.me"
-              >
+              <Link className={styles.primaryAction} href="/consulting">
                 Work with me
                 <RiArrowRightLine aria-hidden="true" />
-              </a>
+              </Link>
               <Link className={styles.textAction} href="/blog">
                 Read my writing
               </Link>
@@ -134,10 +137,10 @@ export default function Page() {
               developer productivity, observability, and technical delivery.
             </p>
           </div>
-          <a className={styles.contactAction} href="mailto:hello@ivansantos.me">
-            Work with me
+          <Link className={styles.contactAction} href="/consulting">
+            How I can help
             <RiArrowRightUpLine aria-hidden="true" />
-          </a>
+          </Link>
           <a
             aria-label="View Ivan Santos on GitHub"
             className={styles.githubAction}

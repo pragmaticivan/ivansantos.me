@@ -1,5 +1,5 @@
 ---
-title: "Keeping sanity with go modules and updates"
+title: "Keeping sanity with Go modules and updates"
 date: "2026-01-18"
 description: "Learn how to avoid supply chain risks by enforcing update cooldowns in Go, using Dependabot for CI and my new tool, go-check-updates, for local development."
 image: /content/images/articles/2026-01-18-keeping-sanity-with-go-modules-and-updates/update-cooldown-zone.png

@@ -43,11 +43,75 @@
   text-wrap: balance;
 }
 
+.dek {
+  max-width: 43rem;
+  margin: 1.75rem 0 0;
+  color: var(--mutedColor);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.byline {
+  margin: 1.5rem 0 0;
+  color: var(--subtleColor);
+  font-size: 0.9rem;
+}
+
+.byline a {
+  color: var(--primaryColor);
+  font-weight: 650;
+  text-decoration-color: var(--accentSoftColor);
+  text-underline-offset: 0.2em;
+}
+
 .content {
   padding-top: clamp(3rem, 6vw, 5rem);
   color: var(--mutedColor);
   font-size: clamp(1.05rem, 2vw, 1.16rem);
   line-height: 1.8;
+}
+
+.articleFooter {
+  margin-top: clamp(4rem, 8vw, 6rem);
+  padding-top: 2rem;
+  border-top: 1px solid var(--lineStrongColor);
+}
+
+.authorLabel {
+  margin: 0 0 0.75rem;
+  color: var(--accentColor);
+  font-family: var(--codeFont);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.articleFooter h2 {
+  margin: 0;
+  color: var(--primaryColor);
+  font-size: 1.6rem;
+  letter-spacing: -0.035em;
+}
+
+.articleFooter > p:not(.authorLabel) {
+  max-width: 39rem;
+  margin: 1rem 0 0;
+  color: var(--mutedColor);
+  line-height: 1.7;
+}
+
+.articleLinks {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.articleLinks a {
+  color: var(--accentColor);
+  font-weight: 650;
+  text-underline-offset: 0.2em;
 }
 
 .content img {

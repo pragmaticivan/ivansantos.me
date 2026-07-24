@@ -8,6 +8,7 @@ import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import styles from "./styles.module.scss";
 
 const links = [
+  { href: "/consulting", label: "Consulting" },
   { href: "/about", label: "About" },
   { href: "/uses", label: "Uses" },
   { href: "/blog", label: "Blog" },

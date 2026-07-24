@@ -29,13 +29,15 @@ export function getArticleBySlug(slug: string, fields: string[] = []) {
   for (const field of fields) {
     if (field === "slug") {
       items[field] = realSlug;
+      continue;
     }
 
     if (field === "content") {
       items[field] = content;
+      continue;
     }
 
-    if (data[field]) {
+    if (data[field] !== undefined) {
       items[field as keyof Article] = data[field];
     }
   }
